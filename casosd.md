@@ -3,8 +3,8 @@
 ## Sumário
 
 - [CDU 01 - Cadastro de clientes](#cdu-01---cadastro-de-clientes)
-- [CDU 02 - Cadastro de Bibliotecários](#cdu-02---cadastro-de-bibliotecários)
-- [CDU 03 - Login](#cdu-03---login)
+- [CDU 02 - Login](#cdu-03---login)
+- [CDU 03 - Locação](#cdu-03---locação)
 - [CDU 04 - Pagamento](#cdu-04---pagamento)
 - [CDU 05 - Gerenciamento dos produtos](#cdu-05---Gerenciamento-dos-produtos)
 - [CDU 06 - Gerenciamento de Locação](#cdu-06---Gerenciamento-de-Locação)
