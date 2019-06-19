@@ -1,22 +1,26 @@
 
 #login{background-color: darkblue;
-       height: 30px;}
+       height: 5%;
+    width:100%;
+}
 
 #menu
-{height: 100px;
- background-color: #8664c5;
-
- margin: 0px, 0px, 0px, 0px;
+{height: 15%;
+ background-color: #25f10a ;
+ width:100%;
+top: 2%;
 }
 
 #conteudo
-{background-color: brown;
-height:500px;
+{background-color: rgb(240, 22, 203) ;
+height:60%;
+width:100%;
 }
 
 #rodape
 {
     
-    height: 100px;
-    background-color: black
+    height: 20%;
+    background-color: black;
+    width:100%;
 }
