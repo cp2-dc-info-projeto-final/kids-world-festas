@@ -1,0 +1,22 @@
+
+#login{background-color: darkblue;
+       height: 30px;}
+
+#menu
+{height: 100px;
+ background-color: #8664c5;
+
+ margin: 0px, 0px, 0px, 0px;
+}
+
+#conteudo
+{background-color: brown;
+height:500px;
+}
+
+#rodape
+{
+    
+    height: 100px;
+    background-color: black
+}
