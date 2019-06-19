@@ -18,3 +18,11 @@ CREATE TABLE cliente(
     telefone VARCHAR(11) NOT NULL,
     FOREIGN KEY(id) REFERENCES usuario(id)
 );
+
+
+CREATE TABLE locacao(
+    id INT NOT NULL PRIMARY KEY,
+    data DATE
+);
+
+CREATE TABLE 
