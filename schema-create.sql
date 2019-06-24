@@ -13,7 +13,7 @@ CREATE TABLE administrador(
 );
 
 CREATE TABLE cliente(
-	id INT NOT NULL PRIMARY KEY,
+    id INT NOT NULL PRIMARY KEY,
     cpf VARCHAR(11) NOT NULL,
     telefone VARCHAR(11) NOT NULL,
     FOREIGN KEY(id) REFERENCES usuario(id)
