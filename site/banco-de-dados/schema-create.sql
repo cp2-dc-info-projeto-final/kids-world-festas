@@ -33,7 +33,7 @@ CREATE TABLE locacao(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     id_cliente INT NOT NULL,
     id_endereco INT NOT NULL,
-    data DATE NOT NULL,
+    ´data´ DATE NOT NULL,
     FOREIGN KEY(id_cliente) REFERENCES cliente(id),
     FOREIGN KEY(id_endereco) REFERENCES endereco(id)
 );
