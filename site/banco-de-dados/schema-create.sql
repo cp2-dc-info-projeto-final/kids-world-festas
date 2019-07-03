@@ -5,6 +5,7 @@ CREATE TABLE usuario(
     nome VARCHAR(50) NOT NULL,
     email VARCHAR(30) NOT NULL,
     senha VARCHAR(16) NOT NULL
+
 );
 
 CREATE TABLE administrador(
