@@ -5,17 +5,30 @@
     $telefone = $_POST["telefone"];
     $email = $_POST["email"];
     $senha = $_POST["senha"];
+    $confirmarsenha = $_POST["confirmarsenha"];
     echo "$nome<br/>";
     echo "$email<br/>";
     echo "$senha<br/>";
+    echo "$confirmarsenha<br/>";
     echo "$telefone<br/>";
     echo "$cpf<br/>";
+
+    // Check confirmarsenha
+    if ($senha != $confirmaSenha) {    
+        $erro = "As senhas não coincidem";        
+        $_SESSION["erro"] = $erro;
+        header("Location: formCadastro.php");
+        exit();
+    }
+
+    // password hash
+    $hash = password_hash($senha, PASSWORD_DEFAULT);
 
     $link = mysqli_connect("localhost", "root", "", "kids_world_festas");
  
     // Check connection
     if($link === false){
-        die("Erro" . mysqli_connect_error());
+        die("Erro na conexão com o banco de dados." . mysqli_connect_error());
     }
 
     // check email
@@ -24,14 +37,27 @@
     $result = mysqli_query($link, $sql_select_id);
 
     $count_email = 0;
-    // mysql fetch busca uma linha ou retorna falso quando não há
+    // mysql fetch busca uma linha, onde retorna a mesma ou retorna falso quando não há
     while ($row = mysqli_fetch_array($result)) {
         $count_email++;
-       // echo "$id_usuario";
+    // echo "$id_usuario";
     }
 
     if ($count_email > 0) {
-        die("E-mail não disponível");
+        die("E-mail já utilizado.");
+    }
+    // check cpf
+    $sql_select_id = "SELECT cpf FROM cliente WHERE cpf ='$cpf'";
+    // lembrando mysql fetch busca uma linha, onde retorna a mesma ou retorna falso quando não há
+    $result = mysqli_query($link, $sql_select_id);
+
+    $count_cpf = 0
+    while ($row = mysqli_fetch_array($result)) {
+        $count_cpf++;
+    }
+
+    if ($count_cpf > 0) {
+        die("CPF já utilizado.");
     }
 
     // insert usuario
@@ -52,7 +78,7 @@
     $id_usuario = null;
     while ($row = mysqli_fetch_array($result)) {
         $id_usuario = $row[0];
-       // echo "$id_usuario";
+    // echo "$id_usuario";
     }
 
     // insert cliente
