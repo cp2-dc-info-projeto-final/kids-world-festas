@@ -2,7 +2,7 @@
 
 <head>
   <title>Cadastro</title>
-  <link rel="Stylesheet" type="text/css" href="estilo.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
 </head>
 
 <body>
@@ -20,7 +20,7 @@
     <img src "logo.png">
     <center>
       <ul>
-        <li><a href="home.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="#">Quem somos</a></li>
         <li><a href="#">Servicos</a></li>
         <li><a href="#">Contato</a></li>
@@ -58,16 +58,14 @@
               <p align="center">
                 <input class="nv" width="50px" type=submit name=enviar value=ENVIAR>
               </p>
-              <p> <label>
-                <?php
+              <p>
+              </p>
+          </fieldset>
+          <?php
                   session_start();
                   $erro = $_SESSION["erro"];
                   echo "$erro";
                 ?>
-                  </label>
-              </p>
-          </fieldset>
-          
         </form>
 
       </div>

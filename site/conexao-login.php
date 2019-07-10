@@ -20,19 +20,19 @@
             if (password_verify($senha, $hash)) {
                 session_unset();
                 $_SESSION["nome"] = $row["nome"]; 
-                header("Location: login.php");
+                header("Location: login.html");
                 exit();
             } else {
                 $erro = "Senha incorreta";        
                 $_SESSION["erro"] = $erro;
-                header("Location: login.php");
+                header("Location: login.html");
                 exit();
             }
         }
     } else {
         $erro = "Login inexistente";
         $_SESSION["erro"] = $erro;
-        header("Location: login.php");
+        header("Location: login.html");
         exit();
     }        
     mysqli_close($connection);
