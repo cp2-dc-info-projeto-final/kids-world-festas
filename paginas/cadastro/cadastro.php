@@ -33,7 +33,7 @@
     <center>
       <div id="formulario">
         <br></br>
-        <form action="conexao.php" method="POST">
+        <form action="conexao-cadastro.php" method="POST">
 
           <fieldset>
             <legend>Cadastro</legend>
@@ -58,16 +58,16 @@
               <p align="center">
                 <input class="nv" width="50px" type=submit name=enviar value=ENVIAR>
               </p>
-              <?php
-              session_start();
-              if(array_key_exists('erro', $_SESSION) == true){
+              <p> <label>
+                <?php
+                  session_start();
                   $erro = $_SESSION["erro"];
-                  echo "<br><b>$erro</b>";
-                  session_unset();
-              }
-              ?>
-              <p></p>
+                  echo "$erro";
+                ?>
+                  </label>
+              </p>
           </fieldset>
+          
         </form>
 
       </div>

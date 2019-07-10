@@ -14,10 +14,10 @@
     echo "$cpf<br/>";
 
     // Check confirmarsenha
-    if ($senha != $confirmaSenha) {    
+    if ($senha != $confirmarsenha) {    
         $erro = "As senhas não coincidem";        
         $_SESSION["erro"] = $erro;
-        header("Location: formCadastro.php");
+        header("Location: cadastro.php");
         exit();
     }
 
@@ -46,20 +46,6 @@
     if ($count_email > 0) {
         die("E-mail já utilizado.");
     }
-    // check cpf
-    $sql_select_id = "SELECT cpf FROM cliente WHERE cpf ='$cpf'";
-    // lembrando mysql fetch busca uma linha, onde retorna a mesma ou retorna falso quando não há
-    $result = mysqli_query($link, $sql_select_id);
-
-    $count_cpf = 0
-    while ($row = mysqli_fetch_array($result)) {
-        $count_cpf++;
-    }
-
-    if ($count_cpf > 0) {
-        die("CPF já utilizado.");
-    }
-
     // insert usuario
     $sql_insert_usuario = "INSERT INTO usuario (nome, email, senha) VALUES
             ('$nome', '$email', '$senha')";
@@ -87,6 +73,7 @@
     
     if(mysqli_query($link, $sql_insert_cliente)){
         echo "Cadastro Concluído";
+        header("Location: login.html");
     } else{
         echo "Erro $sql. " . mysqli_error($link);
     }
