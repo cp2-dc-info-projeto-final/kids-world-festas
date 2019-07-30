@@ -1,67 +1,194 @@
+ul {
+    /* Corrigir erros inseridos do próprio navegador */
+    padding: 0px!important;
+}
 
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
 
+.menu-principal {
+    width: 100%;
+    background-color: #252323;
+    height: 60px;
+}
 
+main {
+    margin: 0 auto;
+    width: 980px;
+    position: relative;
+}
 
-#login{background-color: #EE1289;
-           height: 5%;}
-           
-#login ul li { display: inline;
-               position: relative;
-             }
-#login ul li a {
-    padding: 2px 10px;
+.logo {
+    float: left;
+    padding: 7px;
+    width: 70%;
+}
+
+.redes-sociais ul li {
+    margin-left: 15px;
     display: inline-block;
-
-    /* visual do link */
-    background-color:#EE1289;
-    color: rgb(197, 194, 194);
-    text-decoration: none;
-    border-bottom:3px solid rgb(255, 0, 191);
+    float: left;
+    list-style: none;
 }
-#login ul li a:hover {
-    background-color:#CD1076;
-    color: rgb(197, 194, 194);
-    border-bottom:3px solid  rgb(255, 0, 191) ;    }
 
-
-#menu
-{height: 10%;
-    padding:0px;
-    margin:0px;
-    background-color:#090b88;
-    list-style:none;
+.redes-sociais {
+    width: 25%;
+    float: right;
 }
-#menu  ul li { display: inline;
-                           }
-#menu  ul li a {
-    padding: 2px 10px;
+
+.header-2 {
+    background-color: #ffffff;
+    width: 980px;
+    margin: 0 auto;
+    padding: 13px;
+}
+
+
+/* Efeito hover no menu */
+
+.menus {
+    border-bottom: 3px solid #efefef;
+    height: 80px;
+}
+
+
+/* Estilização do Menu */
+
+.menu {
+    width: 70%;
+    float: left;
+}
+
+.menu ul li {
     display: inline-block;
-    margin-top: 1%;
+    margin-left: 20px;
+    height: 51px;
+}
 
-    /* visual do link */
-    background-color: #090b88;
-    color: rgb(197, 194, 194);
+.menu ul li:hover {
+    border-bottom: 3px solid #00bac6;
+}
+
+.menu ul li a:hover {
+    color: #00bac6;
+}
+
+.menu ul li a {
+    color: #8b8b8b;
     text-decoration: none;
-    border-bottom:3px solid blue;
+    font-size: 20px;
+    text-transform: capitalize;
 }
-#menu ul li a:hover {
-    background-color:#070aa7;
-    color: rgb(197, 194, 194);
-    border-bottom:3px solid #260ff8;
+
+
+/* Estilização do cadastro e do Login */
+
+.sign {
+    width: 30%;
+    float: right;
+    text-align: center;
 }
-#logo{width: 20%;
-      height: 20%;
-     background-color: aqua;}
-#conteudo
-{   
-     background-color: whitesmoke;
-     height:75%;
+
+.sign ul li {
+    display: inline-block;
+    margin-left: 20px;
+    height: 51px;
 }
-#conteudo img {margin-top: 15px;
-               
-            }
-#rodape
-{
-    height: 10%;
-    background-color: black
+
+.sign ul li:hover {
+    border-bottom: 3px solid #00bac6;
+}
+
+.sign ul li a:hover {
+    color: #00bac6;
+}
+
+.sign ul li a {
+    color: #8b8b8b;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+
+/* Admitir o main 100% da tela */
+
+.main100 {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+
+/* Botão da esquerda estilizado */
+
+button.slick-prev {
+    font-size: 0px;
+    border: none;
+    width: 25px;
+    height: 51px;
+    background-color: transparent;
+    background-image: url('../img/esquerda.png');
+    position: absolute;
+    z-index: 9;
+    top: 35%;
+    left: 14%;
+}
+
+
+/* Botão da direita estilizado */
+
+button.slick-next {
+    font-size: 0px;
+    border: none;
+    width: 25px;
+    height: 51px;
+    background-color: transparent;
+    background-image: url('../img/direita.png');
+    position: absolute;
+    z-index: 9;
+    top: 35%;
+    right: 14%;
+}
+
+
+/* Retirar a rolagem infinita do slide */
+
+.slick-initialized {
+    overflow: hidden
+}
+
+
+/* Estilizar botões do slide */
+
+.slick-dots li button {
+    font-size: 0px;
+    border: 5px solid #ffffff;
+    width: 26px;
+    height: 26px;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slick-dots {
+    /* Botão no centro */
+    margin: 0 auto;
+    width: 50%;
+    position: absolute;
+    left: 45%;
+    top: 418px;
+}
+
+li.slick-active button {
+    background: #00bac6;
+}
+
+.slick-dots li {
+    /* Listar um ao lado do outro */
+    display: inline-block;
+    padding-left: 10px;
 }

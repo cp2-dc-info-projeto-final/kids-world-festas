@@ -6,13 +6,14 @@
     $email = $_POST["email"];
     $senha = $_POST["senha"];
     $confirmarsenha = $_POST["confirmarsenha"];
+    /*
     echo "$nome<br/>";
     echo "$email<br/>";
     echo "$senha<br/>";
     echo "$confirmarsenha<br/>";
     echo "$telefone<br/>";
     echo "$cpf<br/>";
-
+    */
     // Check confirmarsenha
     if ($senha != $confirmarsenha) {    
         $erro = "As senhas não coincidem";        
@@ -48,12 +49,12 @@
     }
     // insert usuario
     $sql_insert_usuario = "INSERT INTO usuario (nome, email, senha) VALUES
-            ('$nome', '$email', '$senha')";
+            ('$nome', '$email', '$hash')";
 
     if(mysqli_query($link, $sql_insert_usuario)){
         echo "Cadastro Concluído <br/>";
     } else{
-        echo "Erro $sql. " . mysqli_error($link);
+        echo "Erro $sql_insert_usuario. " . mysqli_error($link);
     }
 
     // select pegando o id inserido, filtrando WHERE com email
@@ -64,18 +65,18 @@
     $id_usuario = null;
     while ($row = mysqli_fetch_array($result)) {
         $id_usuario = $row[0];
-    // echo "$id_usuario";
+        echo "$id_usuario";
     }
 
     // insert cliente
     $sql_insert_cliente = "INSERT INTO cliente (id, telefone, cpf) VALUES
-            ($id_usuario, '$telefone', '$cpf')";
+            ('$id_usuario', '$telefone', '$cpf')";
     
     if(mysqli_query($link, $sql_insert_cliente)){
         echo "Cadastro Concluído";
-        header("Location: login.html");
+        header("Location: login.php");
     } else{
-        echo "Erro $sql. " . mysqli_error($link);
+        echo "Erro $sql_insert_cliente. " . mysqli_error($link);
     }
 
     mysqli_close($link);

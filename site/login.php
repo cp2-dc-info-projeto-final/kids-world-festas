@@ -2,7 +2,7 @@
 
 <head>
     <title>Cadastro</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+    <link rel="Stylesheet" type="text/css" href="css/main.css" media="screen" />
 </head>
 
 <body>
@@ -73,43 +73,30 @@
         </div>
     </main>
     <center>
-        <!-- Estilizar Formulário -->
-        <form action="conexao-cadastro.php" method="POST">
+        <form action="conexao-login.php" method="POST">
             <fieldset>
-                <h2>Cadastro</h2>
-                <p>
-                    <label for="nome">Nome:</label>
-                    <input type="text" name="nome" id="nome" placeholder="Nome" required="required" value="">
-                </p>
+                <h2>Login</h2>
                 <p>
                     <label for="email">E-mail:</label>
-                    <input type="text" name="email" id="email" placeholder="E-mail" required="required" value="">
-                </p>
-                <p>
-                    <label for="cpf">CPF:</label>
-                    <input type="text" name="cpf" id="cpf" placeholder="CPF" required="required" value="">
-                </p>
-                <p>
-                    <label for="telefone">Telefone:</label>
-                    <input type="text" name="telefone" id="telefone" placeholder="Telefone" required="required" value="">
+                    <input type="text" placeholder="Digite seu e-mail" name="email" id="email" value="">
                 </p>
                 <p>
                     <label for="senha">Senha:</label>
-                    <input type="password" name="senha" id="senha" placeholder="Senha" required="required" value="">
+                    <input type="password" placeholder="Digite sua senha" name="senha" id="senha" value="">
                 </p>
+                <input type="submit" value="Entrar">
+                <?php
+                    session_start();
+                    if(array_key_exists('erro', $_SESSION) == true){
+                        $erro = $_SESSION["erro"];
+                        echo "<br><b>$erro</br>";
+                        session_unset();
+                    }
+                ?>
                 <p>
-                    <label for="confirmarsenha">Confirmar senha:</label>
-                    <input type="password" name="confirmarsenha" id="confirmarsenha" placeholder="Confirmar senha" required="required" value="">
-                </p>
-                <p>
-                    <input type="submit" name="enviar" value="Enviar">
+                    <a href="./cadastro.php">Cadastre-se</a>
                 </p>
             </fieldset>
-            <?php
-                session_start();
-                $erro = $_SESSION["erro"];
-                echo "$erro";
-            ?>
         </form>
     </center>
 </body>

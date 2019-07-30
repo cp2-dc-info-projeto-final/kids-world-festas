@@ -9,7 +9,7 @@
     }
     session_start();
     
-    $sql = "SELECT senha,nome FROM usuario WHERE email='$email'";
+    $sql = "SELECT senha, nome FROM usuario WHERE email='$email'";
     $result = mysqli_query($connection, $sql);
     $erro = "";
     
@@ -20,19 +20,19 @@
             if (password_verify($senha, $hash)) {
                 session_unset();
                 $_SESSION["nome"] = $row["nome"]; 
-                header("Location: login.html");
+                header("Location: perfil.php");
                 exit();
             } else {
                 $erro = "Senha incorreta";        
                 $_SESSION["erro"] = $erro;
-                header("Location: login.html");
+                header("Location: login.php");
                 exit();
             }
         }
     } else {
         $erro = "Login inexistente";
         $_SESSION["erro"] = $erro;
-        header("Location: login.html");
+        header("Location: login.php");
         exit();
     }        
     mysqli_close($connection);

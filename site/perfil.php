@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Cadastro</title>
+    <title>Kids World Festas</title>
     <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
 </head>
 
@@ -72,46 +72,19 @@
             </div>
         </div>
     </main>
-    <center>
-        <!-- Estilizar Formulário -->
-        <form action="conexao-cadastro.php" method="POST">
-            <fieldset>
-                <h2>Cadastro</h2>
-                <p>
-                    <label for="nome">Nome:</label>
-                    <input type="text" name="nome" id="nome" placeholder="Nome" required="required" value="">
-                </p>
-                <p>
-                    <label for="email">E-mail:</label>
-                    <input type="text" name="email" id="email" placeholder="E-mail" required="required" value="">
-                </p>
-                <p>
-                    <label for="cpf">CPF:</label>
-                    <input type="text" name="cpf" id="cpf" placeholder="CPF" required="required" value="">
-                </p>
-                <p>
-                    <label for="telefone">Telefone:</label>
-                    <input type="text" name="telefone" id="telefone" placeholder="Telefone" required="required" value="">
-                </p>
-                <p>
-                    <label for="senha">Senha:</label>
-                    <input type="password" name="senha" id="senha" placeholder="Senha" required="required" value="">
-                </p>
-                <p>
-                    <label for="confirmarsenha">Confirmar senha:</label>
-                    <input type="password" name="confirmarsenha" id="confirmarsenha" placeholder="Confirmar senha" required="required" value="">
-                </p>
-                <p>
-                    <input type="submit" name="enviar" value="Enviar">
-                </p>
-            </fieldset>
-            <?php
-                session_start();
-                $erro = $_SESSION["erro"];
-                echo "$erro";
-            ?>
-        </form>
-    </center>
+    <?php
+    session_start();
+    if(array_key_exists('nome', $_SESSION) == false){
+        $erro = "Acesso Negado!";        
+        $_SESSION["erro"] = $erro;
+        header('Location: formlogin.php');
+        exit();
+    } else {
+        $nome = $_SESSION["nome"];
+        echo "Seja bem vindo $nome!<br>";
+        echo "<a href='index.html'>Sair</a>";
+    }
+?>
 </body>
 
 </html>
