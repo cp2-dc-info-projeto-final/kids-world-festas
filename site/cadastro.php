@@ -107,8 +107,10 @@
             </fieldset>
             <?php
                 session_start();
-                $erro = $_SESSION["erro"];
-                echo "$erro";
+                if(array_key_exists('erro', $_SESSION) == true){
+                    $erro = $_SESSION["erro"];
+                    echo "$erro";
+                }
             ?>
         </form>
     </center>
