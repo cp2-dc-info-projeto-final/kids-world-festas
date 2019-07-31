@@ -1,27 +1,6 @@
 
 <?php
-    $nome = $_POST["nome"];
-    $cpf = $_POST["cpf"];
-    $telefone = $_POST["telefone"];
-    $email = $_POST["email"];
-    $senha = $_POST["senha"];
-    $confirmarsenha = $_POST["confirmarsenha"];
-    /*
-    echo "$nome<br/>";
-    echo "$email<br/>";
-    echo "$senha<br/>";
-    echo "$confirmarsenha<br/>";
-    echo "$telefone<br/>";
-    echo "$cpf<br/>";
-    */
-    // Check confirmarsenha
-    if ($senha != $confirmarsenha) {    
-        $erro = "As senhas não coincidem";        
-        $_SESSION["erro"] = $erro;
-        header("Location: cadastro.php");
-        exit();
-    }
-
+    
     // password hash
     $hash = password_hash($senha, PASSWORD_DEFAULT);
 
@@ -65,7 +44,6 @@
     $id_usuario = null;
     while ($row = mysqli_fetch_array($result)) {
         $id_usuario = $row[0];
-        echo "$id_usuario";
     }
 
     // insert cliente
