@@ -46,16 +46,7 @@
         $id_usuario = $row[0];
     }
 
-    // insert cliente
-    $sql_insert_cliente = "INSERT INTO cliente (id, telefone, cpf) VALUES
-            ('$id_usuario', '$telefone', '$cpf')";
-    
-    if(mysqli_query($link, $sql_insert_cliente)){
-        echo "Cadastro Concluído";
-        header("Location: login.php");
-    } else{
-        echo "Erro $sql_insert_cliente. " . mysqli_error($link);
-    }
+   
 
     mysqli_close($link);
 ?>
