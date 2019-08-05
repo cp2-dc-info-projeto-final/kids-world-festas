@@ -21,7 +21,7 @@
 
     $erro = "";
 
-    if (cadastroUsuario($nome, $senha, $senha)) {
+    if (cadastrarUsuario($nome, $email, $senha, $telefone, $cpf)) {
         header("Location: ../login.php");
     } else {
         $erro = "Email indisponível";        

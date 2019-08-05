@@ -1,5 +1,5 @@
 <?php
-    function cadastroUsuario($nome, $email, $senha, $telefone, $cpf){
+    function cadastrarUsuario($nome, $email, $senha, $telefone, $cpf){
         
         // conexão
         $link = mysqli_connect("localhost", "root", "", "kids_world_festas");
@@ -33,7 +33,7 @@
             ('$nome', '$email', '$hash')";
     
         if(!mysqli_query($link, $sql_insert_usuario)){
-            die( "Erro $sql_insert_usuario. " . mysqli_error($link)); // return false
+            die( "Erro $sql_insert_usuario. " . mysqli_error($link));
         }
 
         // select pegando o id inserido, filtrando WHERE com email
@@ -42,6 +42,7 @@
         $result = mysqli_query($link, $sql_select_id);
 
         $id_usuario = null;
+        // "Obtem uma linha do resultado como uma matriz associativa, numérica, ou ambas" Site: https://www.php.net/manual/pt_BR/mysqli-result.fetch-array.php
         while ($row = mysqli_fetch_array($result)) {
             $id_usuario = $row[0];
         }
@@ -51,13 +52,13 @@
         ('$id_usuario', '$telefone', '$cpf')";
 
         if(mysqli_query($link, $sql_insert_cliente)){
-            return true; // *
+            return true;
             
         } 
         else{
             die( "Erro $sql_insert_usuario. " . mysqli_error($link));
         }
 
-mysqli_close($link);
+    mysqli_close($link);
 
 ?>
