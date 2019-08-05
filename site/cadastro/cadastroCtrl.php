@@ -9,12 +9,24 @@
     $senha = $_POST["senha"];
     $confirmarsenha = $_POST["confirmarsenha"];
 
+    session_start();
+
     // Check confirmarsenha
     if ($senha != $confirmarsenha) {    
         $erro = "As senhas não coincidem";        
         $_SESSION["erro"] = $erro;
-        header("Location: cadastro.php");
+        header("Location: cadastroView.php");
         exit();
+    }
+
+    $erro = "";
+
+    if (cadastroUsuario($nome, $senha, $senha)) {
+        header("Location: ../login.php");
+    } else {
+        $erro = "Email indisponível";        
+        $_SESSION["erro"] = $erro;
+        header("Location: cadastroView.php");
     }
     
 ?>
