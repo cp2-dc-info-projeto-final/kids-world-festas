@@ -61,10 +61,3 @@
 mysqli_close($link);
 
 ?>
-
-    
-    
-
-    }
-
-?>
