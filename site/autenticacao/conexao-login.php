@@ -1,14 +1,5 @@
 <?php
-    $email = $_POST["email"];
-    $senha = $_POST["senha"];
-    $connection = mysqli_connect("localhost", "root", "", "kids_world_festas");
- 
-    // Check connection
-    if($connection === false){
-        die("Erro de conexão" . mysqli_connect_error());
-    }
-    session_start();
-    
+
     $sql = "SELECT senha, nome FROM usuario WHERE email='$email'";
     $result = mysqli_query($connection, $sql);
     $erro = "";
