@@ -22,8 +22,9 @@
     $erro = "";
 
     if (cadastrarUsuario($nome, $email, $senha, $telefone, $cpf)) {
-        header("Location: ../login.php");
-    } else {
+        header("Location: ../autenticacao/loginView.php");
+    } 
+    else {
         $erro = "Email indisponível";        
         $_SESSION["erro"] = $erro;
         header("Location: cadastroView.php");

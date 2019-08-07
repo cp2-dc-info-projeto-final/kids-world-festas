@@ -73,7 +73,7 @@
         </div>
     </main>
     <center>
-        <form action="conexao-login.php" method="POST">
+        <form action="loginCtrl.php" method="POST">
             <fieldset>
                 <h2>Login</h2>
                 <p>
