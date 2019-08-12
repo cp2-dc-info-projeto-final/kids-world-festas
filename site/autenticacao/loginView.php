@@ -63,10 +63,10 @@
             <div class="sign">
                 <ul>
                     <li>
-                        <a href="./login.php">Sign In</a>
+                        <a href="./login.php">Logue-se</a>
                     </li>
                     <li>
-                        <a href="./cadastro.php">Sign Up</a>
+                        <a href="./cadastro.php">Cadastrar</a>
                     </li>
                 </ul>
             </div>
