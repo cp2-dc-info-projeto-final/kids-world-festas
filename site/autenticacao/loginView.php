@@ -2,7 +2,7 @@
 
 <head>
     <title>Cadastro</title>
-    <link rel="Stylesheet" type="text/css" href="css/main.css" media="screen" />
+    <link rel="Stylesheet" type="text/css" href="../css/main.css" media="screen" />
 </head>
 
 <body>
@@ -10,8 +10,8 @@
         <main>
             <div class="header-1">
                 <div class="logo">
-                    <a href="./index.html">
-                        <img src="./img/logo-p1.png" />
+                    <a href="../index.html">
+                        <img src="../img/logo-p1.png" />
                     </a>
                 </div>
                 <div class="redes-sociais">
@@ -19,22 +19,22 @@
                     <ul>
                         <li>
                             <a href="#">
-                                <img src="./img/instagram.png" />
+                                <img src="../img/instagram.png" />
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="./img/email.png" />
+                                <img src="../img/email.png" />
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="./img/facebook.png" />
+                                <img src="../img/facebook.png" />
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="./img/whatsapp.png" />
+                                <img src="../img/whatsapp.png" />
                             </a>
                         </li>
                     </ul>
@@ -47,7 +47,7 @@
             <div class="menu">
                 <ul>
                     <li>
-                        <a href="./index.html">Home</a>
+                        <a href="../index.html">Home</a>
                     </li>
                     <li>
                         <a href="#">Produtos</a>
@@ -63,10 +63,10 @@
             <div class="sign">
                 <ul>
                     <li>
-                        <a href="./login.php">Sign In</a>
+                        <a href="./loginView.php">Logar</a>
                     </li>
                     <li>
-                        <a href="./cadastro.php">Sign Up</a>
+                        <a href="../cadastro/cadastroView.php">Cadastrar</a>
                     </li>
                 </ul>
             </div>
@@ -74,29 +74,27 @@
     </main>
     <center>
         <form action="loginCtrl.php" method="POST">
-            <fieldset>
-                <h2>Login</h2>
-                <p>
-                    <label for="email">E-mail:</label>
-                    <input type="text" placeholder="Digite seu e-mail" name="email" id="email" value="">
-                </p>
-                <p>
-                    <label for="senha">Senha:</label>
-                    <input type="password" placeholder="Digite sua senha" name="senha" id="senha" value="">
-                </p>
-                <input type="submit" value="Entrar">
-                <?php
-                    session_start();
-                    if(array_key_exists('erro', $_SESSION) == true){
-                        $erro = $_SESSION["erro"];
-                        echo "<br><b>$erro</br>";
-                        session_unset();
-                    }
-                ?>
-                <p>
+            <h2>Login</h2>
+            <p>
+                <label for="email">E-mail:</label>
+                <input type="text" placeholder="Digite seu e-mail" name="email" id="email" value="">
+            </p>
+            <p>
+                <label for="senha">Senha:</label>
+                <input type="password" placeholder="Digite sua senha" name="senha" id="senha" value="">
+            </p>
+            <input type="submit" value="Entrar">
+            <?php
+                session_start();
+                if(array_key_exists('erro', $_SESSION) == true){
+                    $erro = $_SESSION["erro"];
+                    echo "<br><b>$erro</br>";
+                    session_unset();
+                }
+            ?>
+            <p>
                     <a href="./cadastro.php">Cadastre-se</a>
-                </p>
-            </fieldset>
+            </p>
         </form>
     </center>
 </body>
