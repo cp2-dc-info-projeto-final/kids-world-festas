@@ -1,5 +1,4 @@
 <html>
-
 <head>
     <meta charset="utf-8" />
     <title>Calendário</title>
@@ -64,7 +63,11 @@
 </head>
 
 <body>
-    <p>Data: <input type="text" id="calendario" /></p>
+<p>Data: <input type="text" id="calendario" /></p>
+<?php   
+    echo  $date;
+
+?>    
 </body>
 
 </html>
