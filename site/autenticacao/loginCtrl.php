@@ -9,7 +9,7 @@
 
     if (logar($email, $senha) == true) {
         session_unset();
-        $_SESSION["email"] = $row["email"];
+        $_SESSION["nome"] = $row["nome"];
         header("Location: ../index.html");
         exit();
     }
