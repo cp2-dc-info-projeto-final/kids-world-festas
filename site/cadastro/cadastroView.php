@@ -2,7 +2,7 @@
 
 <head>
     <title>Cadastro</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" media="screen" />
 </head>
 
 <body>
@@ -10,8 +10,8 @@
         <main>
             <div class="header-1">
                 <div class="logo">
-                    <a href="./index.html">
-                        <img src="./img/logo-p1.png" />
+                    <a href="../index.html">
+                        <img src="../img/logo-p1.png" />
                     </a>
                 </div>
                 <div class="redes-sociais">
@@ -19,22 +19,22 @@
                     <ul>
                         <li>
                             <a href="#">
-                                <img src="./img/instagram.png" />
+                                <img src="../img/instagram.png" />
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="./img/email.png" />
+                                <img src="../img/email.png" />
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="./img/facebook.png" />
+                                <img src="../img/facebook.png" />
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="./img/whatsapp.png" />
+                                <img src="../img/whatsapp.png" />
                             </a>
                         </li>
                     </ul>
@@ -47,7 +47,7 @@
             <div class="menu">
                 <ul>
                     <li>
-                        <a href="./index.html">Home</a>
+                        <a href="../index.html">Home</a>
                     </li>
                     <li>
                         <a href="#">Produtos</a>
@@ -63,10 +63,10 @@
             <div class="sign">
                 <ul>
                     <li>
-                        <a href="./login.php">Logue-se</a>
+                        <a href="../autenticacao/loginView.php">Logar</a>
                     </li>
                     <li>
-                        <a href="./cadastro.php">Cadastrar</a>
+                        <a href="./cadastroView.php">Cadastrar</a>
                     </li>
                 </ul>
             </div>
@@ -75,36 +75,34 @@
     <center>
         <!-- Estilizar Formulário -->
         <form action="cadastroCtrl.php" method="POST">
-            <fieldset>
-                <h2>Cadastro</h2>
-                <p>
-                    <label for="nome">Nome:</label>
-                    <input type="text" name="nome" id="nome" placeholder="Nome" required="required" value="">
-                </p>
-                <p>
-                    <label for="email">E-mail:</label>
-                    <input type="text" name="email" id="email" placeholder="E-mail" required="required" value="">
-                </p>
-                <p>
-                    <label for="cpf">CPF:</label>
-                    <input type="text" name="cpf" id="cpf" placeholder="CPF" required="required" value="">
-                </p>
-                <p>
-                    <label for="telefone">Telefone:</label>
-                    <input type="text" name="telefone" id="telefone" placeholder="Telefone" required="required" value="">
-                </p>
-                <p>
-                    <label for="senha">Senha:</label>
-                    <input type="password" name="senha" id="senha" placeholder="Senha" required="required" value="">
-                </p>
-                <p>
-                    <label for="confirmarsenha">Confirmar senha:</label>
-                    <input type="password" name="confirmarsenha" id="confirmarsenha" placeholder="Confirmar senha" required="required" value="">
-                </p>
-                <p>
-                    <input type="submit" name="enviar" value="Enviar">
-                </p>
-            </fieldset>
+            <h2>Cadastro</h2>
+            <p>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" placeholder="Nome" required="required" value="">
+            </p>
+            <p>
+                <label for="email">E-mail:</label>
+                <input type="text" name="email" id="email" placeholder="E-mail" required="required" value="">
+            </p>
+            <p>
+                <label for="cpf">CPF:</label>
+                <input type="text" name="cpf" id="cpf" placeholder="CPF" required="required" value="">
+            </p>
+            <p>
+                <label for="telefone">Telefone:</label>
+                <input type="text" name="telefone" id="telefone" placeholder="Telefone" required="required" value="">
+            </p>
+            <p>
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" id="senha" placeholder="Senha" required="required" value="">
+            </p>
+            <p>
+                <label for="confirmarsenha">Confirmar senha:</label>
+                <input type="password" name="confirmarsenha" id="confirmarsenha" placeholder="Confirmar senha" required="required" value="">
+            </p>
+            <p>
+                <input type="submit" name="enviar" value="Enviar">
+            </p>
             <?php
                 session_start();
                 if(array_key_exists('erro', $_SESSION) == true){
