@@ -11,6 +11,13 @@
 
     session_start();
 
+    if(!preg_match("/^([a-zA-Z' ]+)$/",$nome)){
+        $erro = "Seu nome tá errado mané!";        
+        $_SESSION["erro"] = $erro;
+        header("Location: cadastroView.php");
+        exit();
+    }
+
     // Check confirmarsenha
     if ($senha != $confirmarsenha) {    
         $erro = "As senhas não coincidem";        

@@ -59,6 +59,6 @@
             die( "Erro $sql_insert_usuario. " . mysqli_error($link));
         }
 
-    mysqli_close($link);
-
+        mysqli_close($link);
+    }
 ?>
