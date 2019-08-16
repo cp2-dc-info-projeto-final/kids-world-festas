@@ -1,53 +1,144 @@
 <html>
- <head>
- <title>Formulário de agendamento</title>
- <meta charset="utf-8">
- <link rel="stylesheet" type="text/css" href="style.css">
- </head>
+
+<head>
+    <title>Kids World Festas</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/main.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+
+</head>
 
 <body>
+    <header class="menu-principal">
+        <main>
+            <div class="header-1">
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="../img/logo-p1.png" />
+                    </a>
+                </div>
+                <div class="redes-sociais">
+                    <!-- Direito dos usos dos icons <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="../img/instagram.png" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../img/email.png" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../img/facebook.png" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../img/whatsapp.png" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </header>
+    <main class="main100 menus">
+        <div class="header-2">
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Produtos</a>
+                    </li>
+                    <li>
+                        <a href="#">Quem Somos</a>
+                    </li>
+                    <li>
+                        <a href="#">Contato</a>
+                    </li>
+                    <li>
+                        <a href="../agendar/formagendar.html">Agendar</a>
+                    </li>
+                    <li>
+                        <a href="#">Meus Agendamentos</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sign">
+                <ul>
+                    <li>
+                        <a href="../autenticacao/loginView.php">Logar</a>
+                    </li>
+                    <li>
+                        <a href="../cadastro/cadastroView.php">Cadastrar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
 
-<div class="formagendamento" >
 
-<form name="formteste" action="" method="post">
-        <fieldset><legend><h1>Agende sua data </h1></legend> 
+    <center>
+    <form name="agendamento" class="form1" action="" method="post">
+        <fieldset>
+            <h2>Agende sua data </h2>
 
 
-<h3>Agende sua festa ou evento e entraremos em contato com você pelo whatsapp ou email.</h3>
-<h5>Os valores podem mudar dependendo da quantidade de pessoas ou horas do evento</h5>
+            <h3>Agende sua festa ou evento e entraremos em contato com você pelo whatsapp ou email.</h3>
+            <h5>Os valores podem mudar dependendo da quantidade de pessoas ou horas do evento</h5>
 
-<p class="Data">
- Data do evento: <input type="date" name="nome" placeholder="informe seu nome" required="required">
- </p>
+            <p class="Data">
+                Data do evento: <input type="date" name="nome" placeholder="informe seu nome" required="required">
+            </p>
 
-<p class="hora">
- Hora do evento: <input type="time" name="hora" placeholder="informe seu email" required="required">
- </p>
+            <p class="hora">
+                Hora do evento: <input type="time" name="hora" placeholder="informe seu email" required="required">
+            </p>
+            <p class="qtd-horas">
+                Quantidade de horas do evento: <input type="text" name="hora"
+                    placeholder="Serão quantas horas de evento?" required="required">
+            </p>
 
-<p class="Endereço">
- Endereço do evento: <input type="text" name="Endereço" placeholder="informe o Endereço" required="required">
- </p>
- <p class="Bairro">
-    Bairro do evento: <input type="text" name="Bairro" placeholder="informe o Bairro" required="required">
- </p>
- <p class="CEP">
- CEP do evento: <input type="text" name="CEP" placeholder="informe o CEP" required="required">
-        </p>
- 
-    <input type="radio" name="Pipoqueira de cinema1" value="Pipoqueira de cinema1">Pipoqueira (220V) <br>
-    <input type="radio" name="Pipoqueira de cinema2" value="Pipoqueira de cinema2">Pipoqueira (120V) <br>
-    <input type="radio" name="Máquina de algodão doce" value="Máquina de algodão doce"> Maquina de algodão doce <br>
-    <input type="radio" name="trenzinho de lanches" value="trenzinho de lanches">Trenzinho de lanches <br>
-    <input type="radio" name="Máquina de churros" value="Máquina de churros"> Máquina de churros <br>
-    <input type="radio" name="Cama elástica" value="Cama elástica">Cama elástica <br>
-   
-    
-<p class="enviar">
- <input type="submit" name="enviar" value="Enviar">
- </p>
-</fieldset>
-</form>
+            <p class="Endereço">
+                Endereço do evento: <input type="text" name="Endereço" placeholder="informe o Endereço"
+                    required="required">
+            </p>
+            <p class="Bairro">
+                Bairro do evento: <input type="text" name="Bairro" placeholder="informe o Bairro" required="required">
+            </p>
+            <p class="CEP">
+                CEP do evento: <input type="text" name="CEP" placeholder="informe o CEP" required="required">
+            </p>
 
-</div>
+            <input type="radio" name="Pipoqueira de cinema1" value="Pipoqueira de cinema1">Pipoqueira (220V) <br>
+            <input type="radio" name="Pipoqueira de cinema2" value="Pipoqueira de cinema2">Pipoqueira (120V) <br>
+            <input type="radio" name="Máquina de algodão doce" value="Máquina de algodão doce"> Maquina de algodão doce
+            <br>
+            <input type="radio" name="trenzinho de lanches" value="trenzinho de lanches">Trenzinho de lanches <br>
+            <input type="radio" name="Máquina de churros" value="Máquina de churros"> Máquina de churros <br>
+            <input type="radio" name="Cama elástica" value="Cama elástica">Cama elástica <br>
+
+
+            <p class="enviar">
+                <input type="submit" name="enviar" value="Enviar">
+            </p>
+        </fieldset>
+    </form>
+    </center>
+
+
+
+
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script type="text/javascript" src="./js/jquery-migrate.js"></script>
+    <script type="text/javascript" src="./js/slick.min.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
 </body>
- </html>
+
+</html>

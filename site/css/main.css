@@ -192,3 +192,12 @@ li.slick-active button {
     display: inline-block;
     padding-left: 10px;
 }
+
+/* formulário de agendamento*/
+form{
+    text-align: justify;
+
+   }
+
+.form1{width: 30%;
+       height: 30%;;}
