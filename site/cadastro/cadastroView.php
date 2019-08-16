@@ -3,6 +3,7 @@
 <head>
     <title>Cadastro</title>
     <link rel="stylesheet" type="text/css" href="../css/main.css" media="screen" />
+    <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>     
 </head>
 
 <body>
@@ -86,11 +87,11 @@
             </p>
             <p>
                 <label for="cpf">CPF:</label>
-                <input type="text" name="cpf" id="cpf" placeholder="CPF" required="required" value="">
+                <input type="text" name="cpf" id="cpf" placeholder="CPF" required="required" value="" >
             </p>
             <p>
                 <label for="telefone">Telefone:</label>
-                <input type="text" name="telefone" id="telefone" placeholder="Telefone" required="required" value="">
+                <input type="tel" name="telefone" id="telefone" placeholder="Telefone" required="required" value="">
             </p>
             <p>
                 <label for="senha">Senha:</label>
