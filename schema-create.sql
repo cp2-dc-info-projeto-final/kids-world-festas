@@ -35,7 +35,7 @@ CREATE TABLE locacao(
     id_cliente INT NOT NULL,
     id_endereco INT NOT NULL,
     dia DATE NOT NULL,
-    qtd_horas INT NOT NULL.
+    qtd_horas INT NOT NULL,
     hora_inicio TIME NOT NULL,
     FOREIGN KEY(id_cliente) REFERENCES cliente(id),
     FOREIGN KEY(id_endereco) REFERENCES endereco(id)

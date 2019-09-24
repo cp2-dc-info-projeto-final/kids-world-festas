@@ -17,13 +17,13 @@
             // output data pf each row
             while($row = mysqli_fetch_assoc($result)) {
                 $hash = $row["senha"];
-
+                
                 if(password_verify($senha, $hash)) {
                     return true;
                 } else {
                     return false;
                 }
-            }
+        }
         } else {
             return false;
         }
