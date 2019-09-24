@@ -72,7 +72,7 @@
   <!-- Services -->
   <section class="bg-light page-section" id="services">
         <center>
-            <form action="loginCtrl.php" method="POST">
+            <form action="./login/loginCtrl.php" method="POST">
                 <h2>Login</h2>
                 <p>
                     <label for="email">E-mail:</label>
