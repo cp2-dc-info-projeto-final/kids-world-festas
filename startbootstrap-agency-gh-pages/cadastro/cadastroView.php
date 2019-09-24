@@ -1,14 +1,21 @@
 <html>
 
 <head>
+   
     <title>Cadastro</title>
+    <link href="css/agency.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/main.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/agency.min.css" media="screen" />
+
     <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>     
 </head>
 
-<body>
+<body id= "cadastro">
+    
     <center>
         <!-- Estilizar Formulário -->
+       
+        <div class="cad">
         <form action="cadastroCtrl.php" method="POST">
             <h2>Cadastro</h2>
             <p>
@@ -46,7 +53,11 @@
                 }
             ?>
         </form>
+        <div>
+
+        
     </center>
+        
 </body>
 
 </html>

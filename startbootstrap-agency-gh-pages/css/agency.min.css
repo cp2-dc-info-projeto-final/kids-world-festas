@@ -677,3 +677,22 @@ ul.social-buttons li a {
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
     background-color: #fed136
 }
+
+
+#cadastro {
+    text-align: center;
+    color: #000;
+    background-image: url(../img/cad.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover
+}
+
+
+.cad{background-color: blanchedalmond;
+     width: 500px;
+    height: 500px;
+    filter:alpha(opacity=60);-moz-opacity: 0.6;opacity: 0.6;
+    }
+

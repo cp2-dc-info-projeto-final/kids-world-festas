@@ -37,8 +37,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">Serviços</a>
+        <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">login</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#portfolio">Produtos</a>
@@ -62,15 +62,14 @@
     <div class="container">
       <div class="intro-text">
         <div class="intro-lead-in">Seja bem-vindo ao nosso site!</div>
-        <div class="intro-heading text-uppercase">Kids World Festas</div>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="./login/loginView.php">Login</a>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="./cadastro/cadastroView.php">Cadastre-se</a>
+        <div class="intro-heading text-uppercase">Kids World Festas</div>        
+       <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="./cadastro/cadastroView.php">Cadastre-se</a>
       </div>
     </div>
   </header>
 
   <!-- Services -->
-  <section class="bg-light page-section" id="services">
+  <section class="page-section" id="services">
         <center>
             <form action="loginCtrl.php" method="POST">
                 <h2>Login</h2>
