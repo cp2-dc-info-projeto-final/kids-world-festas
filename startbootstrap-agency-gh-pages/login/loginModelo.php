@@ -9,7 +9,7 @@
             die("Erro de conexão" . mysqli_connect_error());
         }
 
-        $sql_select_usuario = "SELECT senha, nome FROM usuario email='$email'";
+        $sql_select_usuario = "SELECT senha, nome FROM usuario WHERE email='$email'";
 
         $result = mysqli_query($connection, $sql_select_usuario);
         
@@ -23,10 +23,10 @@
                 } else {
                     return false;
                 }
-        }
+            }
         } else {
             return false;
         }
-        mysqli_close($connection)
+        mysqli_close($connection);
     }
 ?>
