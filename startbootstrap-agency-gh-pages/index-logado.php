@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Agency - Start Bootstrap Theme</title>
+  <title>Kids World Festas</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -37,17 +37,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
-        <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services"></a>
-          </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#portfolio">Produtos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">Quem Somos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+            <a class="nav-link js-scroll-trigger" href="#about">Sobre</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Agendamento</a>
@@ -100,7 +94,7 @@
             <img class="img-fluid" src="./img/portfolio/maq_algdoce-thumbnail.png" alt="">
           </a>
           <div class="portfolio-caption">
-            <h4>Máquina de Algodão Doce</h4>
+            <h4>Algodão Doce</h4>
             <p class="text-muted">Máquinas</p>
           </div>
         </div>
@@ -156,8 +150,8 @@
             <img class="img-fluid" src="./img/portfolio/trem-thumbnail.png" alt="">
           </a>
           <div class="portfolio-caption">
-            <h4>Trenzinho de Lanches</h4>
-            <p class="text-muted">Lanchinhos</p>
+            <h4>Trenzinho de lanches</h4>
+            <p class="text-muted">lanchinhos </p>
           </div>
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
@@ -183,8 +177,8 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">About</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          <h2 class="section-heading text-uppercase">Sobre</h2>
+          <h3 class="section-subheading text-muted">Conheça um pouco da nossa história</h3>
         </div>
       </div>
       <div class="row">
@@ -192,65 +186,51 @@
           <ul class="timeline">
             <li>
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/about/1.jpg" alt="">
+                <img class="rounded-circle img-fluid" src="img/about1.jpeg" alt="">
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
-                  <h4>2009-2011</h4>
-                  <h4 class="subheading">Our Humble Beginnings</h4>
+                  <h4>2016</h4>
+                  <h4 class="subheading"> O início</h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                  <p class="text-muted">A história da umpresa teve início em 2016, quando fizemos nossa primeira festa com algodão doce e pipoqueira de cinema.</p>
                 </div>
               </div>
             </li>
             <li class="timeline-inverted">
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/about/2.jpg" alt="">
+                <img class="rounded-circle img-fluid" src="img/about2.jpeg" alt="">
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
-                  <h4>March 2011</h4>
-                  <h4 class="subheading">An Agency is Born</h4>
+                  <h4 class="subheading"> Mudanças </h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                  <p class="text-muted">Houveram muitas mudanças desde a nossa primeira festa. Compramos mais equipamentos e hoje nossa empresa tem 7 máquinas e 1 brinquedo. </p>
                 </div>
               </div>
             </li>
             <li>
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">
+                <img class="rounded-circle img-fluid" src="img/about3.jpeg" alt="">
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
-                  <h4>December 2012</h4>
-                  <h4 class="subheading">Transition to Full Service</h4>
+                  <h4 class="subheading"> Seja parte do nosso mundo </h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                  <p class="text-muted">Nosso objetivo é sempre trazer a alegria, sabor e diversão ao seu evento, fazendo com que ele se torne único e especial. Deixe-nos fazer parte do seu mundo! Agende sua data.</p>
                 </div>
               </div>
             </li>
             <li class="timeline-inverted">
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/about/4.jpg" alt="">
-              </div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4>July 2014</h4>
-                  <h4 class="subheading">Phase Two Expansion</h4>
-                </div>
-                <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-inverted">
-              <div class="timeline-image">
-                <h4>Be Part
-                  <br>Of Our
-                  <br>Story!</h4>
+                
+                  <h4>Agende
+                  <br>sua
+                  <br>Data!</h4>
+                
               </div>
             </li>
           </ul>
@@ -258,8 +238,7 @@
       </div>
     </div>
   </section>
-
-  <!-- Team -->
+  <!-- Team 
   <section class="bg-light page-section" id="team">
     <div class="container">
       <div class="row">
@@ -300,8 +279,7 @@
         </div>
       </div>
     </div>
-  </section>
-
+  </section> -->
   <!-- Clients -->
   <section class="py-5">
     <div class="container">
@@ -417,8 +395,8 @@
 
   <!-- Portfolio Modals -->
 
-  <!-- Modal 1 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+ <!-- Modal 1 -->
+ <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="close-modal" data-dismiss="modal">
@@ -431,14 +409,12 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <h2 class="text-uppercase">Algodão doce</h2>
+               
+                <img class="img-fluid d-block mx-auto" src="img/maq_algdoce.jpg" alt="">
+                <p> Estação de algodão doce para até 100 pessoas</p>
                 <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Threads</li>
-                  <li>Category: Illustration</li>
+                    <li>Preço: R$150,00 (4 horas)</li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
@@ -465,14 +441,11 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                <h2 class="text-uppercase">Pipoqueira</h2>
                 <img class="img-fluid d-block mx-auto" src="img/pipoqueira.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <p>Estação de pipoqueira de cinema para até 100 pessoas </p>
                 <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Explore</li>
-                  <li>Category: Graphic Design</li>
+                    <li>Preço: R$200,00 (4 horas)</li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
@@ -499,14 +472,12 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <h2 class="text-uppercase">Churros</h2>
+                <img class="img-fluid d-block mx-auto" src="img/churros.jpg" alt="">
+                <p>Estação de churros gourmet para 100 pessoas</p>
+                <p>Confeitos: Granulado, paçoca, chocobol e confete.</p>
                 <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Finish</li>
-                  <li>Category: Identity</li>
+                    <li>Preço: R$450,00 (4 horas)</li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
@@ -533,14 +504,13 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/04-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <h2 class="text-uppercase">Crepe</h2>
+                <img class="img-fluid d-block mx-auto" src="img/crepe.jpg" alt="">
+                <p>Rodízio de crepe para até 100 pessoas</p>
+                <p>Sabores: frango,frango com catupiry, queijo, calabresa, queijo, queijo com presunto, Romeu e Julieta, banana caramelizada e chocolate.</p>  </p>
                 <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Lines</li>
-                  <li>Category: Branding</li>
+                    <li>Preço: R$550,00</li>
+
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
@@ -567,14 +537,18 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/05-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <h2 class="text-uppercase">Trenzinho</h2>
+                <img class="img-fluid d-block mx-auto" src="img/trem.jpg" alt="">
+                <h1> Trenzinho de lanches</h1>
+                <p>Lanchinhos: Batata frita, pão de queijo, mini hot dog, mini pizza, mini hamburguer e nuggets.</p>
                 <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Southwest</li>
-                  <li>Category: Website Design</li>
+                    <li>Preço: R$395,00 (300 lanches)</li>
+                    <li>Preço: R$495,00 (400 lanches)</li>
+                    <li>Preço: R$595,00 (500 lanches)</li>
+                    <li>Preço: R$695,00 (600 lanches)</li>
+                    <li>Preço: R$795,00 (700 lanches)</li>
+                    <li>Categoria: Lanches</li>
+                    
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
@@ -604,10 +578,14 @@
                 <h2 class="text-uppercase">Pula-Pula</h2>
                 <!--<p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>-->
                 <img class="img-fluid d-block mx-auto" src="img/portfolio/pula-pula.jpg" alt="">
-                <p>Pula-Pula do Amor. Amém</p>
+                <h1>Cama Elástica</h1>
                 <ul class="list-inline">
-                  <li>Preço: R$ 2.000.000.000,00</li>
+
+                  <li>Preço: R$120,00 sem monitor</li>
+                  <li>Preço: R$150,00 com monitor</li>
                   <li>Categoria: Brinquedo</li>
+                  <li>Tamanho: 3,05m</li>
+
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
