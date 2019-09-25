@@ -171,7 +171,7 @@
           </a>
           <div class="portfolio-caption">
             <h4>Trenzinho de lanches</h4>
-            <p class="text-muted">lanchinhos</p>
+            <p class="text-muted">lanchinhos </p>
           </div>
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
