@@ -114,10 +114,10 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/maq_algdoce.jpg" alt="">
+            <img class="img-fluid" src="./img/portfolio/maq_algdoce-thumbnail.png" alt="">
           </a>
           <div class="portfolio-caption">
-            <h4>Máquina de algodão doce</h4>
+            <h4>Máquina de Algodão Doce</h4>
             <p class="text-muted">Máquinas</p>
           </div>
         </div>
@@ -128,7 +128,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/pipoqueira.jpg" alt="">
+            <img class="img-fluid" src="./img/portfolio/pipoqueira-thumbnail.png" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Pipoqueira</h4>
@@ -142,10 +142,10 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/churros.jpg" alt="">
+            <img class="img-fluid" src="./img/portfolio/churros-thumbnail.png" alt="">
           </a>
           <div class="portfolio-caption">
-            <h4>Máquina de churros</h4>
+            <h4>Máquina de Churros</h4>
             <p class="text-muted">Máquinas</p>
           </div>
         </div>
@@ -156,7 +156,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/crepe.jpg" alt="">
+            <img class="img-fluid" src="./img/portfolio/crepe-thumbnail.png" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Crepe</h4>
@@ -170,11 +170,11 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/trem.jpg" alt="">
+            <img class="img-fluid" src="./img/portfolio/trem-thumbnail.png" alt="">
           </a>
           <div class="portfolio-caption">
-            <h4>Trenzinho de lanches</h4>
-            <p class="text-muted">lanchinhos</p>
+            <h4>Trenzinho de Lanches</h4>
+            <p class="text-muted">Lanchinhos</p>
           </div>
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
@@ -184,7 +184,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/pula-pula.jpg" alt="">
+            <img class="img-fluid" src="./img/portfolio/pula-pula-thumbnail.png" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Pula-Pula</h4>
