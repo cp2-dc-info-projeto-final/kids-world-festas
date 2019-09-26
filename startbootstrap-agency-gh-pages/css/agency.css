@@ -176,7 +176,7 @@ img::-moz-selection {
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url("../img/eu-2.jpg");
+  background-image: url("../img/ft1.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -591,14 +591,11 @@ header.masthead .intro-text .intro-heading {
 }
 
 section#contact {
-  background-color: #212529;
-  background-image: url("../img/map-image.png");
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: #fff
 }
 
 section#contact .section-heading {
-  color: #fff;
+  color: #212529;
 }
 
 section#contact .form-group {
