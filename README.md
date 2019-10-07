@@ -4,7 +4,7 @@
 Um site desenvolvido para a empresa kids world festas.
 
 ## Objetivos: 
-Auxiliar na organização da empresa e tornar os serviços de aluguel,reserva e pagamentos dos equipamentos mais acessiveis para os clientes.
+Auxiliar na organização da empresa e tornar os serviços de aluguel, reserva e pagamentos dos equipamentos mais acessíveis para os clientes.
 
 
 ## Principais funcionalidades:
