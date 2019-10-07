@@ -247,7 +247,7 @@
         <div class="col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">Agendamento</h2>
           <h3 class="section-subheading text-muted">Agende a data da sua festa conosco.</h3>
-          <h3 class="section-subheading text-muted">OS preços selecionados no site são para 4 horas de festas, o maximo de 100 pessoas e para festas infantis. Caso seja uma empresa ou sua festa tenha mais de 4 horas de festas ou mais de 100 pessoas, entre em contato conosco pelo whatsapp ou email.</h3>
+          <h3 class="section-subheading text-muted">Os preços selecionados no site são para 4 horas de festas, o maximo de 100 pessoas e para festas infantis. Caso seja uma empresa ou sua festa tenha mais de 4 horas de festas ou mais de 100 pessoas, entre em contato conosco pelo whatsapp ou email.</h3>
         </div>
       </div>
       <div class="row">
@@ -256,20 +256,20 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <input class="form-control" id="data" type="text" placeholder="Data do evento *" required="required" data-validation-required-message="Please enter your name.">
+                  <input class="form-control" id="data" type="date" placeholder="Data do evento *" required="required" data-validation-required-message="Por favor, digite a data do evento.">
                   <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group">
-                  Horário <input class="form-control" id="horario" type="time" placeholder="Horário do evento *" required="required" data-validation-required-message="Please enter your email address.">
+                  Horário <input class="form-control" id="horario" type="time" placeholder="Horário do evento *" required="required" data-validation-required-message="Por favor, digite o horário do evento.">
                   <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group">
-                    <input class="form-control" id="endereco" type="text" placeholder="Endereço do evento *" required="required" data-validation-required-message="Please enter your email address.">
+                    <input class="form-control" id="endereco" type="text" placeholder="Digite o endereço do evento *" required="required" data-validation-required-message="Por favor, digite o endereço do evento.">
                     <p class="help-block text-danger"></p>
                   </div>
 
                 <div class="form-group">
-                  <input class="form-control" id="Bairro" type="text" placeholder="digite o bairro do evento *" required="required" data-validation-required-message="Please enter your phone number.">
+                  <input class="form-control" id="Bairro" type="text" placeholder="Digite o bairro do evento *" required="required" data-validation-required-message="Por favor, digite o bairro do evento.">
                   <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group">
@@ -278,27 +278,27 @@
               </div>
               
             <div class= "col-md-6">
-                <h1 class="section-subheading text-muted">Selecione os produtos desejados.</h1>
-                <input type="radio" name="Pipoqueira de cinema1" value="Pipoqueira de cinema1">Pipoqueira (220V) <br>
-                <input type="radio" name="Pipoqueira de cinema2" value="Pipoqueira de cinema2">Pipoqueira (120V) <br>
-                <input type="radio" name="Máquina de algodão doce1" value="Máquina de algodão doce vermelha"> Maquina de algodão doce vermelha
-                <br>
-                <input type="radio" name="Máquina de algodão doce2" value="Máquina de algodão doce Prata"> Maquina de algodão doce prateada<br>
-                <input type="radio" name="trenzinho de lanches" value="trenzinho de lanches">Trenzinho de lanches <br>
-                <input type="radio" name="Máquina de churros" value="Máquina de churros"> Máquina de churros <br>
-                <input type="radio" name="Cama elástica" value="Cama elástica">Cama elástica <br>
-                <input type="radio" name="Crepe" value="Crepe"> Crepe <br>
+                <h1 class="section-subheading text-muted">Selecione os produtos desejados</h1>
+                <input type="checkbox" name="Pipoqueira de cinema1" value="Pipoqueira de cinema1"> Pipoqueira (220V) <br>
+                <input type="checkbox" name="Pipoqueira de cinema2" value="Pipoqueira de cinema2"> Pipoqueira (120V) <br>
+                <input type="checkbox" name="Máquina de algodão doce1" value="Máquina de algodão doce vermelha"> Maquina de algodão doce vermelh <br>
+                <input type="checkbox" name="Máquina de algodão doce2" value="Máquina de algodão doce Prata"> Maquina de algodão doce prateada<br>
+                <input type="checkbox" name="trenzinho de lanches" value="trenzinho de lanches"> Trenzinho de lanches <br>
+                <input type="checkbox" name="Máquina de churros" value="Máquina de churros"> Máquina de churros <br>
+                <input type="checkbox" name="Cama elástica" value="Cama elástica"> Cama elástica <br>
+                <input type="checkbox" name="Crepe" value="Crepe"> Crepe <br>
                 <h1 class="section-subheading text-muted"> Selecione a Zona</h1>
-                <input type="radio" name="norte" value="zn_norte">Zona Norte <br>
-                <input type="radio" name="Sul" value=" zn_sul">Zona Sul <br>
-                <input type="radio" name="Leste" value="zn_leste"> Zona Leste<br>
-                <input type="radio" name="Oeste" value=" zn_oeste">Zona Oeste <br>
-                <input type="radio" name="Baixada" value="zn_baixada">Baixada Fluminense <br>
+                <input type="checkbox" name="norte" id="zona" value="zn_norte" onclick="verificar()"> Zona Norte <br>
+                <input type="checkbox" name="Sul" id="zona" value=" zn_sul" onclick="verificar()"> Zona Sul <br>
+                <input type="checkbox" name="Leste" id="zona" value="zn_leste" onclick="verificar()"> Zona Leste<br>
+                <input type="checkbox" name="Oeste" id="zona" value=" zn_oeste" onclick="verificar()"> Zona Oeste <br>
+                <input type="checkbox" name="Baixada" id="zona" value="zn_baixada" onclick="verificar()"> Baixada Fluminense <br>
             </div>
 
               <div class="clearfix"></div>
               <div class="col-lg-12 text-center">
                 <div id="success"></div>
+                <br>
                 <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Agendar</button>
               </div>
             </div>
@@ -567,6 +567,8 @@
   <!-- Custom scripts for this template -->
   <script src="js/agency.min.js"></script>
 
+  <!-- Função Verificar -->
+  <script src="js/funcao_verificar.js"></script>
 </body>
 
 </html>
