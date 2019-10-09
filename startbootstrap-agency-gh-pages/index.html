@@ -15,7 +15,7 @@
 
   <!-- Custom fonts for this template -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:401,700" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
@@ -250,19 +250,21 @@
           <h3 class="section-subheading text-muted">Os preços selecionados no site são para 4 horas de festas, o maximo de 100 pessoas e para festas infantis. Caso seja uma empresa ou sua festa tenha mais de 4 horas de festas ou mais de 100 pessoas, entre em contato conosco pelo whatsapp ou email.</h3>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <form id="contactForm" name="sentMessage" novalidate="novalidate">
+      
+      
+    
+          <form id="contactForm" name="Buscprodutos" novalidate="novalidate">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-4 " class="col-md-offset-4"> 
                 <div class="form-group">
-                  <input class="form-control" id="data" type="date" placeholder="Data do evento *" required="required" data-validation-required-message="Por favor, digite a data do evento.">
+                 Data: <input class="form-control" id="data" type="date" placeholder="Data do evento *" required="required" data-validation-required-message="Por favor, digite a data do evento.">
                   <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group">
-                  Horário <input class="form-control" id="horario" type="time" placeholder="Horário do evento *" required="required" data-validation-required-message="Por favor, digite o horário do evento.">
+                  Horário: <input class="form-control" id="horario" type="time" placeholder="Horário do evento *" required="required" data-validation-required-message="Por favor, digite o horário do evento.">
                   <p class="help-block text-danger"></p>
                 </div>
+               <!-- tirando os dados 
                 <div class="form-group">
                     <input class="form-control" id="endereco" type="text" placeholder="Digite o endereço do evento *" required="required" data-validation-required-message="Por favor, digite o endereço do evento.">
                     <p class="help-block text-danger"></p>
@@ -276,7 +278,8 @@
                   Total<label class="form-control" id="total" type="number" aria-placeholder="total"></label>
                 </div>
               </div>
-              
+            -->
+             <!-- tirando os produtos 
             <div class= "col-md-6">
                 <h1 class="section-subheading text-muted">Selecione os produtos desejados</h1>
                 <input type="checkbox" name="Pipoqueira de cinema1" value="Pipoqueira de cinema1"> Pipoqueira (220V) <br>
@@ -294,18 +297,20 @@
                 <input type="checkbox" name="Oeste" id="zona" value=" zn_oeste" onclick="verificar()"> Zona Oeste <br>
                 <input type="checkbox" name="Baixada" id="zona" value="zn_baixada" onclick="verificar()"> Baixada Fluminense <br>
             </div>
+          -->
 
               <div class="clearfix"></div>
               <div class="col-lg-12 text-center">
                 <div id="success"></div>
                 <br>
-                <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Agendar</button>
+                <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Enviar</button>
               </div>
             </div>
+      
           </form>
+     
         </div>
-      </div>
-    </div>
+    
   </section>
 
   <!-- Footer -->
