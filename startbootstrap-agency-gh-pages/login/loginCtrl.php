@@ -10,7 +10,7 @@
     if (logar($email, $senha) == true) {
         session_unset();
         $_SESSION["nome"] = $row["nome"];
-        header("Location: ../index-logado.php");
+        header("Location: ../index-usuario.php");
         exit();
     }
     else {

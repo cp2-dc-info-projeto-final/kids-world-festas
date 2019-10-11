@@ -17,12 +17,13 @@
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+    type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
   <!-- Custom styles for this template -->
   <link href="css/agency.min.css" rel="stylesheet">
- <link href="css/agency.css" rel="stylesheet">
+  <link href="css/agency.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -31,7 +32,9 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">Kids Wolrd Festas</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
       </button>
@@ -55,10 +58,10 @@
   <header class="masthead">
     <div class="container">
       <div class="intro-text">
-       <!-- <div class="intro-lead-in">Seja bem-vindo ao nosso site!</div>-->
-        <div class="intro-heading text-uppercase">Kids World Festas</div>        
+        <!-- <div class="intro-lead-in">Seja bem-vindo ao nosso site!</div>-->
+        <div class="intro-heading text-uppercase">Kids World Festas</div>
         <div class="intro-lead-in">
-        <?php
+          <?php
             session_start();
             if(array_key_exists('nome', $_SESSION) == false){
                 header('Location: index.php');
@@ -111,7 +114,7 @@
             <h4>Pipoqueira</h4>
             <p class="text-muted">Máquinas</p>
           </div>
-         </div>
+        </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
             <div class="portfolio-hover">
@@ -171,86 +174,92 @@
       </div>
     </div>
   </section>
-    
+
 
   <!-- Meus agendamentos -->
   <section class="page-section" id="meusagendamentos">
     <center>
-       <div class="text-center" >
-         <h2 class="section-heading text-uppercase"> Meus Agendamentos</h2>
-          <h3 class="section-subheading text-muted"> Aqui estão os seus agendamentos</h3>
+      <div class="text-center">
+        <h2 class="section-heading text-uppercase"> Meus Agendamentos</h2>
+        <h3 class="section-subheading text-muted"> Aqui estão os seus agendamentos</h3>
       </div>
-      
-      <table style="border-collapse: collapse;" border="1">
-      <tr id="linha1"> 
-        <td>Data</td> 
-        <td>Horário</td> 
-        <td>Endereço</td> 
-        <td>Bairro</td>
-        <td>Produtos</td>
-        <td>Zona</td>
-        <td>Preço</td>
-        <td>Pagamento</td>
-      </tr> 
-      <tr>
-        <td>11/09/2020</td> 
-        <td>21:00</td> 
-        <td>Rua dos bobos, n°0</td> 
-        <td>Vila da Penha</td>
-        <td>Algodão doce, pipoqueira, crepe</td>
-        <td>Zona norte</td>
-        <td>R$500,00</td>
-        <td>Pago</td>
-      </tr>
-    </table>
-  
-    </div>
-    </div>
-    
- </center>
 
-  </section> 
- 
+      <table style="border-collapse: collapse;" border="1">
+        <tr id="linha1">
+          <td>Data</td>
+          <td>Horário</td>
+          <td>Endereço</td>
+          <td>Bairro</td>
+          <td>Produtos</td>
+          <td>Zona</td>
+          <td>Preço</td>
+          <td>Pagamento</td>
+        </tr>
+        <tr>
+          <td>11/09/2020</td>
+          <td>21:00</td>
+          <td>Rua dos bobos, n°0</td>
+          <td>Vila da Penha</td>
+          <td>Algodão doce, pipoqueira, crepe</td>
+          <td>Zona norte</td>
+          <td>R$500,00</td>
+          <td>Pago</td>
+        </tr>
+      </table>
+
+      </div>
+      </div>
+
+    </center>
+
+  </section>
+
   <!-- Clients -->
-  
+
 
   <!-- Contact -->
-    <section class="bg-light page-section" id="contact">
+  <section class="bg-light page-section" id="contact">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">Agendamento</h2>
           <h3 class="section-subheading text-muted">Agende a data da sua festa conosco.</h3>
-          <h3 class="section-subheading text-muted">Os preços selecionados no site são para 4 horas de festas, o maximo de 100 pessoas e para festas infantis. Caso seja uma empresa ou sua festa tenha mais de 4 horas de festas ou mais de 100 pessoas, entre em contato conosco pelo whatsapp ou email.</h3>
+          <h3 class="section-subheading text-muted">Os preços selecionados no site são para 4 horas de festas, o maximo
+            de 100 pessoas e para festas infantis. Caso seja uma empresa ou sua festa tenha mais de 4 horas de festas ou
+            mais de 100 pessoas, entre em contato conosco pelo whatsapp ou email.</h3>
         </div>
       </div>
-      
-      
-    
+
+
+      <center>
+
+       
           <form id="contactForm" name="Buscprodutos" novalidate="novalidate">
-            <div class="row">
+             <div class="row">
               <div class="col-md-4 "> 
-                <div class="form-group">
-                 Data: <input class="form-control" id="data" type="date" placeholder="Data do evento *" required="required" data-validation-required-message="Por favor, digite a data do evento.">
-                  <p class="help-block text-danger"></p>
-                </div>
-                <div class="form-group">
-                  Horário: <input class="form-control" id="horario" type="time" placeholder="Horário do evento *" required="required" data-validation-required-message="Por favor, digite o horário do evento.">
-                  <p class="help-block text-danger"></p>
-                </div>               
-              <div class="clearfix"></div>
-              <div class="col-lg-12 text-center">
-                <div id="success"></div>
-                <br>
-                <button id="Buscprodutos" class="btn btn-primary btn-xl text-uppercase" type="submit">Enviar</button>
-              </div>
+            <div class="form-group">
+              Data: <input class="form-control" id="data" type="date" placeholder="Data do evento *" required="required"
+                data-validation-required-message="Por favor, digite a data do evento.">
+              <p class="help-block text-danger"></p>
             </div>
-      
-          </form>
-     
-        </div>
-    
-    </section>
+            <div class="form-group">
+              Horário: <input class="form-control" id="horario" type="time" placeholder="Horário do evento *"
+                required="required" data-validation-required-message="Por favor, digite o horário do evento.">
+              <p class="help-block text-danger"></p>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-lg-12 text-center">
+              <div id="success"></div>
+              <br>
+              <button id="Buscprodutos" class="btn btn-primary btn-xl text-uppercase" type="submit">Enviar</button>
+            </div>
+            </div>
+           </form>
+
+
+    </div>
+    </Center>
+  </section>
 
   <!-- Footer -->
   <footer class="footer">
@@ -276,7 +285,7 @@
                 <i class="fab fa-whatsapp"></i>
               </a>
             </li>
-            
+
           </ul>
         </div>
         <div class="col-md-4">
@@ -295,8 +304,8 @@
 
   <!-- Portfolio Modals -->
 
- <!-- Modal 1 -->
- <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Modal 1 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="close-modal" data-dismiss="modal">
@@ -310,11 +319,11 @@
               <div class="modal-body">
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Algodão doce</h2>
-               
+
                 <img class="img-fluid d-block mx-auto" src="img/maq_algdoce.jpg" alt="">
                 <p> Estação de algodão doce para até 100 pessoas</p>
                 <ul class="list-inline">
-                    <li>Preço: R$150,00 (4 horas)</li>
+                  <li>Preço: R$150,00 (4 horas)</li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
@@ -345,7 +354,7 @@
                 <img class="img-fluid d-block mx-auto" src="img/pipoqueira.jpg" alt="">
                 <p>Estação de pipoqueira de cinema para até 100 pessoas </p>
                 <ul class="list-inline">
-                    <li>Preço: R$200,00 (4 horas)</li>
+                  <li>Preço: R$200,00 (4 horas)</li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
@@ -377,7 +386,7 @@
                 <p>Estação de churros gourmet para 100 pessoas</p>
                 <p>Confeitos: Granulado, paçoca, chocobol e confete.</p>
                 <ul class="list-inline">
-                    <li>Preço: R$450,00 (4 horas)</li>
+                  <li>Preço: R$450,00 (4 horas)</li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
@@ -407,9 +416,11 @@
                 <h2 class="text-uppercase">Crepe</h2>
                 <img class="img-fluid d-block mx-auto" src="img/crepe.jpg" alt="">
                 <p>Rodízio de crepe para até 100 pessoas</p>
-                <p>Sabores: frango,frango com catupiry, queijo, calabresa, queijo, queijo com presunto, Romeu e Julieta, banana caramelizada e chocolate.</p>  </p>
+                <p>Sabores: frango,frango com catupiry, queijo, calabresa, queijo, queijo com presunto, Romeu e Julieta,
+                  banana caramelizada e chocolate.</p>
+                </p>
                 <ul class="list-inline">
-                    <li>Preço: R$550,00</li>
+                  <li>Preço: R$550,00</li>
 
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
@@ -442,13 +453,10 @@
                 <h1> Trenzinho de lanches</h1>
                 <p>Lanchinhos: Batata frita, pão de queijo, mini hot dog, mini pizza, mini hamburguer e nuggets.</p>
                 <ul class="list-inline">
-                    <li>Preço: R$395,00 (300 lanches)</li>
-                    <li>Preço: R$495,00 (400 lanches)</li>
-                    <li>Preço: R$595,00 (500 lanches)</li>
-                    <li>Preço: R$695,00 (600 lanches)</li>
-                    <li>Preço: R$795,00 (700 lanches)</li>
-                    <li>Categoria: Lanches</li>
-                    
+                <li>Preço: R$595,00 (500 lanches)</li>
+                  
+                  <li>Categoria: Lanches</li>
+
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
@@ -482,7 +490,7 @@
                 <ul class="list-inline">
 
                   <li>Preço: R$120,00 sem monitor</li>
-                  <li>Preço: R$150,00 com monitor</li>
+                  
                   <li>Categoria: Brinquedo</li>
                   <li>Tamanho: 3,05m</li>
 
