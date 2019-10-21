@@ -22,7 +22,7 @@
                   <div class="row">
                     <div class="col-lg-12 text-center">
                       <h2 class="section-heading text-uppercase">Cadastro</h2>
-                      <h3 class="section-subheading text-muted">Cadastre-se e seja nosso cliente.</h3>
+                      <h3 class="section-subheading text-muted">Cadastre um administrador</h3>
                   </div>
                   <div class="row">
                     <div class="col-lg-12">
