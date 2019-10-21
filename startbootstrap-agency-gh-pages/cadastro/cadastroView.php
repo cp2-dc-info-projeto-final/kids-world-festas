@@ -30,30 +30,30 @@
                         <div class="row">
                           <div class="col-md-6">
                             <div class="form-group">
-                             <input class="form-control" id="nome" type="text" placeholder="Digite seu nome *" required="required" data-validation-required-message="Please enter your name.">
+                             <input class="form-control" id="nome" type="text" placeholder="Digite seu nome *" required="required" data-validation-required-message="Digite seu nome">
                               <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group">
-                               <input class="form-control" id="CPF" type="text" placeholder="Digite seu CPF *" required="required" data-validation-required-message="Please enter your email address.">
+                               <input class="form-control" id="CPF" type="text" placeholder="Digite seu CPF *" required="required" data-validation-required-message="Digite seu CPF">
                               <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" id="telefone" type="text" placeholder="Digite seu telefone *" required="required" data-validation-required-message="Please enter your email address.">
+                                <input class="form-control" id="telefone" type="text" placeholder="Digite seu telefone *" required="required" data-validation-required-message="Digite seu telefone ">
                                 <p class="help-block text-danger"></p>
                               </div>
             
                             <div class="form-group">
-                              <input class="form-control" id="senha" type="text" placeholder=" Digite sua senha *" required="required" data-validation-required-message="Please enter your phone number.">
+                              <input class="form-control" id="senha" type="text" placeholder=" Digite sua senha *" required="required" data-validation-required-message=" Digite sua senha.">
                               <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group">
-                                    <input class="form-control" id="conf_senha" type="text" placeholder="Confirme sua senha *" required="required" data-validation-required-message="Please enter your phone number.">
+                                    <input class="form-control" id="conf_senha" type="text" placeholder="Confirme sua senha *" required="required" data-validation-required-message="Confirme sua senha.">
                                     <p class="help-block text-danger"></p>
                                   </div>
                                   <div class="clearfix"></div>
                                   <div class="col-lg-12 text-center">
                                     <div id="success"></div>
-                                  <  <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Cadastrar</button>
+                                    <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Cadastrar</button>
                                   </div>
                                 </div>
                                   
