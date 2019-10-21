@@ -1,5 +1,5 @@
 <?php
-    function cadastrarCliente($nome, $email, $senha, $telefone, $cpf){
+    function cadastrarAdministrador($nome, $email, $senha){
         
         // conexão
         $link = mysqli_connect("localhost", "root", "", "kids_world_festas");
@@ -47,11 +47,11 @@
             $id_usuario = $row[0];
         }
 
-        // insert cliente
-        $sql_insert_cliente = "INSERT INTO cliente (id, telefone, cpf) VALUES
-        ('$id_usuario', '$telefone', '$cpf')";
+        // insert administrador
+        $sql_insert_administrador = "INSERT INTO administrador (id) VALUES
+        ('$id_usuario')";
 
-        if(mysqli_query($link, $sql_insert_cliente)){
+        if(mysqli_query($link, $sql_insert_administrador)){
             return true;
             
         }
