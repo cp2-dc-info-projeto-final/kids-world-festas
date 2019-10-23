@@ -1,13 +1,7 @@
 <?php
     function cadastrarAdministrador($nome, $email, $senha){
         
-        // conexão
-        $link = mysqli_connect("localhost", "root", "", "kids_world_festas");
-
-        // check connection
-        if($link === false){
-            die("Erro na conexão com o banco de dados." . mysqli_connect_error());
-        }
+        $link = getConnection();
         
         // check email
         $sql_select_id = "SELECT email FROM usuario WHERE email='$email'";

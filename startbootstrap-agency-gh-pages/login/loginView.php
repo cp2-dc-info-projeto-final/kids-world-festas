@@ -43,20 +43,11 @@
                               <div id="success"></div>
                               <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Entrar</button>
                             </div>
-                          </div>
 <<<<<<< HEAD
-                          <?php
-                          session_start();
-                          if(array_key_exists('erro', $_SESSION) == true){
-                              $erro = $_SESSION["erro"];
-                              echo "<br><b>$erro</br>";
-                              session_unset();
-                          }
-                      ?>
-            <p>
-                <a href="./cadastro/cadastroView.html">Cadastre-se</a>
+                          </div>
 =======
-            
+                          </div>            
+>>>>>>> a89cf0e3de3152c28ffe7f71598174a26b0c4ecc
             <?php
                 session_start();
                 if(array_key_exists('erro', $_SESSION) == true){
@@ -67,7 +58,10 @@
             ?>
             <p>
                     <a href="./cadastro/cadastroView.html">Cadastre-se</a>
->>>>>>> ee7e85fd2b0b56b7eb3c9c05dd8170edfd803295
+<<<<<<< HEAD
+
+=======
+>>>>>>> a89cf0e3de3152c28ffe7f71598174a26b0c4ecc
             </p>
         </form>
     </center>  

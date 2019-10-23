@@ -3,65 +3,62 @@
 
 <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <title>Página do usuário</title>
+    <title>Página do usuário</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom fonts for this template -->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
-    type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
-  <!-- Custom styles for this template -->
-  <link href="css/agency.min.css" rel="stylesheet">
-  <link href="css/agency.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/agency.min.css" rel="stylesheet">
+    <link href="css/agency.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Kids Wolrd Festas</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-        aria-label="Toggle navigation">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Kids Wolrd Festas</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav text-uppercase ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#portfolio">Produtos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Agendamento</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#meusagendamentos">Meus Agendamentos</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#portfolio">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Agendamento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#meusagendamentos">Meus Agendamentos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Header -->
-  <header class="masthead">
-    <div class="container">
-      <div class="intro-text">
-        <!-- <div class="intro-lead-in">Seja bem-vindo ao nosso site!</div>-->
-        <div class="intro-heading text-uppercase">Kids World Festas</div>
-        <div class="intro-lead-in">
-          <?php
+    <!-- Header -->
+    <header class="masthead">
+        <div class="container">
+            <div class="intro-text">
+                <!-- <div class="intro-lead-in">Seja bem-vindo ao nosso site!</div>-->
+                <div class="intro-heading text-uppercase">Kids World Festas</div>
+                <div class="intro-lead-in">
+                    <?php
             session_start();
             if(array_key_exists('nome', $_SESSION) == false){
                 header('Location: index.php');
@@ -71,167 +68,148 @@
                 echo "<br><a href='sair.php'>Sair</a>";
             }
         ?>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Services -->
-  <!-- Portfolio Grid -->
-  <section class="bg-light page-section" id="portfolio">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Produtos</h2>
-          <h3 class="section-subheading text-muted">Conheça nossos produtos.</h3>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
+                </div>
             </div>
-            <img class="img-fluid" src="./img/portfolio/maq_algdoce-thumbnail.png" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Algodão Doce</h4>
-            <p class="text-muted">Máquinas</p>
-          </div>
         </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
+    </header>
+
+    <!-- Services -->
+    <!-- Portfolio Grid -->
+    <section class="bg-light page-section" id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Produtos</h2>
+                    <h3 class="section-subheading text-muted">Conheça nossos produtos.</h3>
+                </div>
             </div>
-            <img class="img-fluid" src="./img/portfolio/pipoqueira-thumbnail.png" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Pipoqueira</h4>
-            <p class="text-muted">Máquinas</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="./img/portfolio/maq_algdoce-thumbnail.png" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Algodão Doce</h4>
+                        <p class="text-muted">Máquinas</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="./img/portfolio/pipoqueira-thumbnail.png" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Pipoqueira</h4>
+                        <p class="text-muted">Máquinas</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="./img/portfolio/churros-thumbnail.png" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Máquina de Churros</h4>
+                        <p class="text-muted">Máquinas</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="./img/portfolio/crepe-thumbnail.png" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Crepe</h4>
+                        <p class="text-muted">Máquinas</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="./img/portfolio/trem-thumbnail.png" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Trenzinho de lanches</h4>
+                        <p class="text-muted">lanchinhos </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="./img/portfolio/pula-pula-thumbnail.png" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Pula-Pula</h4>
+                        <p class="text-muted">Brinquedos</p>
+                    </div>
+                </div>
             </div>
-            <img class="img-fluid" src="./img/portfolio/churros-thumbnail.png" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Máquina de Churros</h4>
-            <p class="text-muted">Máquinas</p>
-          </div>
         </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
+    </section>
+
+
+    <!-- Meus agendamentos -->
+    <section class="page-section" id="meusagendamentos">
+        <center>
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase"> Meus Agendamentos</h2>
+                <h3 class="section-subheading text-muted"> Aqui estão os seus agendamentos</h3>
             </div>
-            <img class="img-fluid" src="./img/portfolio/crepe-thumbnail.png" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Crepe</h4>
-            <p class="text-muted">Máquinas</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
+
+            <table style="border-collapse: collapse;" border="1">
+                <tr id="linha1">
+                    <td>Data</td>
+                    <td>Horário</td>
+                    <td>Endereço</td>
+                    <td>Bairro</td>
+                    <td>Produtos</td>
+                    <td>Zona</td>
+                    <td>Preço</td>
+                    <td>Pagamento</td>
+                </tr>
+                <tr>
+                    <td>11/09/2020</td>
+                    <td>21:00</td>
+                    <td>Rua dos bobos, n°0</td>
+                    <td>Vila da Penha</td>
+                    <td>Algodão doce, pipoqueira, crepe</td>
+                    <td>Zona norte</td>
+                    <td>R$500,00</td>
+                    <td>Pago</td>
+                </tr>
+            </table>
+
             </div>
-            <img class="img-fluid" src="./img/portfolio/trem-thumbnail.png" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Trenzinho de lanches</h4>
-            <p class="text-muted">lanchinhos </p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
             </div>
-            <img class="img-fluid" src="./img/portfolio/pula-pula-thumbnail.png" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Pula-Pula</h4>
-            <p class="text-muted">Brinquedos</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
+        </center>
 
-  <!-- Meus agendamentos -->
-  <section class="page-section" id="meusagendamentos">
-    <center>
-      <div class="text-center">
-        <h2 class="section-heading text-uppercase"> Meus Agendamentos</h2>
-        <h3 class="section-subheading text-muted"> Aqui estão os seus agendamentos</h3>
-      </div>
-
-      <table style="border-collapse: collapse;" border="1">
-        <tr id="linha1">
-          <td>Data</td>
-          <td>Horário</td>
-          <td>Endereço</td>
-          <td>Bairro</td>
-          <td>Produtos</td>
-          <td>Zona</td>
-          <td>Preço</td>
-          <td>Pagamento</td>
-        </tr>
-        <tr>
-          <td>11/09/2020</td>
-          <td>21:00</td>
-          <td>Rua dos bobos, n°0</td>
-          <td>Vila da Penha</td>
-          <td>Algodão doce, pipoqueira, crepe</td>
-          <td>Zona norte</td>
-          <td>R$500,00</td>
-          <td>Pago</td>
-        </tr>
-      </table>
-
-      </div>
-      </div>
-
-    </center>
-
-  </section>
-
-  <!-- Clients -->
-
-
-  <!-- Contact -->
-  <section class="bg-light page-section" id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Agendamento</h2>
-          <h3 class="section-subheading text-muted">Agende a data da sua festa conosco.</h3>
-          <h3 class="section-subheading text-muted">Os preços selecionados no site são para 4 horas de festas, o maximo
-            de 100 pessoas e para festas infantis. Caso seja uma empresa ou sua festa tenha mais de 4 horas de festas ou
-            mais de 100 pessoas, entre em contato conosco pelo whatsapp ou email.</h3>
-        </div>
-      </div>
-
-
-      <center>
+    </section>
 
        
           <form id="contactForm" name="Buscprodutos" novalidate="novalidate">
@@ -254,271 +232,294 @@
               <button id="Buscprodutos" class="btn btn-primary btn-xl text-uppercase" type="submit">Enviar</button>
             </div>
             </div>
-           </form>
 
 
-    </div>
-    </Center>
-  </section>
+            <center>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-4">
-          <span class="copyright">Copyright &copy; Kids World Festas</span>
-        </div>
-        <div class="col-md-4">
-          <ul class="list-inline social-buttons">
-            <li class="list-inline-item">
-              <a href="https://www.facebook.com/LehPipocaeAlgodao">
-                <i class="fab fa-facebook"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://www.instagram.com/kids_word_festas/">
-                <i class="fab fa-instagram"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-whatsapp"></i>
-              </a>
-            </li>
 
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <ul class="list-inline quicklinks">
-            <li class="list-inline-item">
-              <a href="#">Privacy Policy</a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">Terms of Use</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
+                <form id="contactForm" name="Buscprodutos" novalidate="novalidate">
+                    <div class="row">
+                        <div class="col-md-4 ">
+                            <div class="form-group">
+                                Data: <input class="form-control" id="data" type="date" placeholder="Data do evento *" required="required" data-validation-required-message="Por favor, digite a data do evento.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                Horário: <input class="form-control" id="horario" type="time" placeholder="Horário do evento *" required="required" data-validation-required-message="Por favor, digite o horário do evento.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <br>
+                                <button id="Buscprodutos" class="btn btn-primary btn-xl text-uppercase" type="submit">Enviar</button>
+                            </div>
+                        </div>
 
-  <!-- Portfolio Modals -->
+                    </div>
+                </form>
 
-  <!-- Modal 1 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
+
+            </Center>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="modal-body">
-                <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Algodão doce</h2>
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; Kids World Festas</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/LehPipocaeAlgodao">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/kids_word_festas/">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </li>
 
-                <img class="img-fluid d-block mx-auto" src="img/maq_algdoce.jpg" alt="">
-                <p> Estação de algodão doce para até 100 pessoas</p>
-                <ul class="list-inline">
-                  <li>Preço: R$150,00 (4 horas)</li>
-                </ul>
-                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li class="list-inline-item">
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modals -->
+
+    <!-- Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">Algodão doce</h2>
+
+                                <img class="img-fluid d-block mx-auto" src="img/maq_algdoce.jpg" alt="">
+                                <p> Estação de algodão doce para até 100 pessoas</p>
+                                <ul class="list-inline">
+                                    <li>Preço: R$150,00 (4 horas)</li>
+                                </ul>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
                   Fechar</button>
-              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 
-  <!-- Modal 2 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="modal-body">
-                <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Pipoqueira</h2>
-                <img class="img-fluid d-block mx-auto" src="img/pipoqueira.jpg" alt="">
-                <p>Estação de pipoqueira de cinema para até 100 pessoas </p>
-                <ul class="list-inline">
-                  <li>Preço: R$200,00 (4 horas)</li>
-                </ul>
-                <button class="btn btn-primary" data-dismiss="modal" type="button">
+    <!-- Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">Pipoqueira</h2>
+                                <img class="img-fluid d-block mx-auto" src="img/pipoqueira.jpg" alt="">
+                                <p>Estação de pipoqueira de cinema para até 100 pessoas </p>
+                                <ul class="list-inline">
+                                    <li>Preço: R$200,00 (4 horas)</li>
+                                </ul>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
                   Fechar </button>
-              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 
-  <!-- Modal 3 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="modal-body">
-                <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Churros</h2>
-                <img class="img-fluid d-block mx-auto" src="img/churros.jpg" alt="">
-                <p>Estação de churros gourmet para 100 pessoas</p>
-                <p>Confeitos: Granulado, paçoca, chocobol e confete.</p>
-                <ul class="list-inline">
-                  <li>Preço: R$450,00 (4 horas)</li>
-                </ul>
-                <button class="btn btn-primary" data-dismiss="modal" type="button">
+    <!-- Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">Churros</h2>
+                                <img class="img-fluid d-block mx-auto" src="img/churros.jpg" alt="">
+                                <p>Estação de churros gourmet para 100 pessoas</p>
+                                <p>Confeitos: Granulado, paçoca, chocobol e confete.</p>
+                                <ul class="list-inline">
+                                    <li>Preço: R$450,00 (4 horas)</li>
+                                </ul>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
                   Fechar </button>
-              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 
-  <!-- Modal 4 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="modal-body">
-                <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Crepe</h2>
-                <img class="img-fluid d-block mx-auto" src="img/crepe.jpg" alt="">
-                <p>Rodízio de crepe para até 100 pessoas</p>
-                <p>Sabores: frango,frango com catupiry, queijo, calabresa, queijo, queijo com presunto, Romeu e Julieta,
-                  banana caramelizada e chocolate.</p>
-                </p>
-                <ul class="list-inline">
-                  <li>Preço: R$550,00</li>
+    <!-- Modal 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">Crepe</h2>
+                                <img class="img-fluid d-block mx-auto" src="img/crepe.jpg" alt="">
+                                <p>Rodízio de crepe para até 100 pessoas</p>
+                                <p>Sabores: frango,frango com catupiry, queijo, calabresa, queijo, queijo com presunto, Romeu e Julieta, banana caramelizada e chocolate.</p>
+                                </p>
+                                <ul class="list-inline">
+                                    <li>Preço: R$550,00</li>
 
-                </ul>
-                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                </ul>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
                   Fechar</button>
-              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 
-  <!-- Modal 5 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="modal-body">
-                <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Trenzinho</h2>
-                <img class="img-fluid d-block mx-auto" src="img/trem.jpg" alt="">
-                <h1> Trenzinho de lanches</h1>
-                <p>Lanchinhos: Batata frita, pão de queijo, mini hot dog, mini pizza, mini hamburguer e nuggets.</p>
-                <ul class="list-inline">
-                <li>Preço: R$595,00 (500 lanches)</li>
-                  
-                  <li>Categoria: Lanches</li>
+    <!-- Modal 5 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">Trenzinho</h2>
+                                <img class="img-fluid d-block mx-auto" src="img/trem.jpg" alt="">
+                                <h1> Trenzinho de lanches</h1>
+                                <p>Lanchinhos: Batata frita, pão de queijo, mini hot dog, mini pizza, mini hamburguer e nuggets.</p>
+                                <ul class="list-inline">
+                                    <li>Preço: R$595,00 (500 lanches)</li>
 
-                </ul>
-                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                    <li>Categoria: Lanches</li>
+
+                                </ul>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
                   Fechar</button>
-              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 
-  <!-- Modal 6 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="modal-body">
-                <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Pula-Pula</h2>
-                <!--<p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>-->
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/pula-pula.jpg" alt="">
-                <h1>Cama Elástica</h1>
-                <ul class="list-inline">
+    <!-- Modal 6 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">Pula-Pula</h2>
+                                <!--<p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>-->
+                                <img class="img-fluid d-block mx-auto" src="img/portfolio/pula-pula.jpg" alt="">
+                                <h1>Cama Elástica</h1>
+                                <ul class="list-inline">
 
-                  <li>Preço: R$120,00 sem monitor</li>
-                  
-                  <li>Categoria: Brinquedo</li>
-                  <li>Tamanho: 3,05m</li>
+                                    <li>Preço: R$120,00 sem monitor</li>
 
-                </ul>
-                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                    <li>Categoria: Brinquedo</li>
+                                    <li>Tamanho: 3,05m</li>
+
+                                </ul>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
                   Fechar</button>
-              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Contact form JavaScript -->
-  <script src="js/jqBootstrapValidation.js"></script>
-  <script src="js/contact_me.js"></script>
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
 
-  <!-- Custom scripts for this template -->
-  <script src="js/agency.min.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
 
 </body>
 
