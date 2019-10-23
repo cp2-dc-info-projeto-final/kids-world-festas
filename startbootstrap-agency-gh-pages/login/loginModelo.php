@@ -2,12 +2,7 @@
 
     function logar($email, $senha) {
 
-        $connection = mysqli_connect("localhost", "root", "", "kids_world_festas"); 
-
-        // Check connection
-        if($connection === false){
-            die("Erro de conexão" . mysqli_connect_error());
-        }
+        $connection = getConnection();
 
         $sql_select_usuario = "SELECT senha, nome FROM usuario WHERE email='$email'";
 

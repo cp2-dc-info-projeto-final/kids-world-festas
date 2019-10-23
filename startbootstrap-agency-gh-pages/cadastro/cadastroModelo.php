@@ -1,13 +1,10 @@
 <?php
 
+    require "../ConnectionFactory.php";
+
     function cadastrarUsuario($nome, $email, $senha) {
         // conexão
-        $link = mysqli_connect("localhost", "root", "", "kids_world_festas");
-
-        // check connection
-        if($link === false){
-            die("Erro na conexão com o banco de dados." . mysqli_connect_error());
-        }
+        $link = getConnection();
         
         // check email
         $sql_select_id = "SELECT email FROM usuario WHERE email='$email'";
@@ -38,6 +35,8 @@
 
         $id_usuario = mysqli_insert_id($link);
 
+        mysqli_close($link);
+
         return $id_usuario;
 
     }
@@ -46,16 +45,18 @@
         
         $id_usuario = cadastrarUsuario($nome, $email, $senha);
 
+        $link = getConnection();
+
         // insert cliente
         $sql_insert_cliente = "INSERT INTO cliente (id, telefone, cpf) VALUES
-        ('$id_usuario', '$telefone', '$cpf')";
+        ($id_usuario, '$telefone', '$cpf')";
 
         if(mysqli_query($link, $sql_insert_cliente)){
             return true;
             
         }
         else{
-            die( "Erro $sql_insert_usuario. " . mysqli_error($link));
+            die( "Erro $sql_insert_cliente. " . mysqli_error($link));
         }
 
         mysqli_close($link);
@@ -65,9 +66,11 @@
         
         $id_usuario = cadastrarUsuario($nome, $email, $senha);
 
+        $link = getConnection();
+
         // insert cliente
         $sql_insert_cliente = "INSERT INTO administrador (id) VALUES
-        ('$id_usuario')";
+        ($id_usuario)";
 
         if(mysqli_query($link, $sql_insert_cliente)){
             return true;
