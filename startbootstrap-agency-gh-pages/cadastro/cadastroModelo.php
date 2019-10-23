@@ -1,13 +1,10 @@
 <?php
-    function cadastrarCliente($nome, $email, $senha, $telefone, $cpf){
-        
-        // conexão
-        $link = mysqli_connect("localhost", "root", "", "kids_world_festas");
 
-        // check connection
-        if($link === false){
-            die("Erro na conexão com o banco de dados." . mysqli_connect_error());
-        }
+    require "../ConnectionFactory.php";
+
+    function cadastrarUsuario($nome, $email, $senha) {
+        // conexão
+        $link = getConnection();
         
         // check email
         $sql_select_id = "SELECT email FROM usuario WHERE email='$email'";
@@ -36,20 +33,44 @@
             die( "Erro $sql_insert_usuario. " . mysqli_error($link));
         }
 
-        // select pegando o id inserido, filtrando WHERE com email
-        $sql_select_id = "SELECT id FROM usuario WHERE email='$email'";
+        $id_usuario = mysqli_insert_id($link);
 
-        $result = mysqli_query($link, $sql_select_id);
+        mysqli_close($link);
 
-        $id_usuario = null;
-        // "Obtem uma linha do resultado como uma matriz associativa, numérica, ou ambas" Site: https://www.php.net/manual/pt_BR/mysqli-result.fetch-array.php
-        while ($row = mysqli_fetch_array($result)) {
-            $id_usuario = $row[0];
-        }
+        return $id_usuario;
+
+    }
+
+    function cadastrarCliente($nome, $email, $senha, $telefone, $cpf){
+        
+        $id_usuario = cadastrarUsuario($nome, $email, $senha);
+
+        $link = getConnection();
 
         // insert cliente
         $sql_insert_cliente = "INSERT INTO cliente (id, telefone, cpf) VALUES
-        ('$id_usuario', '$telefone', '$cpf')";
+        ($id_usuario, '$telefone', '$cpf')";
+
+        if(mysqli_query($link, $sql_insert_cliente)){
+            return true;
+            
+        }
+        else{
+            die( "Erro $sql_insert_cliente. " . mysqli_error($link));
+        }
+
+        mysqli_close($link);
+    }
+
+    function cadastrarAdministrador($nome, $email, $senha){
+        
+        $id_usuario = cadastrarUsuario($nome, $email, $senha);
+
+        $link = getConnection();
+
+        // insert cliente
+        $sql_insert_cliente = "INSERT INTO administrador (id) VALUES
+        ($id_usuario)";
 
         if(mysqli_query($link, $sql_insert_cliente)){
             return true;
@@ -61,4 +82,5 @@
 
         mysqli_close($link);
     }
+
 ?>

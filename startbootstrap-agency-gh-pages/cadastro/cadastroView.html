@@ -1,20 +1,22 @@
 <html>
 
 <head>
-   
+
     <title>Cadastro</title>
-    <link href="css/agency.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/main.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="../css/agency.min.css" media="screen" />
-
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-
-    <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>     
+    <script type="text/javascript" src="../jquery-mascara-form/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="../jquery-mascara-form/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#telefone').mask('(00) 0000-0000'); //Telefone
+            $('#cpf').mask('000.000.000-00'); //CEP
+            $('#valor').mask('000.000.000.000.000,00', {
+                reverse: true
+            }); //Dinheiro
+        });
+    </script>
 </head>
 
-<body id= "cadastro">
-    
+<body>
     <center>
         <!-- Estilizar Formulário -->
         <form action="cadastroCtrl.php" method="POST">
@@ -29,7 +31,7 @@
             </p>
             <p>
                 <label for="cpf">CPF:</label>
-                <input type="text" name="cpf" id="cpf" placeholder="CPF" required="required" value="" >
+                <input type="text" name="cpf" id="cpf" placeholder="CPF" required="required" value="">
             </p>
             <p>
                 <label for="telefone">Telefone:</label>
@@ -55,11 +57,6 @@
             ?>
         </form>
     </center>
-        
-    
- <!-- Contact form JavaScript -->
- <script src="js/jqBootstrapValidation.js"></script>
- <script src="js/contact_me.js"></script>        
 </body>
 
 </html>
