@@ -17,47 +17,36 @@
     
     <center>
         <!-- Estilizar Formulário -->
-        <section class="bg-light page-section" id="contact">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-lg-12 text-center">
-                      <h2 class="section-heading text-uppercase">Cadastro</h2>
-                      <h3 class="section-subheading text-muted">Cadastre-se e seja nosso cliente.</h3>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <form id="contactForm" name="sentMessage" novalidate="novalidate">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <div class="form-group">
-                             <input class="form-control" id="nome" type="text" placeholder="Digite seu nome *" required="required" data-validation-required-message="Digite seu nome">
-                              <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="form-group">
-                               <input class="form-control" id="CPF" type="text" placeholder="Digite seu CPF *" required="required" data-validation-required-message="Digite seu CPF">
-                              <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" id="telefone" type="text" placeholder="Digite seu telefone *" required="required" data-validation-required-message="Digite seu telefone ">
-                                <p class="help-block text-danger"></p>
-                              </div>
-            
-                            <div class="form-group">
-                              <input class="form-control" id="senha" type="text" placeholder=" Digite sua senha *" required="required" data-validation-required-message=" Digite sua senha.">
-                              <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="form-group">
-                                    <input class="form-control" id="conf_senha" type="text" placeholder="Confirme sua senha *" required="required" data-validation-required-message="Confirme sua senha.">
-                                    <p class="help-block text-danger"></p>
-                                  </div>
-                                  <div class="clearfix"></div>
-                                  <div class="col-lg-12 text-center">
-                                    <div id="success"></div>
-                                    <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Cadastrar</button>
-                                  </div>
-                                </div>
-                                  
-                <?php
+        <form action="cadastroCtrl.php" method="POST">
+            <h2>Cadastro</h2>
+            <p>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" placeholder="Nome" required="required" value="">
+            </p>
+            <p>
+                <label for="email">E-mail:</label>
+                <input type="text" name="email" id="email" placeholder="E-mail" required="required" value="">
+            </p>
+            <p>
+                <label for="cpf">CPF:</label>
+                <input type="text" name="cpf" id="cpf" placeholder="CPF" required="required" value="" >
+            </p>
+            <p>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" name="telefone" id="telefone" placeholder="Telefone" required="required" value="">
+            </p>
+            <p>
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" id="senha" placeholder="Senha" required="required" value="">
+            </p>
+            <p>
+                <label for="confirmarsenha">Confirmar senha:</label>
+                <input type="password" name="confirmarsenha" id="confirmarsenha" placeholder="Confirmar senha" required="required" value="">
+            </p>
+            <p>
+                <input type="submit" name="enviar" value="Enviar">
+            </p>
+            <?php
                 session_start();
                 if(array_key_exists('erro', $_SESSION) == true){
                     $erro = $_SESSION["erro"];
@@ -65,8 +54,7 @@
                 }
             ?>
         </form>
-        
-
+    </center>
         
     
  <!-- Contact form JavaScript -->
