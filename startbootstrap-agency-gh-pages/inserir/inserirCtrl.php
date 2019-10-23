@@ -15,7 +15,7 @@
     else {
         $erro = "Deu Ruim";        
         $_SESSION["erro"] = $erro;
-        header("Location: index-admin.php");
+        header("Location: ../index-admin.php");
     }
     
 ?>

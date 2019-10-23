@@ -18,5 +18,5 @@
             die( "Erro $sql_insert_produto. " . mysqli_error($link));
         }
 
-       
+    }      
 ?>
