@@ -1,6 +1,6 @@
 <?php
-    function cadastrarCliente($nome, $email, $senha, $telefone, $cpf){
-        
+
+    function cadastrarUsuario($nome, $email, $senha) {
         // conexão
         $link = mysqli_connect("localhost", "root", "", "kids_world_festas");
 
@@ -36,16 +36,15 @@
             die( "Erro $sql_insert_usuario. " . mysqli_error($link));
         }
 
-        // select pegando o id inserido, filtrando WHERE com email
-        $sql_select_id = "SELECT id FROM usuario WHERE email='$email'";
+        $id_usuario = mysqli_insert_id($link);
 
-        $result = mysqli_query($link, $sql_select_id);
+        return $id_usuario;
 
-        $id_usuario = null;
-        // "Obtem uma linha do resultado como uma matriz associativa, numérica, ou ambas" Site: https://www.php.net/manual/pt_BR/mysqli-result.fetch-array.php
-        while ($row = mysqli_fetch_array($result)) {
-            $id_usuario = $row[0];
-        }
+    }
+
+    function cadastrarCliente($nome, $email, $senha, $telefone, $cpf){
+        
+        $id_usuario = cadastrarUsuario($nome, $email, $senha);
 
         // insert cliente
         $sql_insert_cliente = "INSERT INTO cliente (id, telefone, cpf) VALUES
@@ -61,4 +60,24 @@
 
         mysqli_close($link);
     }
+
+    function cadastrarAdministrador($nome, $email, $senha){
+        
+        $id_usuario = cadastrarUsuario($nome, $email, $senha);
+
+        // insert cliente
+        $sql_insert_cliente = "INSERT INTO administrador (id) VALUES
+        ('$id_usuario')";
+
+        if(mysqli_query($link, $sql_insert_cliente)){
+            return true;
+            
+        }
+        else{
+            die( "Erro $sql_insert_usuario. " . mysqli_error($link));
+        }
+
+        mysqli_close($link);
+    }
+
 ?>
