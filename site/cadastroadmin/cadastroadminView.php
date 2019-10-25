@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../css/agency.min.css" media="screen" />
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 
     <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>     
 </head>
@@ -66,10 +66,10 @@
         
 
         
-    
+        js/jqBootstrapValidation.js
  <!-- Contact form JavaScript -->
- <script src="js/jqBootstrapValidation.js"></script>
- <script src="js/contact_me.js"></script>        
+ <script src="../../startbootstrap/js/jqBootstrapValidation.js"></script>
+ <script src="../../startbootstrap/js/contact_me.js"></script>        
 </body>
 
 </html>

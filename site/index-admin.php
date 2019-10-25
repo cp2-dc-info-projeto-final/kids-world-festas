@@ -11,18 +11,18 @@
     <title>Página do administrador</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../startbootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../startbootstrap/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
-    <link href="css/agency.min.css" rel="stylesheet">
-    <link href="css/agency.css" rel="stylesheet">
+    <link href="../startbootstrap/css/agency.min.css" rel="stylesheet">
+    <link href="../startbootstrap/css/agency.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -362,18 +362,18 @@
 
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../startbootstrap/vendor/jquery/jquery.min.js"></script>
+    <script src="../startbootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../startbootstrap/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Contact form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <script src="../startbootstrap/js/jqBootstrapValidation.js"></script>
+    <script src="../startbootstrap/js/contact_me.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="js/agency.min.js"></script>
+    <script src="../startbootstrap/js/agency.min.js"></script>
 
 </body>
 

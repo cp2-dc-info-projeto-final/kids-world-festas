@@ -3,7 +3,7 @@
 <head>
    
     <title>Login</title>
-    <link href="css/agency.min.css" rel="stylesheet">
+    <link href="../../startbootstrap/css/agency.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/main.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="../css/agency.min.css" media="screen" />
 
@@ -59,7 +59,7 @@
         </form>
     </center>  
 <!-- Contact form JavaScript -->
-<script src="js/jqBootstrapValidation.js"></script>
-<script src="js/contact_me.js"></script> 
+<script src="../../startbootstrap/js/jqBootstrapValidation.js"></script>
+<script src="../../startbootstrap/js/contact_me.js"></script> 
 </body>
 </html>
