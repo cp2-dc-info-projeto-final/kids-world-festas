@@ -43,7 +43,6 @@
                               <div id="success"></div>
                               <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Entrar</button>
                             </div>
-
                           </div>
                           </div>            
             <?php
