@@ -43,11 +43,8 @@
                               <div id="success"></div>
                               <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Entrar</button>
                             </div>
-<<<<<<< HEAD
                           </div>
-=======
                           </div>            
->>>>>>> a89cf0e3de3152c28ffe7f71598174a26b0c4ecc
             <?php
                 session_start();
                 if(array_key_exists('erro', $_SESSION) == true){
@@ -58,10 +55,6 @@
             ?>
             <p>
                     <a href="./cadastro/cadastroView.html">Cadastre-se</a>
-<<<<<<< HEAD
-
-=======
->>>>>>> a89cf0e3de3152c28ffe7f71598174a26b0c4ecc
             </p>
         </form>
     </center>  
