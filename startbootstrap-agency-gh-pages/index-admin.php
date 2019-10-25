@@ -235,12 +235,12 @@
 
 
                         <div class="col-md-4"></div>
-                        <input class="form-control" name="nome" id="nome" type="text" placeholder="Digite o nome *" required="required" data-validation-required-message="Please enter your name.">
+                        <input class="form-control" name="nome" id="nome" type="text" placeholder="Digite o nome *" required="required" data-validation-required-message="Digite o nome .">
                         <p class="help-block text-danger"></p>
 
 
 
-                        <input class="form-control" name="preco" id="preco" type="" placeholder="Digite o preço *" required="required" data-validation-required-message="Please enter your email address.">
+                        <input class="form-control" name="preco" id="preco" type="number" placeholder="Digite o preço *" required="required" data-validation-required-message="Digite o preço.">
                         <p class="help-block text-danger"></p>
 
 

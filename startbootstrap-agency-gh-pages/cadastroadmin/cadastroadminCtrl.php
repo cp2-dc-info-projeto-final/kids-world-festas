@@ -3,8 +3,6 @@
     require "cadastroadminModelo.php";
 
     $nome = $_POST["nome"];
-    $cpf = $_POST["cpf"];
-    $telefone = $_POST["telefone"];
     $email = $_POST["email"];
     $senha = $_POST["senha"];
     $confirmarsenha = $_POST["confirmarsenha"];
@@ -29,7 +27,7 @@
     $erro = "";
 
     if (cadastrarAdministrador($nome, $email, $senha)) {
-        header("Location: ../index.php");
+        header("Location: ../index-admin.php");
     } 
     else {
         $erro = "Email indisponível";        

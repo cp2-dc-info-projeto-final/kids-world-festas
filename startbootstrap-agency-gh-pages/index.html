@@ -241,43 +241,41 @@
 
 
     <!-- Contact -->
-    <section class="bg-light page-section" id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">Agendamento</h2>
-                    <h3 class="section-subheading text-muted">Agende a data da sua festa conosco.</h3>
-                    <h3 class="section-subheading text-muted">Os preços selecionados no site são para 4 horas de festas, o maximo de 100 pessoas e para festas infantis. Caso seja uma empresa ou sua festa tenha mais de 4 horas de festas ou mais de 100 pessoas, entre em contato conosco pelo whatsapp
-                        ou email.</h3>
-                </div>
-            </div>
-
-
-
-            <form id="contactForm" name="Buscprodutos" novalidate="novalidate">
-                <div class="row">
-                    <div class="col-md-4 ">
-                        <div class="form-group">
-                            Data: <input class="form-control" id="data" type="date" placeholder="Data do evento *" required="required" data-validation-required-message="Por favor, digite a data do evento.">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="form-group">
-                            Horário: <input class="form-control" id="horario" type="time" placeholder="Horário do evento *" required="required" data-validation-required-message="Por favor, digite o horário do evento.">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="col-lg-12 text-center">
-                            <div id="success"></div>
-                            <br>
-                            <button id="Buscprodutos" class="btn btn-primary btn-xl text-uppercase" type="submit">Enviar</button>
-                        </div>
-                    </div>
-
-            </form>
-
-            </div>
-
-    </section>
+    <section  class="page-section" id="busc-data">
+            <div class="container">
+           <div class="col-lg-12 text-center">
+               <h2 class="section-heading text-uppercase">Busque sua data</h2>
+               <h3 class="section-subheading text-muted">Busque a data do seu evento e serão indicados os produtos disponiveis a data selecionada.</h3>
+           </div>
+               
+   
+                   <div class="col-lg-12"
+                   <form id="contactForm" name="Buscprodutos" novalidate="novalidate">
+                       <div class="row">
+                           
+                           
+                               <div class=" col-sm-6 form-group">
+                                   Data: <input class="form-control" id="data" type="date" placeholder="Data do evento *" required="required" data-validation-required-message="Por favor, digite a data do evento.">
+                                   <p class="help-block text-danger"></p>
+                               </div>
+                               <div class=" col-md-6 form-group">
+                                   Horário: <input class="form-control" id="horario" type="time" placeholder="Horário do evento *" required="required" data-validation-required-message="Por favor, digite o horário do evento.">
+                                   <p class="help-block text-danger"></p>
+                               </div>
+                               <div class="clearfix"></div>
+                               <div class="col-lg-12 text-center">
+                                   <div id="success"></div>
+                                   <br>
+                                   <button id="Buscprodutos" class="btn btn-primary btn-xl text-uppercase" type="submit">Buscar</button>
+                               </div>
+                           </div>
+                          </div>                
+                       </div>
+                   </form>
+   
+   
+               </div>      
+       </section>
 
     <!-- Footer -->
     <footer class="footer">
