@@ -16,7 +16,7 @@
     else {
         $erro = "Login ou senha incorretos";
         $_SESSION["erro"] = $erro;
-        header("Location: ../index.php");
+        header("Location: ../index.html");
         exit();
     }
 ?>

@@ -26,7 +26,7 @@
                   </div>
                   <div class="row">
                     <div class="col-lg-12">
-                      <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                      <form action="loginCtrl.php" method="POST" id="contactForm" name="sentMessage" novalidate="novalidate">
                         <div class="row">
                           <div class="col-md-6">
                             <div class="form-group">
@@ -34,7 +34,7 @@
                               <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group">
-                               <input class="form-control" id="CPF" type="text" placeholder="Digite sua senha *" required="required" data-validation-required-message="Please enter your email address.">
+                               <input class="form-control" id="senha" type="password" placeholder="Digite sua senha *" required="required" data-validation-required-message="Please enter your email address.">
                               <p class="help-block text-danger"></p>
                             </div>
             

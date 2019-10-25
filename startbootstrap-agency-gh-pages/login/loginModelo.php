@@ -1,5 +1,7 @@
 <?php
 
+    require "../ConnectionFactory.php";
+
     function logar($email, $senha) {
 
         $connection = getConnection();
