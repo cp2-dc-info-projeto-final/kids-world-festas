@@ -35,7 +35,6 @@ CREATE TABLE locacao(
     id_cliente INT NOT NULL,
     id_endereco INT NOT NULL,
     dia DATE NOT NULL,
-    qtd_horas INT NOT NULL,
     hora_inicio TIME NOT NULL,
     FOREIGN KEY(id_cliente) REFERENCES cliente(id),
     FOREIGN KEY(id_endereco) REFERENCES endereco(id)
@@ -57,3 +56,18 @@ CREATE TABLE locacao_produto(
     FOREIGN KEY(id_locacao) REFERENCES locacao(id),
     FOREIGN KEY(id_produto) REFERENCES produto(id)
 );
+
+SELECT
+produto.nome 
+
+FROM
+locacao
+
+INNER JOIN
+locacao_produto ON locacao.id = locacao_produto.id_locacao 
+
+INNER JOIN
+produto ON produto.id = locacao_produto.id_produto 
+
+WHERE
+locacao.dia = "$dia"

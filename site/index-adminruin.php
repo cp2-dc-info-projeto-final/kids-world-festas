@@ -64,7 +64,7 @@
                     <?php
             session_start();
             if(array_key_exists('nome', $_SESSION) == false){
-                header('Location: index.php');
+                //header('Location: index.html');
             } else {
                 $nome = $_SESSION["nome"];
                 echo "Seja bem vindo $nome!<br>";
@@ -220,7 +220,7 @@
 
     </section>
 
-    <form action="inserirCtrl.php" method="POST">
+    <form action="inserir/inserirCtrl.php" method="POST">
         <section class=" bg-light   page-section" id="produtos-inserir">
 
             <div class="container">
@@ -234,37 +234,37 @@
                         <br id="contactForm" name="sentMessage" novalidate="novalidate">
 
 
-                        <div class="col-md-4 col-sm-6 form-group">
-                            <input class="form-control" id="nome" type="text" placeholder="Digite o nome *" required="required" data-validation-required-message="Digite o nome.">
-                            <p class="help-block text-danger"></p>
-                        </div>
-
-                        <div class="col-md-4 col-sm-6 form-group">
-                            <input class="form-control" id="preco" type="number" placeholder="Digite o preço *" required="required" data-validation-required-message="Digite o preço .">
-                            <p class="help-block text-danger"></p>
-                        </div>
+                        <div class="col-md-4"></div>
+                        <input class="form-control" name="nome" id="nome" type="text" placeholder="Digite o nome *" required="required" data-validation-required-message="Digite o nome .">
+                        <p class="help-block text-danger"></p>
 
 
 
-                        <div class="col-md-4 col-sm-6 form-group">
-                            <input class="form-control" id="descricao" type="text" placeholder=" Digite a descrição *" required="required" data-validation-required-message="Digite a descrição.">
-                            <p class="help-block text-danger"></p>
-                        </div>
+                        <input class="form-control" name="preco" id="preco" type="number" placeholder="Digite o preço *" required="required" data-validation-required-message="Digite o preço.">
+                        <p class="help-block text-danger"></p>
 
-                        <div class="form-group">
-                            <form id="upload" method="post" enctype="multipart/form-data">
-                                <ul>
-                                    <li>
-                                        <h4>Selecione uma imagem</h4>
-                                        <input type="file" id="arquivo" name="arquivo" accept="image/*" />
-                                    </li>
-                                </ul>
-                            </form>
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="col-lg-12 text-center">
-                            <div id="success"></div>
-                            <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Inserir</button>
+
+
+
+                        <input class="form-control" name="descricao" id="descricao" type="text" placeholder=" Digite a descrição *" required="required" data-validation-required-message="Please enter your phone number.">
+                        <p class="help-block text-danger"></p>
+                    </div>
+
+                    <form id="upload" method="post" enctype="multipart/form-data">
+                        <ul>
+                            <li>
+                                <h4>Selecione uma imagem</h4>
+                                <input type="file" id="arquivo" name="arquivo" accept="image/*" />
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-lg-12 text-center">
+                    <div id="success"></div>
+                    <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Inserir</button>
+
+                </div>
 
     </form>
     </div>
@@ -276,60 +276,45 @@
     </section>
 
     <!-- Contact -->
-    <section class="page-section" id="Adm-cadastrar">
+    <section class=" page-section" id="Adm-cadastrar">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading text-uppercase">Administradores</h2>
                     <h3 class="section-subheading text-muted">Cadastre novos Administradores no seu site.</h3>
-
-
-
-                    <center>
-                        <div class="col-md-6">
-
-                            <form id="contactForm" name="Adm-cadastrar" novalidate="novalidate">
-
-
-                                <input class="form-control" id="nome" type="text" placeholder="Digite o nome *" required="required" data-validation-required-message="Please enter your email address.">
-                                <p class="help-block text-danger"></p>
-
-
-
-                                <input class="form-control" id="telefone" type="text" placeholder="Digite o telefone *" required="required" data-validation-required-message="Please enter your email address.">
-                                <p class="help-block text-danger"></p>
-
-
-
-                                <input class="form-control" id="email" type="email" placeholder="Digite o email *" required="required" data-validation-required-message="Please enter your email address.">
-                                <p class="help-block text-danger"></p>
-
-
-
-                                <input class="form-control" id="senha" type="password" placeholder=" Digite a senha *" required="required" data-validation-required-message="Please enter your phone number.">
-                                <p class="help-block text-danger"></p>
-
-
-
-                                <input class="form-control" id="conf_senha" type="password" placeholder="Confirme sua senha *" required="required" data-validation-required-message="Please enter your phone number.">
-                                <p class="help-block text-danger"></p>
-
-
-                                <br class="row">
-                                <div class="clearfix"></div>
-                                <div class="col-lg-12 text-center">
-                                    <div id="success"></div>
-                                    <button id="agndar-button" class="btn btn-primary btn-xl text-uppercase" type="submit">Cadastrar</button>
-                                </div>
-                            </form>
-                    </center>
-                    </div>
                 </div>
 
+                <div class="row">
+                    <br class="col-lg-12">
+                    <br id="contactForm" name="Adm-cadastrar" novalidate="novalidate">
+
+                    <input class="form-control" id="nome" type="text" placeholder="Digite o nome *" required="required" data-validation-required-message="Please enter your email address.">
+                    <p class="help-block text-danger"></p>
+
+                    <input class="form-control" id="telefone" type="text" placeholder="Digite o telefone *" required="required" data-validation-required-message="Please enter your email address.">
+                    <p class="help-block text-danger"></p>
+
+                    <input class="form-control" id="email" type="email" placeholder="Digite o email *" required="required" data-validation-required-message="Please enter your email address.">
+                    <p class="help-block text-danger"></p>
+
+                    <input class="form-control" id="senha" type="password" placeholder=" Digite a senha *" required="required" data-validation-required-message="Please enter your phone number.">
+                    <p class="help-block text-danger"></p>
+
+
+
+                    <input class="form-control" id="conf_senha" type="password" placeholder="Confirme sua senha *" required="required" data-validation-required-message="Please enter your phone number.">
+                    <p class="help-block text-danger"></p>
+
+                    <br class="row">
+                    <div class="clearfix"></div>
+                    <div class="col-lg-12 text-center">
+                        <div id="success"></div>
+                        <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Cadastrar</button>
+                    </div>
+                </div>
+                </form>
 
             </div>
-        </div>
-        </div>
 
     </section>
 
