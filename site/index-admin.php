@@ -247,7 +247,7 @@
                                 <ul>
                                     <li>
                                         <h4>Selecione uma imagem</h4>
-                                        <input type="file" id="arquivo" name="arquivo" accept="image/*" />
+                                        <input type="file" placeholder="Imagem:"  name="arquivo" required="required" accept="image/*" />
                                     </li>
                                 </ul>
                             </form>

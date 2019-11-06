@@ -6,18 +6,12 @@
     $descricao = $_POST["descricao"];
     $preco = $_POST["preco"];
     $imagem = $_FILES["arquivo"]["name"];
-    $imagem = $imagem;
 
     session_start();
 
 
-    if (inserirProduto($nome, $descricao, $preco)) {
-        header("Location: ../index-admin.php");
-    } 
-    else {
-        $erro = "Deu Ruim";        
-        $_SESSION["erro"] = $erro;
-        header("Location: ../index-admin.php");
-    }
-    
+    $id=(inserirProduto($nome, $descricao, $preco, $imagem)); 
+        mkdir('../img/produtos/'.$id.'/', 755, true);
+        move_uploaded_file($_FILES["arquivo"]["tmp_name"], '../img/produtos/'.$id.'/'.$imagem);
+        header("Location: ../index-admin.php");  
 ?>
