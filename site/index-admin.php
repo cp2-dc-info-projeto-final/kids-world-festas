@@ -226,19 +226,19 @@
 
 
                         <div class="col-md-4 col-sm-6 form-group">
-                            <input class="form-control" id="nome" type="text" placeholder="Digite o nome *" required="required" data-validation-required-message="Digite o nome.">
+                            <input class="form-control" id="nome" name="nome" type="text" placeholder="Digite o nome *" required="required" data-validation-required-message="Digite o nome.">
                             <p class="help-block text-danger"></p>
                         </div>
 
                         <div class="col-md-4 col-sm-6 form-group">
-                            <input class="form-control" id="preco" type="number" placeholder="Digite o preço *" required="required" data-validation-required-message="Digite o preço .">
+                            <input class="form-control" id="preco" name="preco" type="number" placeholder="Digite o preço *" required="required" data-validation-required-message="Digite o preço .">
                             <p class="help-block text-danger"></p>
                         </div>
 
 
 
                         <div class="col-md-4 col-sm-6 form-group">
-                            <input class="form-control" id="descricao" type="text" placeholder=" Digite a descrição *" required="required" data-validation-required-message="Digite a descrição.">
+                            <input class="form-control" id="descricao" name="descricao" type="text" placeholder=" Digite a descrição *" required="required" data-validation-required-message="Digite a descrição.">
                             <p class="help-block text-danger"></p>
                         </div>
 
