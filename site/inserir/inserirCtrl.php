@@ -5,7 +5,9 @@
     $nome = $_POST["nome"];
     $descricao = $_POST["descricao"];
     $preco = $_POST["preco"];
-    
+    $imagem = $_FILES["arquivo"]["name"];
+    $imagem = $imagem;
+
     session_start();
 
 

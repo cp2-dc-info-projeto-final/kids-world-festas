@@ -211,7 +211,7 @@
 
     </section>
 
-    <form action="inserir/inserirCtrl.php" method="POST">
+    <form action="inserir/inserirCtrl.php" method="POST" enctype="multipart/form-data"> 
         <section class=" bg-light   page-section" id="produtos-inserir">
 
             <div class="container">
