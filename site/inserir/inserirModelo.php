@@ -1,8 +1,10 @@
 <?php
-    function inserirProduto($nome, $descricao, $preco){
+
+require '../ConnectionFactory.php';
+    function inserirProduto($nome, $descricao, $preco, $imagem){
         
         // conexão
-        $link = mysqli_connect("localhost", "root", "", "kids_world_festas");
+            $link=getConnection();
 
         // check connection
         if($link === false){
@@ -11,12 +13,17 @@
         
 
         // insert produto
-        $sql_insert_produto = "INSERT INTO produto (nome, descricao, preco) VALUES
-            ('$nome', '$descricao', '$preco')";
+        $sql_insert_produto = "INSERT INTO produto (nome, descricao, preco, imagem) VALUES
+            ('$nome', '$descricao', '$preco', '$imagem')";
     
         if(!mysqli_query($link, $sql_insert_produto)){
             die( "Erro $sql_insert_produto. " . mysqli_error($link));
         }
-
+        $id=mysqli_insert_id($link);
+       $sql="UPDATE produto  SET imagem='img/produtos/$id/$imagem' WHERE id=$id";
+       if (!mysqli_query($link, $sql)){
+           die(mysqli_error($link));
+       } 
+        return $id;
     }      
 ?>
