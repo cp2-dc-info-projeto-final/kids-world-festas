@@ -43,7 +43,7 @@ CREATE TABLE locacao(
 CREATE TABLE produto(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(30) NOT NULL,
-    imagem VARCHAR(200),
+    imagem VARCHAR(1024),
     descricao VARCHAR(200),
     preco DOUBLE NOT NULL
 );
