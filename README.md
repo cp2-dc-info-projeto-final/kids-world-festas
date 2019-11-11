@@ -25,13 +25,14 @@ Auxiliar na organização da empresa e tornar os serviços de aluguel, reserva e
 
 
 ### 3. Casos de Uso
-- (ÁC:\Users\letic\Desktop\imagens\Diagrama-de-Caso-de-Uso.PNG)
-- (https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/casosd.md "Casosdeuso.md")
+![Casos de Uso](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/Diagrama%20de%20Caso%20de%20Uso.png)
+- [Casosdeuso.md](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/casosd.md)
 
 ### 4. Modelagem
-- (ÁC:\Users\letic\Desktop\imagens\Diagrama-de-Classes.PNG) 
+- ![D.de.Classes](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/diagrama-de-classes.png) 
 - Diagrama de banco de dados **** 
-- (https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/schema-create.sql "schema-create.sql")
+- [schema-create.sql](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/schema-create.sql)
+
 ### 5. Manual de utilização
 - link para o manual de utilização ****
 
