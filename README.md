@@ -29,7 +29,7 @@ Auxiliar na organização da empresa e tornar os serviços de aluguel, reserva e
 - [casosDeUso.md](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/casosDeUso.md)
 
 ### 4. Modelagem
-- ![D.de.Classes](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/diagrama-de-classes.png) 
+- ![D.de.Classes](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/DiagramaClasse.png) 
 - Diagrama de banco de dados **** 
 - [schema-create.sql](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/schema-create.sql)
 
