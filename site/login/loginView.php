@@ -30,20 +30,21 @@
                         <div class="row">
                           <div class="col-md-6">
                             <div class="form-group">
-                             <input class="form-control" id="email" type="text" placeholder="Digite seu email *" required="required" data-validation-required-message="Please enter your name.">
+                             <input class="form-control" id="email" type="text" placeholder="Digite seu email *" required="required" data-validation-required-message="Por favor, digite seu email.">
                               <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group">
-                               <input class="form-control" id="senha" type="password" placeholder="Digite sua senha *" required="required" data-validation-required-message="Please enter your email address.">
+                               <input class="form-control" id="senha" type="password" placeholder="Digite sua senha *" required="required" data-validation-required-message="Por favor, digite sua senha.">
                               <p class="help-block text-danger"></p>
                             </div>
             
                             <div class="clearfix"></div>
-                            <div class="col-lg-12 text-center">
-                              <div id="success"></div>
-                              <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Entrar</button>
+                                <div class="col-lg-12 text-center">
+                                    <div id="success"></div>
+                                    <br>
+                                    <input id="Buscprodutos" class="btn btn-primary btn-xl text-uppercase" type="submit" value="Login">
+                                </div>
                             </div>
-                          </div>
                           </div>            
             <?php
                 session_start();

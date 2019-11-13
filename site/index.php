@@ -79,14 +79,13 @@
             <section class="bg-light page-section" id="portfolio">
         
                     <div class="col-lg-12">
-                        <form name="Buscprodutos" action="index.php" method="GET">
-                            <div class="row">
-        
-        
+                        <form name="Buscprodutos" action="#busc-data" method="GET">
+                                <center>
                                 <div class=" col-sm-6 form-group">
                                     Data: <input class="form-control" id="data" name="dia" type="date" placeholder="Data do evento *" required="required" data-validation-required-message="Por favor, digite a data do evento.">
                                     <p class="help-block text-danger"></p>
                                 </div>
+                                </center>
                                 <div class=" col-md-6 form-group">
                                     <!--Horário: <input class="form-control" id="horario" type="time" name="hora" placeholder="Horário do evento *" required="required" data-validation-required-message="Por favor, digite o horário do evento.">
                                     <p class="help-block text-danger"></p>-->
@@ -97,12 +96,14 @@
                                     <br>
                                     <input id="Buscprodutos" class="btn btn-primary btn-xl text-uppercase" type="submit" value="Buscar">
                                 </div>
-                            </div>
+                            
                         </form>
                     </div>
+
+                    <br>
         
                 <div class="col-sm-12">
-                    <h1 class="section-subheading text-muted">Os produtos disponíveis nessa data são:</h1>
+                    <h1 class="section-subheading text-muted text-center">Os produtos disponíveis nessa data são:</h1>
         
                     <?php
         
@@ -120,7 +121,38 @@
                         foreach ($produtos as $produto) {
         
                         
-                    ?>   <div class="col-md-4 portfolio-item" >
+                    ?>  
+                   <!-- Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase"><?php echo $produto['nome'];?></h2>
+
+                                <img class="img-fluid d-block mx-auto" src="<?php echo $produto['imagem'];?>"/> 
+                                <p> <?php echo $produto['imagem'];?></p>
+                                
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                 <i class="fas fa-times"></i>
+                                  Fechar</button>
+                                   </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                    
+                    <div  class="portfolio-item">
                     <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -135,20 +167,34 @@
 
                         <p class="text-muted"> R$<?php echo $produto['preco'];?>,00</p>
                     </div>
-                </div> 
+                    </div>
+                       
                         
                     <?php
                         $i++;
                     }
                     ?>
+                    </div>
                 </div>
-                Total <input type="text" id="resultado" value="0";>
+                <center>
+                <div class="DivTotal">
+                Total: <input type="text" id="resultado" value="0";>
+                </div>
+                </center>
                 </section>
                 <script>
+                
+
                     function soma(id) {
-                        var campoPreco = $("input[name='preco" + id + "']").val();
-                        alert(campoPreco)
-                    }
+                        var preco = parseFloat($("input[name='preco" + id + "']").val());
+                        total = parseFloat($("#resultado").val());
+                        if ($("input[name='prod" + id + "']").prop('checked')){
+                            total += preco;
+                        } else {
+                            total -= preco;
+                        }
+                        return $("#resultado").val(total);
+                    }  
                 </script>
                 
                 
@@ -189,38 +235,6 @@
 
     </div>
 </section>
-
-    <!-- Portfolio Grid -->
-    <section class="page-section" id="portifolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">Produtos</h2>
-                    <h3 class="section-subheading text-muted">Conheça nossos produtos.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="./img/portfolio/maq_algdoce-thumbnail.png" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Algodão Doce</h4>
-                        <p class="text-muted">Máquinas</p>
-                    </div>
-                </div>
-               
-                
-                
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- About -->
     <section class="page-section" id="about">
@@ -346,12 +360,12 @@
                         <div class="col-lg-8 mx-auto">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">Algodão doce</h2>
+                                <h2 class="text-uppercase"><?php echo $produto['nome'];?></h2>
 
-                                <img class="img-fluid d-block mx-auto" src="img/maq_algdoce.jpg" alt="">
+                                <img class="img-fluid d-block mx-auto" src="<?php echo $produto['imagem'];?>"/> 
                                 <p> Estação de algodão doce para até 100 pessoas</p>
                                 <ul class="list-inline">
-                                    <li>Preço: R$150,00 (4 horas)</li>
+                                    <li><?php echo $produto['descricao'];?></li>
                                 </ul>
                                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
@@ -364,177 +378,14 @@
         </div>
     </div>
 
-    <!-- Modal 2 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">Pipoqueira</h2>
-                                <img class="img-fluid d-block mx-auto" src="img/pipoqueira.jpg" alt="">
-                                <p>Estação de pipoqueira de cinema para até 100 pessoas </p>
-                                <ul class="list-inline">
-                                    <li>Preço: R$200,00 (4 horas)</li>
-                                </ul>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Fechar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
+   
 
-    <!-- Modal 3 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">Churros</h2>
-                                <img class="img-fluid d-block mx-auto" src="img/churros.jpg" alt="">
-                                <p>Estação de churros gourmet para 100 pessoas</p>
-                                <p>Confeitos: Granulado, paçoca, chocobol e confete.</p>
-                                <ul class="list-inline">
-                                    <li>Preço: R$450,00 (4 horas)</li>
-                                </ul>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                   Fechar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+   
 
-    <!-- Modal 4 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">Crepe</h2>
-                                <img class="img-fluid d-block mx-auto" src="img/crepe.jpg" alt="">
-                                <p>Rodízio de crepe para até 100 pessoas</p>
-                                <p>Sabores: frango,frango com catupiry, queijo, calabresa, queijo, queijo com presunto, Romeu e Julieta, banana caramelizada e chocolate.</p>
-                                </p>
-                                <ul class="list-inline">
-                                    <li>Preço: R$550,00</li>
+    
 
-                                </ul>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Fechar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 5 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">Trenzinho</h2>
-                                <img class="img-fluid d-block mx-auto" src="img/trem.jpg" alt="">
-                                <h1> Trenzinho de lanches</h1>
-                                <p>Lanchinhos: Batata frita, pão de queijo, mini hot dog, mini pizza, mini hamburguer e nuggets.</p>
-                                <ul class="list-inline">
-                                    <li>Preço: R$395,00 (300 lanches)</li>
-                                    <li>Preço: R$495,00 (400 lanches)</li>
-                                    <li>Preço: R$595,00 (500 lanches)</li>
-                                    <li>Preço: R$695,00 (600 lanches)</li>
-                                    <li>Preço: R$795,00 (700 lanches)</li>
-                                    <li>Categoria: Lanches</li>
-
-                                </ul>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Fechar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 6 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">Pula-Pula</h2>
-                                <!--<p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>-->
-                                <img class="img-fluid d-block mx-auto" src="img/portfolio/pula-pula.jpg" alt="">
-                                <h1>Cama Elástica</h1>
-                                <ul class="list-inline">
-
-                                    <li>Preço: R$120,00 sem monitor</li>
-                                    <li>Preço: R$150,00 com monitor</li>
-                                    <li>Categoria: Brinquedo</li>
-                                    <li>Tamanho: 3,05m</li>
-
-                                </ul>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Fechar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     <!-- Bootstrap core JavaScript -->
     <script src="../startbootstrap/vendor/jquery/jquery.min.js"></script>
