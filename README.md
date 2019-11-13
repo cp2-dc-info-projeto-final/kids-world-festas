@@ -10,12 +10,12 @@ Auxiliar na organização da empresa e tornar os serviços de aluguel, reserva e
 ## Integrantes:
  - Arsi Luiz Ferreira Monteiro Gonçalves  N°3
  - Caio Wagner Never Borges N°4
- - Emanuel Pires  N°8
+ - Emanuel Pires da Costa N°8
  - Letícia Simões do Nascimento  N°15
  
 ## Sumário com links para as seções numeradas abaixo:
 ### 1. Proposta 
-- Visão geral da proposta 
+- Desenvolver um site de aluguel de equipamentos para festas para a empresa Kids Worlds Festas
 - [proposta.md](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/proposta.md)
 
 ### 2. Requisitos
