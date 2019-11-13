@@ -68,9 +68,122 @@
         </div>
     </header>
 
+<!-- Contact -->
+<section class="bg-light page-section" id="busc-data">
+    <div class="container">
+        <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Busque sua data</h2>
+            <h3 class="section-subheading text-muted">Busque a data do seu evento e serão indicados os produtos disponiveis a data selecionada.</h3>
+        </div>
+        <body id="page-top">
+            <section class="bg-light page-section" id="portfolio">
+        
+                    <div class="col-lg-12">
+                        <form name="Buscprodutos" action="index.php" method="GET">
+                            <div class="row">
+        
+        
+                                <div class=" col-sm-6 form-group">
+                                    Data: <input class="form-control" id="data" name="dia" type="date" placeholder="Data do evento *" required="required" data-validation-required-message="Por favor, digite a data do evento.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class=" col-md-6 form-group">
+                                    <!--Horário: <input class="form-control" id="horario" type="time" name="hora" placeholder="Horário do evento *" required="required" data-validation-required-message="Por favor, digite o horário do evento.">
+                                    <p class="help-block text-danger"></p>-->
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="col-lg-12 text-center">
+                                    <div id="success"></div>
+                                    <br>
+                                    <input id="Buscprodutos" class="btn btn-primary btn-xl text-uppercase" type="submit" value="Buscar">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+        
+                <div class="col-sm-12">
+                    <h1 class="section-subheading text-muted">Os produtos disponíveis nessa data são:</h1>
+        
+                    <?php
+        
+                        require_once "buscarCtrl.php";
+        
+                        $dia = null;
+        
+                        if (isset($_GET['dia']))
+                            $dia = $_GET['dia'];
+        
+                        
+                        $produtos = buscarProdutosCtrl($dia);
+        
+                        $i = 0;
+                        foreach ($produtos as $produto) {
+        
+                        
+                    ?>   <div class="col-md-4 portfolio-item" >
+                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="<?php echo $produto['imagem'];?>"/>
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4><input type="checkbox" name="<?php echo "prod".$i;?>" value="<?php echo $produto['id'];?>"> <?php echo $produto['nome'];?>
+                        <input type="hidden" name="<?php echo "preco".$i;?>" value="<?php echo $produto['preco'];?>"></h4>
+
+                        <p class="text-muted"> R$<?php echo $produto['preco'];?>,00</p>
+                    </div>
+                </div> 
+                        
+                    <?php
+                        $i++;
+                    }
+                    ?>
+                </div>
+                </section>
+                
+          <section class="page-section" id="Endereço">
+         <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Endereço</h2>
+                    <h3 class="section-subheading text-muted">Insira o endereço do evento.</h3>
+                </div>
+
+                <div class="col-sm-6">
+                    <h1 class="section-subheading text-muted">Indique o endereço do evento</h1>
+                    <div class="form-group">
+                        Logradouro: <input class="form-control" id="endereco" type="text" placeholder="Digite o endereço do evento *" required="required" data-validation-required-message="Por favor, digite o endereço do evento.">
+                        <p class="help-block text-danger"></p>
+                    </div>
+        
+                    <div class="form-group">
+                        CEP: <input class="form-control" id="Bairro" type="text" placeholder="Digite o bairro do evento *" required="required" data-validation-required-message="Por favor, digite o bairro do evento.">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="form-group">
+                        Complemento: <input class="form-control" id="Bairro" type="text" placeholder="Digite o bairro do evento *" required="required" data-validation-required-message="Por favor, digite o bairro do evento.">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="form-group">
+                        Cidade:<input class="form-control" id="Bairro" type="text" placeholder="Digite o bairro do evento *" required="required" data-validation-required-message="Por favor, digite o bairro do evento.">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="form-group">
+                        UF:<input class="form-control" id="Bairro" type="text" placeholder="Digite o bairro do evento *" required="required" data-validation-required-message="Por favor, digite o bairro do evento.">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                </div>
+
+
+    </div>
+</section>
 
     <!-- Portfolio Grid -->
-    <section class="bg-light page-section" id="portifolio">
+    <section class="page-section" id="portifolio">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -93,75 +206,9 @@
                         <p class="text-muted">Máquinas</p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="./img/portfolio/pipoqueira-thumbnail.png" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Pipoqueira</h4>
-                        <p class="text-muted">Máquinas</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="./img/portfolio/churros-thumbnail.png" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Máquina de Churros</h4>
-                        <p class="text-muted">Máquinas</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="./img/portfolio/crepe-thumbnail.png" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Crepe</h4>
-                        <p class="text-muted">Máquinas</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="./img/portfolio/trem-thumbnail.png" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Trenzinho de lanches</h4>
-                        <p class="text-muted">lanchinhos </p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="./img/portfolio/pula-pula-thumbnail.png" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Pula-Pula</h4>
-                        <p class="text-muted">Brinquedos</p>
-                    </div>
+               
+                
+                
                 </div>
             </div>
         </div>
@@ -234,25 +281,7 @@
         </div>
     </section>
 
-    <!-- Team -->
-
-
-    <!-- Clients -->
-
-
-    <!-- Contact -->
-    <section class="bg-light page-section" id="busc-data">
-        <div class="container">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading text-uppercase">Busque sua data</h2>
-                <h3 class="section-subheading text-muted">Busque a data do seu evento e serão indicados os produtos disponiveis a data selecionada.</h3>
-            </div>
-
-
-
-        </div>
-    </section>
-
+    
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
