@@ -49,7 +49,7 @@ CREATE TABLE produto(
 );
 
 CREATE TABLE locacao_produto(
-	     INT,
+	id_locacao INT,
     id_produto INT,
     preco_pago FLOAT,
     quantidade INT,
