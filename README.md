@@ -26,7 +26,7 @@ Auxiliar na organização da empresa e tornar os serviços de aluguel, reserva e
 
 ### 3. Casos de Uso
 ![Casos de Uso](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/Diagrama-cdu.png)
-- [Casosdeuso.md](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/casosd.md)
+- [casosDeUso.md](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/casosDeUso.md)
 
 ### 4. Modelagem
 - ![D.de.Classes](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/diagrama-de-classes.png) 
