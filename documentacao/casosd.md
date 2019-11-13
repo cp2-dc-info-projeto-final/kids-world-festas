@@ -53,8 +53,6 @@
   1. O sistema exibe um calendário.  
   2. Caso o usuário selecione um dia, será exibida uma lista com os produtos disponiveis naquele dia.
   3. Caso o usuário selecione um ou mais produtos, será redirecionado para uma página de locação.
-  4. O usuário poderá cancelar o pedido até  uma semana após o agendamento.
-     - Caso cancele depois do prazo estabelecido terá de pagar uma taxa.
 
   ## CDU 04 - Pagamento
 
@@ -77,7 +75,7 @@
 **Fluxo Principal:**
 
   1. Administrador tem a possibilidade de adicionar novos equipamentos ao estoque:
-    - O administrador escreverá uma descrição contendo as informações do equipamento a ser adcionados.
+    - O administrador escreverá uma descrição contendo as informações do equipamento a ser adicionados.
     - Sistema adcionará o novo equipamento ao estoque, com as informações dadas pelo administrador.
 
   2. Administrador tem a possibilidade de excluir equipamentos do estoque.

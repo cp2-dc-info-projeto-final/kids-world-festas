@@ -39,7 +39,7 @@ O sistema deverá ter um login pré definido para o administrador.
  
 ### RF 05
 
- O site deverá possuir as páginas: home, login/cadstro, quem somos/contatos, serviços, agendamento e perfil do usuário
+ O site deverá possuir as páginas: home, login/cadstro, quem somos/contatos, serviços e agendamento.
 
 
 

@@ -1,8 +1,11 @@
 <?php
     
-    require "buscaModelo.php";
+    require "buscarModelo.php";
 
-    $dia = $_POST["dia"];
+    function buscarProdutosCtrl($dia) {
+        if (is_null($dia))
+            return [];
 
-    buscarProdutos($dia)
+        return buscarProdutos($dia);
+    }
 ?>

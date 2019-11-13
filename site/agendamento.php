@@ -28,23 +28,56 @@
 <body id="page-top">
     <section class="bg-light page-section" id="portfolio">
 
+            <div class="col-lg-12">
+                <form name="Buscprodutos" action="agendamento.php" method="GET">
+                    <div class="row">
 
+
+                        <div class=" col-sm-6 form-group">
+                            Data: <input class="form-control" id="data" name="dia" type="date" placeholder="Data do evento *" required="required" data-validation-required-message="Por favor, digite a data do evento.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class=" col-md-6 form-group">
+                            <!--Horário: <input class="form-control" id="horario" type="time" name="hora" placeholder="Horário do evento *" required="required" data-validation-required-message="Por favor, digite o horário do evento.">
+                            <p class="help-block text-danger"></p>-->
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-lg-12 text-center">
+                            <div id="success"></div>
+                            <br>
+                            <input id="Buscprodutos" class="btn btn-primary btn-xl text-uppercase" type="submit" value="Buscar">
+                        </div>
+                    </div>
+                </form>
+            </div>
 
         <div class="col-md-6">
             <h1 class="section-subheading text-muted">Os produtos disponíveis nessa data são:</h1>
-            <input type="checkbox" name="Pipoqueira de cinema1" value="Pipoqueira de cinema1"> Pipoqueira (220V) <br>
-            <input type="checkbox" name="Pipoqueira de cinema2" value="Pipoqueira de cinema2"> Pipoqueira (120V) <br>
-            <input type="checkbox" name="Máquina de algodão doce" value="Máquina de algodão"> Maquina de algodão doce <br>
-            <input type="checkbox" name="trenzinho de lanches" value="trenzinho de lanches"> Trenzinho de lanches <br>
-            <input type="checkbox" name="Máquina de churros" value="Máquina de churros"> Máquina de churros <br>
-            <input type="checkbox" name="Cama elástica" value="Cama elástica"> Cama elástica <br>
-            <input type="checkbox" name="Crepe" value="Crepe"> Crepe <br>
-            <h1 class="section-subheading text-muted"> Selecione a Zona</h1>
-            <input type="checkbox" name="norte" id="zona" value="zn_norte" onclick="verificar()"> Zona Norte <br>
-            <input type="checkbox" name="Sul" id="zona" value=" zn_sul" onclick="verificar()"> Zona Sul <br>
-            <input type="checkbox" name="Leste" id="zona" value="zn_leste" onclick="verificar()"> Zona Leste<br>
-            <input type="checkbox" name="Oeste" id="zona" value=" zn_oeste" onclick="verificar()"> Zona Oeste <br>
-            <input type="checkbox" name="Baixada" id="zona" value="zn_baixada" onclick="verificar()"> Baixada Fluminense <br>
+
+            <?php
+
+                require_once "buscarCtrl.php";
+
+                $dia = null;
+
+                if (isset($_GET['dia']))
+                    $dia = $_GET['dia'];
+
+                
+                $produtos = buscarProdutosCtrl($dia);
+
+                $i = 0;
+                foreach ($produtos as $produto) {
+
+                
+            ?>
+                <input type="checkbox" name="<?php echo "prod".$i;?>" value="<?php echo $produto['id'];?>"> <?php echo $produto['nome'];?><br>
+                <input type="hidden" name="<?php echo "preco".$i;?>" value="<?php echo $produto['preco'];?>">
+                <img src="<?php echo $produto['imagem'];?>"/> 
+            <?php
+                $i++;
+            }
+            ?>
         </div>
         <div class="col-sm-3 form-group">
             Total<label class="form-control" id="total" type="number" aria-placeholder="total"></label>
