@@ -130,7 +130,7 @@
                         <img class="img-fluid" src="<?php echo $produto['imagem'];?>"/>
                     </a>
                     <div class="portfolio-caption">
-                        <h4><input type="checkbox" name="<?php echo "prod".$i;?>" value="<?php echo $produto['id'];?>"> <?php echo $produto['nome'];?>
+                        <h4><input type="checkbox" onclick="soma(<?php echo $i;?>)" name="<?php echo "prod".$i;?>" value="<?php echo $produto['id'];?>"> <?php echo $produto['nome'];?>
                         <input type="hidden" name="<?php echo "preco".$i;?>" value="<?php echo $produto['preco'];?>"></h4>
 
                         <p class="text-muted"> R$<?php echo $produto['preco'];?>,00</p>
@@ -142,7 +142,15 @@
                     }
                     ?>
                 </div>
+                Total <input type="text" id="resultado" value="0";>
                 </section>
+                <script>
+                    function soma(id) {
+                        var campoPreco = $("input[name='preco" + id + "']").val();
+                        alert(campoPreco)
+                    }
+                </script>
+                
                 
           <section class="page-section" id="Endereço">
          <div class="container">

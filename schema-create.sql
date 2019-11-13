@@ -82,12 +82,12 @@ WHERE produto.id NOT IN
 ==========================================================================================================
                                         // Inserir produtos
 
-INSERT INTO `produto`( `nome`, `descricao`, `preco`) VALUES ('Máquina de Algodão Doce', 'Estação de algodão doce para até 100 pessoas', 150);
-INSERT INTO `produto`( `nome`, `descricao`, `preco`) VALUES ('Pipoqueira', 'Estação de pipoqueira de cinema para até 100 pessoas', 200);
-INSERT INTO `produto`( `nome`, `descricao`, `preco`) VALUES ('Máquina de Crepe', 'Rodízio de crepe para até 100 pessoas', 550);
-INSERT INTO `produto`( `nome`, `descricao`, `preco`) VALUES ('Máquina de Churros', 'Estação de churros gourmet para 100 pessoas', 150);
-INSERT INTO `produto`( `nome`, `descricao`, `preco`) VALUES ('Trenzinho de Lanches', 'Lanchinhos: Batata frita, pão de queijo, mini hot dog, mini pizza, mini hamburguer e nuggets.', 500);
-INSERT INTO `produto`( `nome`, `descricao`, `preco`) VALUES ('Pula-Pula', 'Categoria: Brinquedo Tamanho: 3,05m', 150)
+INSERT INTO `produto`( `nome`, `descricao`, `preco`, `imagem`) VALUES ('Máquina de Algodão Doce', 'Estação de algodão doce para até 100 pessoas', 150, 'img/portfolio/maq_algdoceThumbnail.png');
+INSERT INTO `produto`( `nome`, `descricao`, `preco`, `imagem`) VALUES ('Pipoqueira', 'Estação de pipoqueira de cinema para até 100 pessoas', 200, 'img/portfolio/pipoqueiraThumbnail.png');
+INSERT INTO `produto`( `nome`, `descricao`, `preco`, `imagem`) VALUES ('Máquina de Crepe', 'Rodízio de crepe para até 100 pessoas', 550, 'img/portfolio/crepeThumbnail.png');
+INSERT INTO `produto`( `nome`, `descricao`, `preco`, `imagem`) VALUES ('Máquina de Churros', 'Estação de churros gourmet para 100 pessoas', 150, 'img/portfolio/churrosThumbnail.png');
+INSERT INTO `produto`( `nome`, `descricao`, `preco`, `imagem`) VALUES ('Trenzinho de Lanches', 'Lanchinhos: Batata frita, pão de queijo, mini hot dog, mini pizza, mini hamburguer e nuggets.', 500, 'img/portfolio/tremThumbnail.png');
+INSERT INTO `produto`( `nome`, `descricao`, `preco`, `imagem`) VALUES ('Pula-Pula', 'Categoria: Brinquedo Tamanho: 3,05m', 150, 'img/portfolio/pulaThumbnail.png')
 
 INSERT INTO `usuario`(`nome`, `email`, `senha`) VALUES ('Leticia', 'leticiagatinha@gmail.com', '$2y$10$cyeMlImU8XE79FK3EeQjAOP6b.kiYl.7wTkQ/7DLd92jzD6putRoi')
 INSERT INTO `cliente`(`id`, `cpf`, `telefone`) VALUES (3 ,'33352223133', '21954346541')
