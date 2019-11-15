@@ -89,17 +89,17 @@ INSERT INTO `produto`( `nome`, `descricao`, `preco`, `imagem`) VALUES ('Máquina
 INSERT INTO `produto`( `nome`, `descricao`, `preco`, `imagem`) VALUES ('Trenzinho de Lanches', 'Lanchinhos: Batata frita, pão de queijo, mini hot dog, mini pizza, mini hamburguer e nuggets.', 500, 'img/portfolio/tremThumbnail.png');
 INSERT INTO `produto`( `nome`, `descricao`, `preco`, `imagem`) VALUES ('Pula-Pula', 'Categoria: Brinquedo Tamanho: 3,05m', 150, 'img/portfolio/pulaThumbnail.png')
 
-INSERT INTO `usuario`(`nome`, `email`, `senha`) VALUES ('Leticia', 'leticiagatinha@gmail.com', '$2y$10$cyeMlImU8XE79FK3EeQjAOP6b.kiYl.7wTkQ/7DLd92jzD6putRoi')
-INSERT INTO `cliente`(`id`, `cpf`, `telefone`) VALUES (3 ,'33352223133', '21954346541')
-INSERT INTO `usuario`(`nome`, `email`, `senha`) VALUES ('Emanuel', 'ueitomep@gmail.com', '$2y$10$cyeMlImU8XE79FK3EeQjAOP6b.kiYl.7wTkQ/7DLd92jzD6putRoi')
-INSERT INTO `cliente`(`id`, `cpf`, `telefone`) VALUES (2 ,'12312312312', '21012341234')
-INSERT INTO `endereco`(`logradouro`, `numero`, `cep`, `complemento`, `cidade`, `UF`) VALUES ('Rua Aninha','1677','123-789','Atrás da árvore','Mauá', 'RJ')
-INSERT INTO `locacao`(`id_cliente`, `id_endereco`, `dia`, `qtd_horas`, `hora_inicio`) VALUES (2, 1, '2019-11-06', 4, '12:12')
-INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`, `quantidade`) VALUES (1, 14, 500, 2)
-INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`, `quantidade`) VALUES (1, 15, 150, 1)
-INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`, `quantidade`) VALUES (1, 11, 200, 3)
-INSERT INTO `endereco`(`logradouro`, `numero`, `cep`, `complemento`, `cidade`, `UF`) VALUES ('Av Jukinha','9999','1237890','Apartamento 2','Belford Roxo', 'RJ');
-INSERT INTO `locacao`(`id_cliente`, `id_endereco`, `dia`, `qtd_horas`, `hora_inicio`) VALUES (3, 2, '2019-11-10', 4, '17:17');
-INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`, `quantidade`) VALUES (1, 12, 550, 2);
-INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`, `quantidade`) VALUES (1, 13, 150, 1);
-INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`, `quantidade`) VALUES (1, 10, 150, 3)
+INSERT INTO `usuario`(`nome`, `email`, `senha`) VALUES ('Leticia', 'leticiagatinha@gmail.com', '$2y$10$cyeMlImU8XE79FK3EeQjAOP6b.kiYl.7wTkQ/7DLd92jzD6putRoi');
+INSERT INTO `cliente`(`id`, `cpf`, `telefone`) VALUES (1 ,'33352223133', '21954346541');
+INSERT INTO `usuario`(`nome`, `email`, `senha`) VALUES ('Emanuel', 'ueitomep@gmail.com', '$2y$10$cyeMlImU8XE79FK3EeQjAOP6b.kiYl.7wTkQ/7DLd92jzD6putRoi');
+INSERT INTO `cliente`(`id`, `cpf`, `telefone`) VALUES (2 ,'12312312312', '21012341234');
+INSERT INTO `endereco`(`logradouro`, `numero`, `cep`, `complemento`, `cidade`, `UF`) VALUES ('Rua Aninha','1677','123-789','Atrás da árvore','Mauá', 'RJ');
+INSERT INTO `locacao`(`id_cliente`, `id_endereco`, `dia`, `hora_inicio`) VALUES (1, 1, '2019-11-15', '12:12');
+INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`, `quantidade`) VALUES (1, 1, 500, 2);
+INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`, `quantidade`) VALUES (1, 3, 150, 1);
+INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`, `quantidade`) VALUES (1, 4, 200, 3);
+    INSERT INTO `endereco`(`logradouro`, `numero`, `cep`, `complemento`, `cidade`, `UF`) VALUES ('Av Jukinha','9999','1237890','Apartamento 2','Belford Roxo', 'RJ');
+    INSERT INTO `locacao`(`id_cliente`, `id_endereco`, `dia`, `hora_inicio`) VALUES (2, 2, '2019-11-16', '17:17');
+    INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`, `quantidade`) VALUES (2, 2, 550, 2);
+    INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`, `quantidade`) VALUES (2, 5, 150, 1);
+    INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`, `quantidade`) VALUES (2, 6, 150, 3);
