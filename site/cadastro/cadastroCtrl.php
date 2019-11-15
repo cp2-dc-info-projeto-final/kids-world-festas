@@ -29,7 +29,7 @@
     $erro = "";
 
     if (cadastrarCliente($nome, $email, $senha, $telefone, $cpf)) {
-        header("Location: ../index.html");
+        header("Location: ../index.php");
     } 
     else {
         $erro = "Email indisponível";        

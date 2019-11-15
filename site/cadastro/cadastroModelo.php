@@ -51,11 +51,7 @@
         $sql_insert_cliente = "INSERT INTO cliente (id, telefone, cpf) VALUES
         ($id_usuario, '$telefone', '$cpf')";
 
-        if(mysqli_query($link, $sql_insert_cliente)){
-            return true;
-            
-        }
-        else{
+        if(!mysqli_query($link, $sql_insert_cliente)){
             die( "Erro $sql_insert_cliente. " . mysqli_error($link));
         }
 

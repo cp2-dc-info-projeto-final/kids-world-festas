@@ -10,13 +10,13 @@
     if (logar($email, $senha) == true) {
         session_unset();
         $_SESSION["nome"] = $row["nome"];
-        header("Location: ../index-usuario.php");
+        header("Location: ../index.php");
         exit();
     }
     else {
         $erro = "Login ou senha incorretos";
         $_SESSION["erro"] = $erro;
-        header("Location: ../index-cliente.html");
+        header("Location: loginVieww.php");
         exit();
     }
 ?>
