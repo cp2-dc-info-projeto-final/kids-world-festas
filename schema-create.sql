@@ -45,6 +45,7 @@ CREATE TABLE produto(
     nome VARCHAR(30) NOT NULL,
     imagem VARCHAR(1024),
     descricao VARCHAR(200),
+    visivel BIT NOT NULL,
     preco DOUBLE NOT NULL
 );
 
@@ -103,3 +104,6 @@ INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`, `quantid
     INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`, `quantidade`) VALUES (2, 2, 550, 2);
     INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`, `quantidade`) VALUES (2, 5, 150, 1);
     INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`, `quantidade`) VALUES (2, 6, 150, 3);
+
+
+   

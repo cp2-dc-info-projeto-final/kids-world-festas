@@ -13,7 +13,9 @@ require '../ConnectionFactory.php';
          
      
             }
-            $sql="DELETE FROM produto WHERE nome=$nome";
+            $sql="UPDATE produto
+            SET visivel = 1
+            WHERE nome=$nome";
             mysqli_query($link, $sql);
             mysqli_close($link);
         }
