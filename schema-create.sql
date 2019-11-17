@@ -46,7 +46,8 @@ CREATE TABLE produto(
     imagem VARCHAR(1024),
     descricao VARCHAR(200),
     visivel BIT NOT NULL,
-    preco DOUBLE NOT NULL
+    preco DOUBLE NOT NULL,
+    visibilidade BIT
 );
 
 CREATE TABLE locacao_produto(
