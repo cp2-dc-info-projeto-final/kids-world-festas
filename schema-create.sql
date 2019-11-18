@@ -61,19 +61,28 @@ CREATE TABLE locacao_produto(
 );
 
 SELECT
-produto.nome 
+ locacao.dia, usuario.email, usuario.nome, cliente.cpf, cliente.telefone, endereco.logradouro, endereco.numero, endereco.cep, endereco.complemento, endereco.cidade, locacao.hora_inicio, produto.nome, locacao_produto.preco_pago
 
 FROM
-locacao
+usuario
 
 INNER JOIN
-locacao_produto ON locacao.id = locacao_produto.id_locacao 
+cliente ON usuario.id = cliente.id 
 
 INNER JOIN
-produto ON produto.id = locacao_produto.id_produto 
+locacao ON locacao.id_cliente = cliente.id
 
-WHERE
-locacao.dia = "$dia"
+INNER JOIN
+endereco ON endereco.id = locacao.id_endereco
+
+INNER JOIN
+locacao_produto ON locacao_produto.id_locacao = locacao.id
+
+INNER JOIN
+produto ON produto.id = locacao_produto.id_produto
+
+ORDER BY
+locacao.dia
 =====================================================================================================
 SELECT nome
 FROM produto 
