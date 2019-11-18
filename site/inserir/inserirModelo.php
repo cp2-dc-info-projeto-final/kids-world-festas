@@ -1,7 +1,7 @@
 <?php
 
 require '../ConnectionFactory.php';
-    function inserirProduto($nome, $descricao, $preco, $imagem){
+    function inserirProduto($nome, $descricao, $preco, $imagem, $visibilidade){
         
         // conexão
             $link=getConnection();
@@ -13,8 +13,8 @@ require '../ConnectionFactory.php';
         
 
         // insert produto
-        $sql_insert_produto = "INSERT INTO produto (nome, descricao, preco, imagem) VALUES
-            ('$nome', '$descricao', '$preco', '$imagem')";
+        $sql_insert_produto = "INSERT INTO produto (nome, descricao, preco, imagem, visibilidade) VALUES
+            ('$nome', '$descricao', '$preco', '$imagem', 1)";
     
         if(!mysqli_query($link, $sql_insert_produto)){
             die( "Erro $sql_insert_produto. " . mysqli_error($link));

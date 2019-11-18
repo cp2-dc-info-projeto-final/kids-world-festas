@@ -14,7 +14,7 @@ require '../ConnectionFactory.php';
      
             }
             $sql="UPDATE produto
-            SET visivel = 1
+            SET visibilidade = 0
             WHERE nome=$nome";
             mysqli_query($link, $sql);
             mysqli_close($link);

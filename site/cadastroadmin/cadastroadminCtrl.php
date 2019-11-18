@@ -10,7 +10,7 @@
     session_start();
 
     if(!preg_match("/^([a-zA-Z' ]+)$/",$nome)){
-        $erro = "Seu nome tá errado mané!";        
+        $erro = "Nome inválido";        
         $_SESSION["erro"] = $erro;
         header("Location: cadastroadminView.php");
         exit();

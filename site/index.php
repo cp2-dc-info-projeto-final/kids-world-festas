@@ -39,10 +39,7 @@
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#portifolio">Produtos</a>
-                    </li>
+                <ul class="navbar-nav text-uppercase ml-auto">                   
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#about">Sobre</a>
                     </li>
@@ -66,7 +63,7 @@
             <div class="intro-text">
                 <div class="intro-lead-in">Seja bem-vindo ao nosso site!</div>
                 <div class="intro-heading text-uppercase">Kids World Festas</div>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#portifolio">Produtos</a>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#busc_data">Agendar</a>
             </div>
         </div>
     </header>
@@ -102,7 +99,7 @@
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
                                 <br>
-                                <input id="Buscprodutos" class="btn btn-primary btn-xl text-uppercase" type="submit"
+                                <input id="Buscprodutos" onclick="SumirDiv('sumir')" class="btn btn-primary btn-xl text-uppercase" type="submit"
                                     value="Buscar">
                             </div>
 
@@ -115,7 +112,7 @@
                     <br>
 
                     <div class="col-sm-12">
-                        <h1 class="section-subheading sumir text-muted text-center " style="display: none;">
+                        <h1 class="section-subheading text-muted text-center "">
                             Os produtos disponíveis nessa data são:
                         </h1>
 
@@ -201,56 +198,27 @@
                     ?>
                     </div>
         </div>
-        <center>
-            <div class="DivTotal">
-                Total: <input type="text" id="resultado" readonly=“true” value="0" ;>
+        <form action="endereco/enderecoCtrl.php" method="POST">
+            <div>
+                <center>
+                    <div class="DivTotal">
+                        Total: <input type="text" id="resultado" readonly=“true” value="0" ;>
+                    </div>
+                        
+            
+                <div class="clearfix"></div>
+                <div class="col-lg-12 text-center">
+                    <div id="success"></div>
+                    <br>
+                    <input id="agendar" class="btn btn-primary btn-xl text-uppercase"
+                        type="submit" value="agendar">
+                </div>
+                </center>
             </div>
-        </center>
+        </form>
+    </div>
     </section>
 
-    <section class="page-section" id="Endereço">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">Endereço</h2>
-                    <h3 class="section-subheading text-muted">Insira o endereço do evento.</h3>
-                </div>
-
-                <div class="col-sm-6">
-                    <h1 class="section-subheading text-muted">Indique o endereço do evento</h1>
-                    <div class="form-group">
-                        Logradouro: <input class="form-control" id="endereco" type="text"
-                            placeholder="Digite o endereço do evento *" required="required"
-                            data-validation-required-message="Por favor, digite o endereço do evento.">
-                        <p class="help-block text-danger"></p>
-                    </div>
-
-                    <div class="form-group">
-                        CEP: <input class="form-control" id="Bairro" type="text"
-                            placeholder="Digite o bairro do evento *" required="required"
-                            data-validation-required-message="Por favor, digite o bairro do evento.">
-                        <p class="help-block text-danger"></p>
-                    </div>
-                    <div class="form-group">
-                        Complemento: <input class="form-control" id="Bairro" type="text"
-                            placeholder="Digite o bairro do evento *" required="required"
-                            data-validation-required-message="Por favor, digite o bairro do evento.">
-                        <p class="help-block text-danger"></p>
-                    </div>
-                    <div class="form-group">
-                        Cidade:<input class="form-control" id="Bairro" type="text"
-                            placeholder="Digite o bairro do evento *" required="required"
-                            data-validation-required-message="Por favor, digite o bairro do evento.">
-                        <p class="help-block text-danger"></p>
-                    </div>
-                    <div class="form-group">
-                        UF:<input class="form-control" id="Bairro" type="text" placeholder="Digite o bairro do evento *"
-                            required="required"
-                            data-validation-required-message="Por favor, digite o bairro do evento.">
-                        <p class="help-block text-danger"></p>
-                    </div>
-                </div>
-            </div>
 
 
         </div>
