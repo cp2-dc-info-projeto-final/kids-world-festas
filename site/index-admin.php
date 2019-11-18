@@ -47,7 +47,7 @@
                         <a class="nav-link js-scroll-trigger" href="#produtos-inserir">Inserir Produtos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#adm-cadastrar">Cadastrar administradores</a>
+                        <a class="nav-link js-scroll-trigger" href="#Adm-cadastrar">Cadastrar administradores</a>
                     </li>
                 </ul>
             </div>
@@ -177,30 +177,42 @@
 
             <table style="border-collapse: collapse;" border="1">
                 <tr id="linha1">
-                    <td>Cliente</td>
-                    <td>CPF</td>
-                    <td>E-mail</td>
                     <td>Data</td>
                     <td>Horário</td>
-                    <td>Endereço</td>
-                    <td>Bairro</td>
                     <td>Produtos</td>
-                    <td>Zona</td>
                     <td>Preço</td>
-                    <td>Pagamento</td>
+
+                    <td>Cliente</td>
+                    <td>E-mail</td>
+                    <td>Telefone</td>
+                    <td>CPF</td>
+
+                    <td>Logradouro</td>
+                    <td>N°</td>
+                    <td>CEP</td>
+                    <td>Bairro</td>
+                    <td>Cidade</td>
+
+                    
                 </tr>
                 <tr>
-                    <td>Janaina</td>
-                    <td>111.222.333-44</td>
-                    <td>janalinda@gmail.com</td>
-                    <td>11/09/2020</td>
-                    <td>21:00</td>
-                    <td>Rua dos bobos, n°0</td>
-                    <td>Vila da Penha</td>
+                    <td>18-11-2019</td>
+                    <td>12:00</td>
                     <td>Algodão doce, pipoqueira, crepe</td>
-                    <td>Zona norte</td>
                     <td>R$500,00</td>
-                    <td>Pago</td>
+
+                    <td>Janaina</td>
+                    <td>janalinda@gmail.com</td>
+                    <td>21995581433</td>
+                    <td>111.222.333-44</td>
+
+                    
+                    <td>Rua dos bobos</td>
+                    <td>0</td>
+                    <td>21210010</td>
+                    <td>Vila da Penha</td>
+                    <td>Rio de Janeiro</td>
+                    
                 </tr>
             </table>
 
@@ -256,6 +268,38 @@
                         <div class="col-lg-12 text-center">
                             <div id="success"></div>
                             <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Inserir</button>
+
+    </form>
+    </div>
+    </div>
+
+
+
+
+    </section>
+
+    <section class=" bg-light   page-section" id="produtos-inserir">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading text-uppercase">Excluir Produtos</h2>
+                        <h3 class="section-subheading text-muted">Exclua produtos do seu site.</h3>
+                    </div>
+                    <div class="row">
+                        <br class="col-lg-12">
+                        <br id="contactForm" name="sentMessage" novalidate="novalidate">
+                        
+                        <h6 class="section-heading text-uppercase">Digite o nome do produto que deve ser apagado</h6>
+                        <div class= " col-md-12 form-group">
+                            <input class="form-control" id="nome" name="nome" type="text" placeholder="Digite o nome do produto *" required="required" data-validation-required-message="Digite o nome.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                         
+                        <div class="clearfix"></div>
+                        <div class="col-lg-12 text-center">
+                            <div id="success"></div>
+                            <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Excluir</button>
 
     </form>
     </div>

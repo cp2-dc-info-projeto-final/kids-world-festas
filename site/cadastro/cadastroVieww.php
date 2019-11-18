@@ -10,6 +10,10 @@
 
     <title>Cadastro </title>
 
+    <!-- jQuery (Mascara) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+
     <!-- Bootstrap core CSS -->
     <link href="../../startbootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -80,6 +84,10 @@
                     </div>
                 </center>
             </form>
+        <script>
+        $("#cpf").mask("000.000.000-00");
+        $("#telefone").mask("(00) 0000-0000");
+        </script>
         </div>
     </section>
 
