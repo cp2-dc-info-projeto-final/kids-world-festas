@@ -23,7 +23,7 @@
 
 ### RF 01
 
-O sistema deverá permitir cadastro de usuarios.
+O sistema deverá permitir cadastro de usuários.
 
 ### RF 02 
 
@@ -35,11 +35,11 @@ O sistema deverá ter um login pré definido para o administrador.
 
 ### RF 04
 
- O usuário poderá agendar a reserva dos produtos através de um calendário que irá exibir os produtos e sua disponibilidade.
+ O usuário poderá agendar a reserva dos produtos através de um calendário que irá exibir os produtos e disponível na data escolhida.
  
 ### RF 05
 
- O site deverá possuir as páginas: home, login/cadstro, quem somos/contatos, serviços e agendamento.
+ O site deverá possuir as páginas: home, login/cadastro, quem somos e agendamento.
 
 
 
