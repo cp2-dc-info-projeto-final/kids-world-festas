@@ -115,13 +115,6 @@
                                 data-validation-required-message="Por favor, digite o horário do evento.">
                             <p class="help-block text-danger"></p>
                         </div>
-                        <?php
-                            require_once "enderecoCtrl.php";
-                        ?>
-                        <div class="DivTotal">
-                                Total: <input type="text" id="resultado" readonly=“true” value="<?php echo $resultado ?>" ;>
-                        </div>
-                        
                         
                         <div class="col-lg-12 text-center">
                             <div id="success"></div>

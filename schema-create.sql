@@ -34,7 +34,7 @@ CREATE TABLE locacao(
     id_cliente INT NOT NULL,
     id_endereco INT NOT NULL,
     dia DATE NOT NULL,
-    hora_inicio TIME NOT NULL,
+    horario TIME NOT NULL,
     FOREIGN KEY(id_cliente) REFERENCES cliente(id),
     FOREIGN KEY(id_endereco) REFERENCES endereco(id)
 );
@@ -52,14 +52,13 @@ CREATE TABLE locacao_produto(
 	id_locacao INT,
     id_produto INT,
     preco_pago FLOAT,
-    quantidade INT,
     PRIMARY KEY(id_locacao, id_produto),
     FOREIGN KEY(id_locacao) REFERENCES locacao(id),
     FOREIGN KEY(id_produto) REFERENCES produto(id)
 );
 
 SELECT
- locacao.dia, usuario.email, usuario.nome, cliente.cpf, cliente.telefone, endereco.logradouro, endereco.numero, endereco.cep, endereco.complemento, endereco.cidade, locacao.hora_inicio, produto.nome, locacao_produto.preco_pago
+locacao.dia, usuario.email, usuario.nome, cliente.cpf, cliente.telefone, endereco.logradouro, endereco.numero, endereco.cep, endereco.complemento, endereco.cidade, locacao.hora_inicio, produto.nome, locacao_produto.preco_pago
 
 FROM
 usuario
@@ -98,20 +97,54 @@ INSERT INTO `produto`( `nome`, `descricao`, `preco`, `imagem`, `visibilidade`) V
 INSERT INTO `produto`( `nome`, `descricao`, `preco`, `imagem`, `visibilidade`) VALUES ('Trenzinho de Lanches', 'Lanchinhos: Batata frita, pão de queijo, mini hot dog, mini pizza, mini hamburguer e nuggets.', 500, 'img/portfolio/tremThumbnail.png', 1);
 INSERT INTO `produto`( `nome`, `descricao`, `preco`, `imagem`, `visibilidade`) VALUES ('Pula-Pula', 'Categoria: Brinquedo Tamanho: 3,05m', 150, 'img/portfolio/pulaThumbnail.png', 1);
 
+                                        // Inserir Usuario
 INSERT INTO `usuario`(`nome`, `email`, `senha`) VALUES ('Leticia', 'leticiagatinha@gmail.com', '$2y$10$cyeMlImU8XE79FK3EeQjAOP6b.kiYl.7wTkQ/7DLd92jzD6putRoi');
 INSERT INTO `cliente`(`id`, `cpf`, `telefone`) VALUES (1 ,'33352223133', '21954346541');
 INSERT INTO `usuario`(`nome`, `email`, `senha`) VALUES ('Emanuel', 'ueitomep@gmail.com', '$2y$10$cyeMlImU8XE79FK3EeQjAOP6b.kiYl.7wTkQ/7DLd92jzD6putRoi');
 INSERT INTO `cliente`(`id`, `cpf`, `telefone`) VALUES (2 ,'12312312312', '21012341234');
+
+                                        // Finalizar Compra
 INSERT INTO `endereco`(`logradouro`, `numero`, `cep`, `complemento`, `cidade`) VALUES ('Rua Aninha','1677','123-789','Atrás da árvore','Mauá', 'RJ');
-INSERT INTO `locacao`(`id_cliente`, `id_endereco`, `dia`, `hora_inicio`) VALUES (1, 1, '2019-11-15', '12:12');
-INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`, `quantidade`) VALUES (1, 1, 500, 2);
-INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`, `quantidade`) VALUES (1, 3, 150, 1);
+
+INSERT INTO `locacao`(`id_cliente`, `id_endereco`, `dia`, `horario`) VALUES (1, 1, '2019-11-15', '12:12');
+
+INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`) VALUES (1, 1, 500, 2);
+INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`) VALUES (1, 3, 150, 1);
 INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`, `quantidade`) VALUES (1, 4, 200, 3);
+
+
+
+
+
+
+AGENDAMENTO (tamo finalizando agr)
+Redirecionamento com segurança dos atores
+Exibir os agendamentos para o administrador
+
+Pagamento*
+Máscaras perfeitas
+
+
+
+
+
+
+
+
+
+
+
+
 INSERT INTO `endereco`(`logradouro`, `numero`, `cep`, `complemento`, `cidade` VALUES ('Av Jukinha','9999','1237890','Apartamento 2','Belford Roxo');
-INSERT INTO `locacao`(`id_cliente`, `id_endereco`, `dia`, `hora_inicio`) VALUES (2, 2, '2019-11-16', '17:17');
-INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`, `quantidade`) VALUES (2, 2, 550, 2);
-INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`, `quantidade`) VALUES (2, 5, 150, 1);
-INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`, `quantidade`) VALUES (2, 6, 150, 3);
+INSERT INTO `locacao`(`id_cliente`, `id_endereco`, `dia`, `horario`) VALUES (2, 2, '2019-11-16', '17:17');
+INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`) VALUES (2, 2, 550);
+INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`) VALUES (2, 5, 150);
+INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`) VALUES (2, 6, 150);
+
+
+
+
+
 
 
    

@@ -7,9 +7,10 @@
     
     session_start();
 
-    if (logar($email, $senha) == true) {
+    if ($usuario = logar($email, $senha) != false) {
         session_unset();
-        $_SESSION["nome"] = $row["nome"];
+        $_SESSION["nome"] = $usuario["nome"];
+        $_SESSION["usuario_id"] = $usuario["id"];
         header("Location: ../index.php");
         exit();
     }

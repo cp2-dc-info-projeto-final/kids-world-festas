@@ -99,7 +99,7 @@
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
                                 <br>
-                                <input id="Buscprodutos" onclick="SumirDiv('sumir')" class="btn btn-primary btn-xl text-uppercase" type="submit"
+                                <input id="Buscprodutos" class="btn btn-primary btn-xl text-uppercase" type="submit"
                                     value="Buscar">
                             </div>
 
@@ -112,6 +112,7 @@
                     <br>
 
                     <div class="col-sm-12">
+                    <form action="fim-compra/guardarProdutosSelecionados.php" method="POST">
                         <h1 class="section-subheading text-muted text-center "">
                             Os produtos disponíveis nessa data são:
                         </h1>
@@ -131,7 +132,7 @@
                             // if ($dia < date('Y-m-d') and $dia != [])
                             // echo "esta busca não é permitida";
                             // die;
-                        
+                        echo "<input type=\"hidden\" name=\"dia\" value=\"".$dia."\"/>";
                         $produtos = buscarProdutosCtrl($dia);
         
                         $i = 0;
@@ -170,7 +171,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
                                 <div class="portfolio-hover">
@@ -181,9 +182,15 @@
                                 <img class="img-fluid" src="<?php echo $produto['imagem'];?>" />
                             </a>
                             <div class="portfolio-caption">
-                                <h4><input type="checkbox" onclick="soma(<?php echo $i;?>)"
-                                        name="<?php echo "prod".$i;?>" value="<?php echo $produto['id'];?>">
+                                <h4>
+                                    
+                                    <input type="checkbox" onclick="soma(<?php echo $i;?>)"
+                                        name="<?php echo "prod".$i;?>">
                                     <?php echo $produto['nome'];?>
+
+                                    <input type="hidden" name="<?php echo "prodid".$i;?>"
+                                        value="<?php echo $produto['id'];?>">
+
                                     <input type="hidden" name="<?php echo "preco".$i;?>"
                                         value="<?php echo $produto['preco'];?>"></h4>
 
@@ -198,11 +205,11 @@
                     ?>
                     </div>
         </div>
-        <form action="endereco/enderecoCtrl.php" method="POST">
+        
             <div>
                 <center>
                     <div class="DivTotal">
-                        Total: <input type="text" id="resultado" readonly=“true” value="0" ;>
+                        Total: <input type="text" id="resultado" name="resultado" readonly=“true” value="0" ;>
                     </div>
                         
             

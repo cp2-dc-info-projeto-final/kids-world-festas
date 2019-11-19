@@ -11,30 +11,30 @@
 
     session_start();
 
-    if(!preg_match("/^([a-zA-Z' ]+)$/",$nome)){
-        $erro = "Seu nome tá errado mané!";        
-        $_SESSION["erro"] = $erro;
-        header("Location: cadastroView.php");
-        exit();
-    }
+    // if(!preg_match("/^([a-zA-Z' ]+)$/",$nome)){
+    //     $erro = "Seu nome tá errado mané!";        
+    //     $_SESSION["erro"] = $erro;
+    //     header("Location: cadastroVieww.php");
+    //     exit();
+    // }
 
     // Check confirmarsenha
     if ($senha != $confirmarsenha) {    
         $erro = "As senhas não coincidem";        
         $_SESSION["erro"] = $erro;
-        header("Location: cadastroView.php");
+        header("Location: cadastroVieww.php");
         exit();
     }
 
     $erro = "";
 
     if (cadastrarCliente($nome, $email, $senha, $telefone, $cpf)) {
-        header("Location: ../index.php");
+        header("Location: ../login/loginVieww.php");
     } 
     else {
         $erro = "Email indisponível";        
         $_SESSION["erro"] = $erro;
-        header("Location: cadastroView.php");
+        header("Location: cadastroVieww.php");
     }
     
 ?>

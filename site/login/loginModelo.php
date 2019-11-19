@@ -6,7 +6,7 @@
 
         $connection = getConnection();
 
-        $sql_select_usuario = "SELECT senha, nome FROM usuario WHERE email='$email'";
+        $sql_select_usuario = "SELECT id, senha, nome FROM usuario WHERE email='$email'";
 
         $result = mysqli_query($connection, $sql_select_usuario);
         
@@ -16,7 +16,7 @@
                 $hash = $row["senha"];
                 
                 if(password_verify($senha, $hash)) {
-                    return true;
+                    return $row;
                 } else {
                     return false;
                 }
