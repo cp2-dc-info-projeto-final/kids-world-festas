@@ -8,8 +8,7 @@ Auxiliar na organização da empresa e tornar os serviços de aluguel,reserva e 
 
 
 ## Principais funcionalidades:
-- Reserva e agendamento de datas
-- Validação de pagamentos 
+- Reserva e agendamento de datas 
 - Monitoramento da disponibilidade dos equipamentos de trabalho
 
 ## Stakeholder:
