@@ -47,6 +47,9 @@
                         <a class="nav-link js-scroll-trigger" href="#produtos-inserir">Inserir Produtos</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#produtos-remover">Remover Produtos</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#Adm-cadastrar">Cadastrar administradores</a>
                     </li>
                 </ul>
@@ -278,13 +281,14 @@
 
     </section>
 
-    <section class=" bg-light   page-section" id="produtos-inserir">
+     <form action="removerCtrl.php" method="POST" id="contactForm" name="sentMessage" novalidate="novalidate">
+      <section class=" bg-light   page-section" id="produtos-remover">
 
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h2 class="section-heading text-uppercase">Excluir Produtos</h2>
-                        <h3 class="section-subheading text-muted">Exclua produtos do seu site.</h3>
+                        <h2 class="section-heading text-uppercase">Remover Produtos</h2>
+                        <h3 class="section-subheading text-muted">Remova produtos do seu site.</h3>
                     </div>
                     <div class="row">
                         <br class="col-lg-12">
@@ -301,14 +305,14 @@
                             <div id="success"></div>
                             <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Excluir</button>
 
-    </form>
+      </form>
     </div>
     </div>
 
 
 
 
-    </section>
+        </section>
 
     <!-- Contact -->
     <section class="page-section" id="Adm-cadastrar">
