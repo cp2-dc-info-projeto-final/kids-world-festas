@@ -17,7 +17,7 @@
 ![Agendar](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/telas/busca1.png "Agendar")
 
  - Ao selecionar algum produto, uma prévia do valor do aluguel será exibida e ao clicar no botão "Agendar", o usuário será redirecionado para outra página para finalizar o agendamento.
-![Agendar2](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/telas/busca2.png"Agendar2")
+![Agendar2](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/telas/busca2.png "Agendar2")
 
 
 - Ao ser redirecionado para esta página, o usuário deverá informar o local e o horário da festa para finalizar o agendamento.
