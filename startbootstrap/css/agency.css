@@ -127,7 +127,7 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-brand {
-    color: #fed136;
+    color: #ffffff;
     font-family: 'Kaushan Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
@@ -135,7 +135,7 @@ img::-moz-selection {
 #mainNav .navbar-brand:active,
 #mainNav .navbar-brand:focus,
 #mainNav .navbar-brand:hover {
-    color: #fec503;
+    color: #ffffff;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -183,7 +183,7 @@ img::-moz-selection {
 header.masthead {
     text-align: center;
     color: white;
-    background-image: url(../../site/img/logo2.png);
+    background-image: url(../../site/img/logoamarela.png);
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
