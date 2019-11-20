@@ -23,7 +23,7 @@
     - Se o e-mail já estiver cadastrado no sistema, ele retorna um erro.
     - Se o e-mail for válido o sistema cadastra o Usuário como cliente.
     - O usuário se cadastra pela internet, através da página de Login.
-  3. O usuário escolherá e responderá uma pergunta referente ao processo de recuperação de senha.
+ 
 
 ## CDU 02 - Login 
 
@@ -39,8 +39,7 @@
       * clientes recebem as permissões de acesso de clientes.
     - Se o e-mail não estiver cadastrado no sistema, ele retorna um erro.
     - Se a senha não for condizente com o e-mail informado, ele retorna um erro.
-  2. Caso o Usuário tenha esquecido sua senha, será redirecionado para um processo de Recuperação da mesma, onde responderá uma pergunta escolhida durante o cadastro.
-
+ 
 
  ## CDU 03 - Locação 
 
