@@ -9,7 +9,7 @@ Auxiliar na organização da empresa e tornar os serviços de aluguel, reserva e
 
 ## Integrantes:
  - Arsi Luiz Ferreira Monteiro Gonçalves  N°3
- - Caio Wagner Never Borges N°4
+ - Caio Wagner Neves Borges N°4
  - Emanuel Pires da Costa N°8
  - Letícia Simões do Nascimento  N°15
  
