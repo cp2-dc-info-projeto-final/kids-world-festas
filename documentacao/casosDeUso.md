@@ -5,9 +5,9 @@
 - [CDU 01 - Cadastro de clientes](#cdu-01---cadastro-de-clientes)
 - [CDU 02 - Login](#cdu-03---login)
 - [CDU 03 - Locação](#cdu-03---locação)
-- [CDU 04 - Pagamento](#cdu-04---pagamento)
+- [CDU 04 - Gerenciamento de Locação](#cdu-04---Gerenciamento-de-Locação)
 - [CDU 05 - Gerenciamento dos produtos](#cdu-05---Gerenciamento-dos-produtos)
-- [CDU 06 - Gerenciamento de Locação](#cdu-06---Gerenciamento-de-Locação)
+
 
 
 ## CDU 01 - Cadastro de clientes
@@ -53,18 +53,18 @@
   2. Caso o usuário selecione um dia, será exibida uma lista com os produtos disponiveis naquele dia.
   3. Caso o usuário selecione um ou mais produtos, será redirecionado para uma página de locação.
 
-  ## CDU 04 - Pagamento
+  ## CDU 04 - Gerenciamento das Locações
 
-**Atores:** Clientes
+**Atores:** Admnistrador
 
-**Pré-Condições:** Ser cadastrado e estar logado 
+**Pré-Condições:** Ser cadastrado no sistema como Admnistrador e estar logado.
 
 **Fluxo Principal:**
 
-  1. O usuário será redirecionado para uma pagina do PagSeguro onde efetuará o pagamento.
+   1. O admnistrador deverá ter acesso a informações referentes às locações e seus respectivos clientes(Equipamentos alugados, data da locação, preço).
+
 
  
-
 ## CDU 05 - Gerenciamento dos produtos
 
 **Atores:** Administrador
@@ -79,16 +79,4 @@
 
   2. Administrador tem a possibilidade de excluir equipamentos do estoque.
 
-  3. Administrador tem a possibilidade de alterar as informações dos equipamentos do estoque.
 
-## CDU 06 - Gerenciamento das Locações
-
-**Atores:** Admnistrador
-
-**Pré-Condições:** Ser cadastrado no sistema como Admnistrador e estar logado.
-
-**Fluxo Principal:**
-
-  1. O admnistrador deverá ter acesso a informações referentes às locações e seus respectivos clientes(Equipamentos alugados, data da locação, preço).
-
-  2. O admnistrador poderá negar ou autorizar os pedidos.
