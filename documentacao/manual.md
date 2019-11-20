@@ -13,9 +13,10 @@
 ![Home](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/telas/home.png "Home")
 
 
-- Na página Home, o usuário poderá selecionar uma data e visualizar todos os produtos disponíveis na data selecionada. Ao selecionar algum produto uma prévia do valor do aluguel será exibida e ao clickar no botão "Agendar" será redirecionado para outra página para finalizar o agendamento.
+- Na página Home, o usuário poderá selecionar uma data e visualizar todos os produtos disponíveis na data selecionada. 
 ![Agendar](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/telas/busca1.png "Agendar")
 
+ - Ao selecionar algum produto, uma prévia do valor do aluguel será exibida e ao clicar no botão "Agendar", o usuário será redirecionado para outra página para finalizar o agendamento.
 ![Agendar2](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/telas/busca2.png"Agendar2")
 
 
