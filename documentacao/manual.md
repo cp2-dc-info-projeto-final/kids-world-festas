@@ -1,5 +1,6 @@
 #Cliente
-![Cadastro](https://github.com/cp2-dc-info-projeto-final/catalogo-livros-cpii/blob/master/Documentacao/telas/cadastro.jpg "Cadastro")
+
+![Cadastro](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/telas/cadastro.png "Cadastro")
 - O primeiro passo é o cadastro. Nele, o usuário insere seu nome, e-mail, telefone, CPF e senha. 
 
 ![Login](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/telas/login.png "Login")
