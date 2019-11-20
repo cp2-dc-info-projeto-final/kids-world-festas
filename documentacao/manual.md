@@ -5,7 +5,7 @@
 ![Cadastro](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/telas/cadastro.png "Cadastro")
 
 
-- Após o cadastro, o usuário realiza o login, com as informações cadastradas.
+- Após o cadastro, o usuário será redirecionado para a página de login onde irá inserir as informações cadastradas.
 ![Login](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/telas/login.png "Login")
 
 
