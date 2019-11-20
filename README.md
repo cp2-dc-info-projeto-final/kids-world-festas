@@ -34,6 +34,8 @@ Auxiliar na organização da empresa e tornar os serviços de aluguel, reserva e
  ###### Diagrama de Banco de Dados
  ![D.de.BD](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/Diagrama%20de%20Branco%20de%20Dados.png) 
 - [schema-create.sql](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/schema-create.sql)
+###### src
+![Pasta src](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/tree/master/documentacao/src) 
 
 ### 5. Manual de utilização
 - [Manual.md](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/manual.md)
