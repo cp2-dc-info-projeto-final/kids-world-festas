@@ -13,6 +13,7 @@
 - Ao efetuar o login, o usuário é direcionado para a página Home. 
 
 ![Agendar](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/telas/busca1.png "Agendar")
+
 ![Agendar2](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/telas/busca2.png"Agendar2")
 
 - Na página Home, o usuário poderá selecionar uma data e visualizar todos os produtos disponíveis na data selecionada. Ao selecionar algum produto uma prévia do valor do aluguel será exibida e ao clickar no botão "Agendar" será redirecionado para outra página para finalizar o agendamento.
