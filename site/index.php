@@ -50,7 +50,7 @@
                         <a class="nav-link js-scroll-trigger" href="./login/loginView.php">login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="./cadastro/cadastroView.html">Cadastre-se</a>
+                        <a class="nav-link js-scroll-trigger" href="./cadastro/cadastroVieww.php">Cadastre-se</a>
                     </li>
                 </ul>
             </div>

@@ -57,7 +57,7 @@
 
         mysqli_close($link);
     }
-
+    
     function cadastrarAdministrador($nome, $email, $senha){
         
         $id_usuario = cadastrarUsuario($nome, $email, $senha);
@@ -78,5 +78,4 @@
 
         mysqli_close($link);
     }
-
 ?>
