@@ -8,10 +8,8 @@
 - Após o cadastro, o usuário será redirecionado para a página de login onde irá inserir as informações cadastradas.
 ![Login](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/telas/login.png "Login")
 
-
 - Ao efetuar o login, o usuário será redirecionado para a página Home. 
 ![Home](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/telas/home.png "Home")
-
 
 - Na página Home, o usuário poderá selecionar uma data e visualizar todos os produtos disponíveis na data selecionada. 
 ![Agendar](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/telas/busca1.png "Agendar")
