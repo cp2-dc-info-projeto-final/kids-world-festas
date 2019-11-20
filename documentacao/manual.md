@@ -9,7 +9,7 @@
 ![Login](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/telas/login.png "Login")
 
 
-- Ao efetuar o login, o usuário é direcionado para a página Home. 
+- Ao efetuar o login, o usuário será redirecionado para a página Home. 
 ![Home](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/telas/home.png "Home")
 
 
