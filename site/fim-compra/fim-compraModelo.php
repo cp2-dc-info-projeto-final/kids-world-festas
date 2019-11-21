@@ -21,12 +21,11 @@
         }
         
         //insert locacao
-        $id_cliente = $_SESSION['usuario_id'];
-        $dia = $_SESSION['dia'];
-        //$horario = $_SESSION[''];
+        $id_cliente = 7; //$_SESSION['usuario_id']
+        $dia = '2019-11-21';//$_SESSION['dia']
         $id_endereco = mysqli_insert_id($link);
 
-        $sql_insert_locacao = "INSERT INTO `locacao`(`id_cliente`, `id_endereco`, `dia`, `horario`) VALUES
+        $sql_insert_locacao = "INSERT INTO locacao (id_cliente, id_endereco, dia, horario) VALUES
         ($id_cliente, $id_endereco, '$dia', '$horario');";
 
         if(!mysqli_query($link, $sql_insert_locacao)){
@@ -38,12 +37,20 @@
 
         foreach ($_SESSION["produtos"] as $id_produto)
         {
-            //SELECT preco FROM produto WHERE id = $id_produto
+            $sql_select_preco = "SELECT preco FROM produto WHERE id = $id_produto";
+            $result = mysqli_query($connection, $sql_select_preco);
 
-            
+            if (!mysqli_query($link, $sql_select_preco)){
+                die( "Erro $sql_select_preco. " . mysqli_error($link));
+            }
+
+            while($row = mysqli_fetch_assoc($result)) {
+                $preco = $row["preco"];
+            }
+
             $sql_insert_locacao_produto = "INSERT INTO locacao_produto 
-                                            (`id_locacao`, `id_produto`, `preco_pago`)
-                                            VALUES(`$id_locacao`, `$id_produto`, null) ";
+                (id_locacao, id_produto, preco_pago)
+                VALUES($id_locacao, $id_produto, $preco) ";
             
             if(!mysqli_query($link, $sql_insert_locacao_produto)){
                 die( "Erro $sql_insert_locacao_produto. " . mysqli_error($link));

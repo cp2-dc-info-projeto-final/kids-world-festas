@@ -66,7 +66,7 @@
 
     <!-- Services -->
     <!-- Portfolio Grid -->
-    <section class="page-section" id="Endereço">
+    <!-- <section class="page-section" id="Endereço">
         <div class="container">
             
             <div class="row">
@@ -122,7 +122,7 @@
                             <input id="finalizar_compra" class="btn btn-primary btn-xl text-uppercase"
                                 type="submit" value="finalizar Compra">
                         </div>
-                    </form>
+                    </form> -->
                                    
                    <!-- tirar 
 
@@ -134,12 +134,61 @@
                     </div>
                 </div>
             -->
-            </div>
+            <!-- </div>
         </div>
 
-    </section>
+    </section> -->
+
+    <form action="fim-compraCtrl.php" method="POST" enctype="multipart/form-data"> 
+        <section class=" bg-light   page-section" id="produtos-inserir">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading text-uppercase">Produtos</h2>
+                        <h3 class="section-subheading text-muted">Insira novos produtos no seu site.</h3>
+                    </div>
+                    <div class="row">
+                        <br class="col-lg-12">
+                        <br id="contactForm" name="sentMessage" novalidate="novalidate">
 
 
+                        <div class="col-md-4 col-sm-6 form-group">
+                            <input class="form-control" id="logradouro" name="logradouro" type="text" placeholder="Digite o logradouro *" required="required" data-validation-required-message="Digite o nome.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 form-group">
+                            <input class="form-control" id="numero" name="numero" type="text" placeholder="Digite o numero *" required="required" data-validation-required-message="Digite o preço .">
+                            <p class="help-block text-danger"></p>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 form-group">
+                            <input class="form-control" id="cep" name="cep" type="text" placeholder=" Digite a cep *" required="required" data-validation-required-message="Digite a descrição.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 form-group">
+                            <input class="form-control" id="complemento" name="complemento" type="text" placeholder=" Digite a complemento *" required="required" data-validation-required-message="Digite a descrição.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 form-group">
+                            <input class="form-control" id="cidade" name="cidade" type="text" placeholder=" Digite a cidade *" required="required" data-validation-required-message="Digite a descrição.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 form-group">
+                            <input class="form-control" id="horario" name="horario" type="time" placeholder=" Digite a hora *" required="required" data-validation-required-message="Digite a descrição.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+
+                        <div class="clearfix"></div>
+                        <div class="col-lg-12 text-center">
+                            <div id="success"></div>
+                            <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Finalizar Compra</button>
+
+    </form>
 
     
 
