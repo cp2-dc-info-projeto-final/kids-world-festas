@@ -29,12 +29,12 @@
     $erro = "";
 
     if (cadastrarCliente($nome, $email, $senha, $telefone, $cpf)) {
-        header("Location: ../login/loginVieww.php");
+        header("Location: ../login/loginView.php");
     } 
     else {
         $erro = "Email indisponível";        
         $_SESSION["erro"] = $erro;
-        header("Location: cadastroVieww.php");
+        header("Location: ../login/loginView.php");
     }
     
 ?>
