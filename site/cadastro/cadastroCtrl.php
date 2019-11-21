@@ -20,10 +20,10 @@ if ($senha != $confirmasenha) {
 if ($resposta==false){
     $erro="<p style='color:red;'>E-mail indisponível</p>";
     $_SESSION["erro"]= $erro;
-    header ("Location:cadastroView.php");
+    header ("Location:../Login/loginVieww.php");
     exit();
     
 } 
 else {
-    header("Location:../Login/loginVieww.php");
+    header("Location:../Login/loginView.php");
 }

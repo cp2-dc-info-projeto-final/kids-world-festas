@@ -54,7 +54,7 @@
                     <div class="col-lg-12 text-center">
                         <div id="success"></div>
                         <br>
-                        <input id="Buscprodutos" class="btn btn-primary btn-xl text-uppercase" type="submit"
+                        <input id="login" class="btn btn-primary btn-xl text-uppercase" type="submit"
                             value="Login">
                     </div>
                     <?php
