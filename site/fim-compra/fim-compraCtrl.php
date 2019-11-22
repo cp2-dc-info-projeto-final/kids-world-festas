@@ -8,6 +8,12 @@
     $complemento = $_POST["complemento"];
     $cidade = $_POST["cidade"];
     $horario = $_POST["horario"];
+
+    session_start();
+
+    $id_cliente = $_SESSION['usuario_id'];
     
-    finalizarCompra($logradouro, $numero, $cep, $complemento, $cidade, $horario)
+    $dia = $_SESSION['dia'];
+
+    finalizarCompra($id_cliente, $dia, $logradouro, $numero, $cep, $complemento, $cidade, $horario)
 ?>

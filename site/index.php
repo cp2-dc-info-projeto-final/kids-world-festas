@@ -49,12 +49,28 @@ session_start();
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#busc-data">Agendamento</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="./login/loginView.php">login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="./cadastro/cadastroVieww.php">Cadastre-se</a>
-                    </li>
+                        <?php 
+                            session_start();
+                            if (isset($_SESSION["nome"])) {
+                        ?>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger" href="./sair.php">sair</a>
+                            </li>
+                        <?php 
+                            } else {
+                        ?>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger" href="./login/loginView.php">login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger" href="./cadastro/cadastroVieww.php">Cadastre-se</a>
+                            </li>
+                        <?php
+                            }
+                        ?>
+                        
+                    
+                    
                 </ul>
             </div>
         </div>

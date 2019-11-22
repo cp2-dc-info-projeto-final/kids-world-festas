@@ -1,8 +1,7 @@
 <?php
-session_start();
     require '../ConnectionFactory.php';
 
-    function finalizarCompra($logradouro, $numero, $cep, $complemento, $cidade, $horario){
+    function finalizarCompra($id_cliente, $dia, $logradouro, $numero, $cep, $complemento, $cidade, $horario){
         
         // conexão
             $link=getConnection();
@@ -22,8 +21,8 @@ session_start();
         
         //insert locacao session_start();
         //print_r($_SESSION);die(); 
-        $id_cliente = $_SESSION['usuario_id'];
-        $dia = $_SESSION['dia'];
+        
+        
         $id_endereco = mysqli_insert_id($link);
 
         $sql_insert_locacao = "INSERT INTO locacao (id_cliente, id_endereco, dia, horario) VALUES

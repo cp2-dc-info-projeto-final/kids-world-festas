@@ -7,11 +7,12 @@
     /*print_r($_POST["email"]);echo"<br>";
     print_r($_POST["senha"]);die();*/
 
-    
+    session_start();
 
     if ($usuario = logar($email, $senha)) {
         //print
         //session_unset();
+        
         $_SESSION["nome"] = $usuario["nome"];
         $_SESSION["usuario_id"] = $usuario["id"];
         //print_r($_SESSION);die();
@@ -21,7 +22,7 @@
     else {
         $erro = "Login ou senha incorretos";
         $_SESSION["erro"] = $erro;
-        header("Location: loginVieww.php");
+        header("Location: loginView.php");
         exit();
     }
 ?>
