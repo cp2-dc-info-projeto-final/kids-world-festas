@@ -6,8 +6,16 @@
 
         $connection = getConnection();
 
-        $sql_select_usuario = "SELECT id, senha, nome FROM usuario WHERE email='$email'";
-        //print_r($sql_select_usuario);
+        $sql = "SELECT
+        u.id_usuario,
+        u.email,
+        IF (administrador.id is not null, 'administrador', 'cliente') as tipo
+        FROM usuario as u
+        LEFT JOIN funcionario as f ON f.id = u.id
+        LEFT JOIN cliente as c ON c.id = u.id
+        WHERE email='$email'";
+        $result = mysqli_query($conn, $sql);
+        $erro = "";
         $result = mysqli_query($connection, $sql_select_usuario);
         //print_r($result);
         if (mysqli_num_rows($result) > 0) {
