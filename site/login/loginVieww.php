@@ -38,23 +38,23 @@
                 <center>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <input class="form-control" id="email" type="text" placeholder="Digite seu e-mail *"
-                                required="required" data-validation-required-message="Por favor, digite seu email.">
+                            <input class="form-control" id="email" name="email" type="text" placeholder="Digite seu e-mail *"
+                                required="required">
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" id="senha" type="password" placeholder="Digite sua senha *"
-                                required="required" data-validation-required-message="Por favor, digite sua senha.">
+                            <input class="form-control" id="senha" name="senha" type="password" placeholder="Digite sua senha *"
+                                required="required" >
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
-
+                </center>
 
                     <div class="clearfix"></div>
                     <div class="col-lg-12 text-center">
                         <div id="success"></div>
                         <br>
-                        <input id="Buscprodutos" class="btn btn-primary btn-xl text-uppercase" type="submit"
+                        <input id="login" class="btn btn-primary btn-xl text-uppercase" type="submit"
                             value="Login">
                     </div>
                     <?php

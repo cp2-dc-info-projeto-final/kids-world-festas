@@ -3,6 +3,7 @@
     require "buscarModelo.php";
 
     function buscarProdutosCtrl($dia) {
+        //print_r($dia);die();
         if (is_null($dia))
             return [];
             

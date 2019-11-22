@@ -1,5 +1,5 @@
 <?php
-
+session_start();
     require '../ConnectionFactory.php';
 
     function finalizarCompra($logradouro, $numero, $cep, $complemento, $cidade, $horario){
@@ -20,9 +20,10 @@
             die( "Erro $sql_insert_endereco. " . mysqli_error($link));
         }
         
-        //insert locacao
-        $id_cliente = 7; //$_SESSION['usuario_id']
-        $dia = '2019-11-21';//$_SESSION['dia']
+        //insert locacao session_start();
+        //print_r($_SESSION);die(); 
+        $id_cliente = $_SESSION['usuario_id'];
+        $dia = $_SESSION['dia'];
         $id_endereco = mysqli_insert_id($link);
 
         $sql_insert_locacao = "INSERT INTO locacao (id_cliente, id_endereco, dia, horario) VALUES
@@ -34,11 +35,11 @@
 
         //inserir produtos
         $id_locacao = mysqli_insert_id($link);
+        //print_r($_SESSION);die();
+        foreach ($_SESSION["id_produtos"] as $id_produto){
 
-        foreach ($_SESSION["produtos"] as $id_produto)
-        {
             $sql_select_preco = "SELECT preco FROM produto WHERE id = $id_produto";
-            $result = mysqli_query($connection, $sql_select_preco);
+            $result = mysqli_query($link, $sql_select_preco);
 
             if (!mysqli_query($link, $sql_select_preco)){
                 die( "Erro $sql_select_preco. " . mysqli_error($link));
@@ -57,6 +58,9 @@
             }
             
         }
+
+        echo "<script>alert('FOI')</script>";
+        header("Location: ../index.php");
        
 
     }      

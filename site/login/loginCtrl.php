@@ -1,16 +1,20 @@
 <?php
-
+//session_start();
     require "loginModelo.php";
 
     $email = $_POST["email"];
     $senha = $_POST["senha"];
-    
-    session_start();
+    /*print_r($_POST["email"]);echo"<br>";
+    print_r($_POST["senha"]);die();*/
 
-    if ($usuario = logar($email, $senha) != false) {
-        session_unset();
+    
+
+    if ($usuario = logar($email, $senha)) {
+        //print
+        //session_unset();
         $_SESSION["nome"] = $usuario["nome"];
         $_SESSION["usuario_id"] = $usuario["id"];
+        //print_r($_SESSION);die();
         header("Location: ../index.php");
         exit();
     }

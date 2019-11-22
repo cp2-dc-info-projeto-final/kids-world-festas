@@ -42,37 +42,37 @@
                 <center>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <input class="form-control" id="nome" type="text" placeholder="Digite seu nome *"
-                                required="required" data-validation-required-message="Por favor, digite seu nome.">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control" id="email" type="text" placeholder="Digite seu e-mail *"
-                                required="required" data-validation-required-message="Por favor, digite seu email.">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control" id="cpf" type="text" placeholder="Digite seu CPF *"
-                                required="required" data-validation-required-message="Por favor, digite seu cpf.">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control" id="telefone" type="text" placeholder="Digite seu telefone *"
-                                required="required" data-validation-required-message="Por favor, digite seu telefone.">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control" id="senha" type="password" placeholder="Digite sua senha *"
-                                required="required" data-validation-required-message="Por favor, digite sua senha.">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control" id="confirmarsenha" type="password"
-                                placeholder="Confirme sua senha *" required="required"
-                                data-validation-required-message="Por favor, confirme sua senha.">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
+            <p>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="name" placeholder="Nome" required="required" value="">
+            </p>
+             </div>
+
+             <div class="form-group">
+            <p>
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" placeholder="E-mail" required="required" value="">
+            </p>
+             </div>
+
+            <div class="form-group">
+            <p>
+                <label for="cpf">CPF:</label>
+                <input type="text" name="cpf" id="cpf" placeholder="CPF" required="required" value="">
+            </p>
+            </div>
+
+            <div class="form-group">
+            <p>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" name="telefone" id="telefone" placeholder="Telefone" required="required" value="">
+            </p>
+            </div>
+            <div class="form-group">
+            <p>
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" id="senha" placeholder="Senha" required="required" value="">
+            </p>
 
 
                     <div class="clearfix"></div>

@@ -34,13 +34,13 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <input class="form-control" id="email" type="text"
-                                                placeholder="Digite seu email *" required="required"
+                                                placeholder="Digite seu email *" name="email" required="required"
                                                 data-validation-required-message="Por favor, digite seu email.">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                         <div class="form-group">
                                             <input class="form-control" id="senha" type="password"
-                                                placeholder="Digite sua senha *" required="required"
+                                                placeholder="Digite sua senha *" name="senha" required="required"
                                                 data-validation-required-message="Por favor, digite sua senha.">
                                             <p class="help-block text-danger"></p>
                                         </div>

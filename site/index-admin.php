@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php 
 
-<head>
+//print_r($_POST);die();
+require_once('header.php');
+//Seguir modelo de chamada de Scripts,CSSs e etc
+?>
+<!--<head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,20 +15,20 @@
 
     <title>Página do administrador</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS 
     <link href="../startbootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom fonts for this template -->
+    <!-- Custom fonts for this template 
     <link href="../startbootstrap/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
-    <!-- Custom styles for this template -->
+    <!-- Custom styles for this template 
     <link href="../startbootstrap/css/agency.min.css" rel="stylesheet">
     <link href="../startbootstrap/css/agency.css" rel="stylesheet">
-</head>
+</head>-->
 
 <body id="page-top">
 
@@ -241,7 +246,7 @@
 
 
                         <div class="col-md-4 col-sm-6 form-group">
-                            <input class="form-control" id="nome" name="nome" type="text" placeholder="Digite o nome *" required="required" data-validation-required-message="Digite o nome.">
+                            <input class="form-control" id="nomeprod" name="nomeprod" type="text" placeholder="Digite o nome *" required="required" data-validation-required-message="Digite o nome.">
                             <p class="help-block text-danger"></p>
                         </div>
 
@@ -296,14 +301,14 @@
                         
                         <h6 class="section-heading text-uppercase">Digite o nome do produto que deve ser apagado</h6>
                         <div class= " col-md-12 form-group">
-                            <input class="form-control" id="nome" name="nome" type="text" placeholder="Digite o nome do produto *" required="required" data-validation-required-message="Digite o nome.">
+                            <input class="form-control" id="nomeremprod" name="nomeremprod" type="text" placeholder="Digite o nome do produto *" required="required" data-validation-required-message="Digite o nome.">
                             <p class="help-block text-danger"></p>
                         </div>
                          
                         <div class="clearfix"></div>
                         <div class="col-lg-12 text-center">
                             <div id="success"></div>
-                            <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Excluir</button>
+                            <button id="sendMessageButtonb" class="btn btn-primary btn-xl text-uppercase" type="submit">Excluir</button>
 
       </form>
     </div>
@@ -327,30 +332,30 @@
                     <center>
                         <div class="col-md-6">
 
-                            <form id="contactForm" name="Adm-cadastrar" novalidate="novalidate">
+                            <form action="\cadastroadmin\cadastroadminCtrl.php" name="Adm-cadastrar">
 
 
-                                <input class="form-control" id="nome" type="text" placeholder="Digite o nome *" required="required" data-validation-required-message="Please enter your email address.">
+                                <input class="form-control" id="nome" name="nome" type="text" placeholder="Digite o nome *" required="required" data-validation-required-message="Please enter your email address.">
                                 <p class="help-block text-danger"></p>
 
 
 
-                                <input class="form-control" id="telefone" type="text" placeholder="Digite o telefone *" required="required" data-validation-required-message="Please enter your email address.">
+                                <input class="form-control" id="telefone" name="tel" type="text" placeholder="Digite o telefone *" required="required" data-validation-required-message="Please enter your email address.">
                                 <p class="help-block text-danger"></p>
 
 
 
-                                <input class="form-control" id="email" type="email" placeholder="Digite o email *" required="required" data-validation-required-message="Please enter your email address.">
+                                <input class="form-control" id="email" type="email" name="email" placeholder="Digite o email *" required="required" data-validation-required-message="Please enter your email address.">
                                 <p class="help-block text-danger"></p>
 
 
 
-                                <input class="form-control" id="senha" type="password" placeholder=" Digite a senha *" required="required" data-validation-required-message="Please enter your phone number.">
+                                <input class="form-control" id="senha" type="password" name="senha" placeholder=" Digite a senha *" required="required" data-validation-required-message="Please enter your phone number.">
                                 <p class="help-block text-danger"></p>
 
 
 
-                                <input class="form-control" id="conf_senha" type="password" placeholder="Confirme sua senha *" required="required" data-validation-required-message="Please enter your phone number.">
+                                <input class="form-control" id="conf_senha" type="password" name="confirmarsenha" placeholder="Confirme sua senha *" required="required" data-validation-required-message="Please enter your phone number.">
                                 <p class="help-block text-danger"></p>
 
 
