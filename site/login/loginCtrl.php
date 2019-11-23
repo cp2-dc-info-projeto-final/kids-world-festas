@@ -14,6 +14,8 @@
         
         $_SESSION["nome"] = $usuario["nome"];
         $_SESSION["usuario_id"] = $usuario["id"];
+        
+        
         $_SESSION["admin"]= administrador($email);
         if ($_SESSION["admin"]==true){
             header("Location: ../index-admin.php");
@@ -25,6 +27,8 @@
         exit();
     }
     else {
+        
+
         echo administrador($email);
         /*$erro = "Login ou senha incorretos";
         $_SESSION["erro"] = $erro;

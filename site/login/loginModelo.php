@@ -18,8 +18,8 @@
             while($row = mysqli_fetch_assoc($result)) {
                 
                 $hash = $row["senha"];
-                
-                if(password_verify($senha, $hash)) {
+                //
+                if($senha == $hash) {
                     //print_r('$row');die();
                     return $row;
                 } else {
@@ -34,22 +34,29 @@
 
     function administrador($email){
 
-        $connection = getConection();
+        
+        $connection = getConnection();
         if($connection === false){
             die("Erro de Conexão" . mysqli_connect_error());
         }
+        
+
         $sql="SELECT * FROM usuario AS u JOIN  administrador AS a ON u.id = a.id  WHERE u.email = '$email'";
+        
 
         $result=mysqli_query($connection, $sql);
-        
+       
         if (!$result){
+           
             die(mysqli_error($connection));
         }
         if(mysqli_num_rows($result)==1){
+            
             return true;
         } 
         else 
-            {return false;
+            {
+            return false;
             }
     }
 
