@@ -29,10 +29,9 @@
     else {
         
 
-        echo administrador($email);
-        /*$erro = "Login ou senha incorretos";
+        $erro = "Login ou senha incorretos";
         $_SESSION["erro"] = $erro;
         header("Location: loginView.php");
-        exit();*/
+        exit();
     }
 ?>
