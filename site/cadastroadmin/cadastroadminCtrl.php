@@ -1,8 +1,9 @@
 <?php
 
     require "cadastroadminModelo.php";
+    //session_start();
 
-    $nome = $_POST["nome"];
+    $nome = $_POST["nomeadmin"];
     $email = $_POST["email"];
     $senha = $_POST["senha"];
     $confirmarsenha = $_POST["confirmarsenha"];
@@ -12,7 +13,7 @@
     if(!preg_match("/^([a-zA-Z' ]+)$/",$nome)){
         $erro = "Nome inválido";        
         $_SESSION["erro"] = $erro;
-        header("Location: cadastroadminView.php");
+        header("Location: index-admin.php");
         exit();
     }
 
@@ -20,7 +21,7 @@
     if ($senha != $confirmarsenha) {    
         $erro = "As senhas não coincidem";        
         $_SESSION["erro"] = $erro;
-        header("Location: cadastroadminView.php");
+        header("Location: index-admin.php");
         exit();
     }
 
@@ -32,7 +33,7 @@
     else {
         $erro = "Email indisponível";        
         $_SESSION["erro"] = $erro;
-        header("Location: cadastroadminView.php");
+        header("Location: index-admin.php");
     }
     
 ?>

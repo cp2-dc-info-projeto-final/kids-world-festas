@@ -308,7 +308,7 @@ require_once('header.php');
                         <div class="clearfix"></div>
                         <div class="col-lg-12 text-center">
                             <div id="success"></div>
-                            <button id="sendMessageButtonb" class="btn btn-primary btn-xl text-uppercase" type="submit">Excluir</button>
+                            <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Excluir</button>
 
       </form>
     </div>
@@ -332,10 +332,10 @@ require_once('header.php');
                     <center>
                         <div class="col-md-6">
 
-                            <form action="\cadastroadmin\cadastroadminCtrl.php" name="Adm-cadastrar">
+                            <form action="cadastroadminCtrl.php" name="Adm-cadastrar">
 
 
-                                <input class="form-control" id="nome" name="nome" type="text" placeholder="Digite o nome *" required="required" data-validation-required-message="Please enter your email address.">
+                            <input class="form-control" id="nomeadmin" name="nomeadmin" type="text" placeholder="Digite o nome *" required="required" data-validation-required-message="Please enter your email address.">
                                 <p class="help-block text-danger"></p>
 
 
