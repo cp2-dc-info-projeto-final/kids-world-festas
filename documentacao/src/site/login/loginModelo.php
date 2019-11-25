@@ -15,7 +15,7 @@
             while($row = mysqli_fetch_assoc($result)) {
                 $hash = $row["senha"];
                 
-                if(password_verify($senha, $hash)) {
+                if($senha == $hash) {
                     return $row;
                 } else {
                     return false;
