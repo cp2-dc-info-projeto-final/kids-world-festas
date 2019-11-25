@@ -30,11 +30,13 @@
 
     if (cadastrarCliente($nome, $email, $senha, $telefone, $cpf)) {
         header("Location: ../login/loginView.php");
+        exit();
     } 
     else {
         $erro = "Email indisponível";        
         $_SESSION["erro"] = $erro;
         header("Location: ../login/loginView.php");
+        exit();
     }
     
 ?>

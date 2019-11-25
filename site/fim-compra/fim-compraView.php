@@ -1,3 +1,9 @@
+<?php
+    if (!isset( $_SESSION["nome"])){
+        header('Location: ../login/loginView.php');
+    } 
+    
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,6 +32,7 @@
 </head>
 
 <body id="page-top">
+
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
