@@ -55,13 +55,13 @@
                                     </div>
                                 </div>
                                 <?php
-                session_start();
-                if(array_key_exists('erro', $_SESSION) == true){
-                    $erro = $_SESSION["erro"];
-                    echo "<br><b>$erro</br>";
-                    session_unset();
-                }
-            ?>
+                                    session_start();
+                                    if(array_key_exists('erro', $_SESSION) == true){
+                                        $erro = $_SESSION["erro"];
+                                        echo "<br><b>$erro</br>";
+                                        session_unset();
+                                    }
+                                ?>
                                 <p>
                                     <a href="./cadastro/cadastroView.html">Cadastre-se</a>
                                 </p>
