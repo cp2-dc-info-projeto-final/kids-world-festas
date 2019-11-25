@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php 
-
-//print_r($_POST);die();
-require_once('header.php');
-//Seguir modelo de chamada de Scripts,CSSs e etc
-?>
-<!--<head>
+<head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,20 +9,20 @@ require_once('header.php');
 
     <title>Página do administrador</title>
 
-    <!-- Bootstrap core CSS 
+    <!--Bootstrap core CSS--> 
     <link href="../startbootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom fonts for this template 
+    <!-- Custom fonts for this template  -->
     <link href="../startbootstrap/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
-    <!-- Custom styles for this template 
+    <!-- Custom styles for this template  -->
     <link href="../startbootstrap/css/agency.min.css" rel="stylesheet">
     <link href="../startbootstrap/css/agency.css" rel="stylesheet">
-</head>-->
+</head>
 
 <body id="page-top">
 
@@ -49,14 +43,17 @@ require_once('header.php');
                         <a class="nav-link js-scroll-trigger" href="#agendamentos">Agendamentos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#produtos-inserir">Inserir Produtos</a>
+                        <a class="nav-link js-scroll-trigger" href="#produtos-inserir">Inserir</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#produtos-remover">Remover Produtos</a>
+                        <a class="nav-link js-scroll-trigger" href="#produtos-remover">Remover</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#Adm-cadastrar">Cadastrar administradores</a>
-                    </li>
+                        <a class="nav-link js-scroll-trigger" href="#Adm-cadastrar">Cadastrar ADM's</a>
+                    </li>               
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="./sair.php">sair</a>
+                    </li>                
                 </ul>
             </div>
         </div>

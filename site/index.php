@@ -49,8 +49,7 @@ session_start();
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#busc-data">Agendamento</a>
                     </li>
-                        <?php 
-                            session_start();
+                        <?php
                             if (isset($_SESSION["nome"])) {
                         ?>
                             <li class="nav-item">
