@@ -58,7 +58,9 @@ CREATE TABLE locacao_produto(
 );
 
 SELECT
-locacao.dia, usuario.email, usuario.nome, cliente.cpf, cliente.telefone, endereco.logradouro, endereco.numero, endereco.cep, endereco.complemento, endereco.cidade, locacao.hora_inicio, produto.nome, locacao_produto.preco_pago
+locacao.dia, usuario.email, usuario.nome, cliente.telefone,
+endereco.logradouro, endereco.numero, endereco.cep, endereco.complemento,
+endereco.cidade, locacao.horario, produto.nome, locacao_produto.preco_pago
 
 FROM
 usuario

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+                             <!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -172,63 +172,7 @@
     </section>
 
 
-    <!-- agendamentos -->
-    <section class="page-section" id="agendamentos">
-        <center>
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase"> Agendamentos</h2>
-                <h3 class="section-subheading text-muted"> Aqui estão os agendamentos efetuados </h3>
-            </div>
-
-            <table style="border-collapse: collapse;" border="1">
-                <tr id="linha1">
-                    <td>Data</td>
-                    <td>Horário</td>
-                    <td>Produtos</td>
-                    <td>Preço</td>
-
-                    <td>Cliente</td>
-                    <td>E-mail</td>
-                    <td>Telefone</td>
-                    <td>CPF</td>
-
-                    <td>Logradouro</td>
-                    <td>N°</td>
-                    <td>CEP</td>
-                    <td>Bairro</td>
-                    <td>Cidade</td>
-
-                    
-                </tr>
-                <tr>
-                    <td>18-11-2019</td>
-                    <td>12:00</td>
-                    <td>Algodão doce, pipoqueira, crepe</td>
-                    <td>R$500,00</td>
-
-                    <td>Janaina</td>
-                    <td>janalinda@gmail.com</td>
-                    <td>21995581433</td>
-                    <td>111.222.333-44</td>
-
-                    
-                    <td>Rua dos bobos</td>
-                    <td>0</td>
-                    <td>21210010</td>
-                    <td>Vila da Penha</td>
-                    <td>Rio de Janeiro</td>
-                    
-                </tr>
-            </table>
-
-            </div>
-            </div>
-
-        </center>
-
-    </section>
-
-    <form action="inserir/inserirCtrl.php" method="POST" enctype="multipart/form-data"> 
+       <form action="inserir/inserirCtrl.php" method="POST" enctype="multipart/form-data"> 
         <section class=" bg-light   page-section" id="produtos-inserir">
 
             <div class="container">
@@ -373,6 +317,95 @@
         </div>
 
     </section>
+
+
+     <!-- agendamentos -->
+     <section class="page-section" id="agendamentos">
+        <center>
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase"> Agendamentos</h2>
+                <h3 class="section-subheading text-muted"> Aqui estão os agendamentos efetuados </h3>
+            </div>
+
+            <div>
+            <table style="border-collapse: collapse;" border="1">
+                <tr id="linha1">
+
+                    <td>Nome</td>
+                    <td>Email</td>
+                    <td>Telefone</td>
+                    <td>Logradouro</td>
+
+                    <td>Número</td>
+                    <td>CEP</td>
+                    <td>Cidade</td>
+                    
+                    <td>Data</td>
+                    <td>Horário</td>
+                    <td>Produto</td>
+                    <td>Preço</td>
+                    
+
+                    
+                </tr>
+                <?php
+                 require_once "mostrarAgendamento.php";
+
+                 $agendamentos = buscaAgendamentos();
+
+                 foreach ($agendamentos as $agendamento) {
+                                
+                ?>
+
+            <tr>
+                <td>
+                 <?php echo $agendamento['nome']; ?>
+                </td>
+                <td>
+                <?php echo $agendamento['email']; ?>
+                </td>
+                <td>
+                <?php echo $agendamento['telefone']; ?>
+                </td>
+                <td>
+                <?php echo $agendamento['logradouro']; ?>
+                </td>
+                <td>
+                <?php echo $agendamento['numero']; ?>
+                </td>
+                <td>
+                <?php echo $agendamento['cep']; ?>
+                </td>
+                <td>
+                <?php echo $agendamento['cidade']; ?>
+                </td>                
+                <td>
+                <?php echo $agendamento['data']; ?>
+                </td>
+                <td>
+                <?php echo $agendamento['horario']; ?>
+                </td><td>
+                <?php echo $agendamento['nomeprod']; ?>
+                </td><td>
+                <?php echo "R$ " . number_format($agendamento['preco'],2,",",".") ?>
+                </td>
+            </tr>
+      
+         <?php    
+      }
+  ?>
+
+                </tr>
+            </table>
+        </div>
+            </div>
+            </div>
+
+        </center>
+
+    </section>
+
+
 
     <!-- Footer -->
     <footer class="bg-light footer">

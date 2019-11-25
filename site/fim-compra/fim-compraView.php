@@ -1,7 +1,7 @@
 <?php
-    if (!isset( $_SESSION["nome"])){
-        header('Location: ../login/loginView.php');
-    } 
+    // if (!isset( $_SESSION["nome"])){
+    //     header('Location: ../login/loginView.php');
+    // } 
     
  ?>
 <!DOCTYPE html>
