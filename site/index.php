@@ -154,42 +154,10 @@ session_start();
                         $produtos = buscarProdutosCtrl($dia);
         
                         $i = 0;
+
                         foreach ($produtos as $produto) {
-        
-                        
-                    ?>
-                        <!-- Modal 1 -->
-                        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog"
-                            aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="close-modal" data-dismiss="modal">
-                                        <div class="lr">
-                                            <div class="rl"></div>
-                                        </div>
-                                    </div>
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-lg-8 mx-auto">
-                                                <div class="modal-body">
-                                                    <!-- Project Details Go Here -->
-                                                    <h2 class="text-uppercase"><?php echo $produto['nome'];?></h2>
+                        ?>
 
-                                                    <img class="img-fluid d-block mx-auto"
-                                                        src="<?php echo $produto['imagem'];?>" />
-                                                    <p> <?php echo $produto['imagem'];?></p>
-
-                                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                                        <i class="fas fa-times"></i>
-                                                        Fechar</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
                                 <div class="portfolio-hover">
@@ -210,24 +178,26 @@ session_start();
                                         value="<?php echo $produto['id'];?>">
 
                                     <input type="hidden" name="<?php echo "preco".$i;?>"
-                                        value="<?php echo $produto['preco'];?>"></h4>
+                                        value="<?php echo $produto['preco'];?>">
 
+                                </h4>
                                 <p class="text-muted"> R$<?php echo $produto['preco'];?>,00</p>
+                                <p class="text-muted"><?php echo $produto['descricao'];?>,00</p>
                             </div>
                         </div>
 
-
                         <?php
-                        $i++;
-                    }
-                    ?>
+
+                            $i++;
+                        }
+                        ?>
                     </div>
         </div>
         
             <div>
                 <center>
-                    <div class="DivTotal">
-                        Total: <input type="text" id="resultado" name="resultado" readonly=“true” value="0" ;>
+                    <div class="DivTotal col-sm-4 form-group">
+                        Total: <input class="form-control" style="width:100px;" type="text" id="resultado" name="resultado" readonly=“true” value="0" ;>
                     </div>
                         
             
