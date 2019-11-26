@@ -34,60 +34,55 @@
 
     <section class="page-section" id="login">
         <form action="cadastroCtrl.php" method="POST" enctype="multipart/form-data"> 
-            <section class="page-section" id="produtos-inserir">
-                <div class="container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading text-uppercase">Cadastre-se</h2>
+                        <h3 class="section-subheading text-muted">Cadastre-se e seja nosso cliente.</h3>
+                    </div>
                     <div class="row">
-                        <div class="col-lg-12 text-center">
-                            <h2 class="section-heading text-uppercase">Cadastre-se</h2>
-                            <h3 class="section-subheading text-muted">Cadastre-se e seja nosso cliente.</h3>
+                        <br class="col-lg-12">
+                        <br id="contactForm" name="sentMessage" novalidate="novalidate">
+
+                        <div class="col-md-4 col-sm-6 form-group">
+                            <p>
+                            <input class="form-control" id="nome" name="nome" type="text" placeholder="Digite seu nome *" required="required" data-validation-required-message="Por favor, Digite o nome.">
+                            </p>
                         </div>
-                        <div class="row">
-                            <br class="col-lg-12">
-                            <br id="contactForm" name="sentMessage" novalidate="novalidate">
+                        <br>
+                        <div class="col-md-4 col-sm-6 form-group">
+                            <p>
+                            <input class="form-control" id="email" name="email" type="text" placeholder="Digite seu email *" required="required" data-validation-required-message="Por favor, Digite seu email.">
+                            </p>
+                        </div>
 
+                        <div class="col-md-4 col-sm-6 form-group">
+                            <input class="form-control" id="cep" name="cpf" type="text" placeholder="Digite seu cpf *" required="required" data-validation-required-message="Por favor, Digite seu cpf.">
+                            <p class="help-block text-danger"></p>
+                        </div>
 
-                            <div class="col-md-4 col-sm-6 form-group">
-                                <input class="form-control" id="nome" name="nome" type="text" placeholder="Digite seu nome *" required="required" data-validation-required-message="Por favor, Digite o nome.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <br>
-                            <div class="col-md-4 col-sm-6 form-group">
-                                <input class="form-control" id="email" name="email" type="text" placeholder="Digite seu email *" required="required" data-validation-required-message="Por favor, Digite seu email.">
-                                <p class="help-block text-danger"></p>
-                            </div>
+                        <div class="col-md-4 col-sm-6 form-group">
+                            <input class="form-control" id="complemento" name="telefone" type="text" placeholder=" Digite seu telefone *" required="required" data-validation-required-message="Por favor, Digite seu telefone.">
+                            <p class="help-block text-danger"></p>
+                        </div>
 
-                            <div class="col-md-4 col-sm-6 form-group">
-                                <input class="form-control" id="cep" name="cpf" type="text" placeholder="Digite seu cpf *" required="required" data-validation-required-message="Por favor, Digite seu cpf.">
-                                <p class="help-block text-danger"></p>
-                            </div>
+                        <div class="col-md-4 col-sm-6 form-group">
+                            <input class="form-control" id="senha" name="senha" type="password" placeholder=" Digite sua senha *" required="required" data-validation-required-message="Por favor, Digite sua senha.">
+                            <p class="help-block text-danger"></p>
+                        </div>
 
-                            <div class="col-md-4 col-sm-6 form-group">
-                                <input class="form-control" id="complemento" name="telefone" type="text" placeholder=" Digite seu telefone *" required="required" data-validation-required-message="Por favor, Digite seu telefone.">
-                                <p class="help-block text-danger"></p>
-                            </div>
+                        <div class="col-md-4 col-sm-6 form-group">
+                            <input class="form-control" id="confirmarsenha" name="confirmarsenha" type="password" placeholder=" Confirme sua senha *" required="required" data-validation-required-message="Por favor, confirme sua senha.">
+                            <p class="help-block text-danger"></p>
+                        </div>
 
-                            <div class="col-md-4 col-sm-6 form-group">
-                                <input class="form-control" id="senha" name="senha" type="password" placeholder=" Digite sua senha *" required="required" data-validation-required-message="Por favor, Digite sua senha.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-
-                            <div class="col-md-4 col-sm-6 form-group">
-                                <input class="form-control" id="confirmarsenha" name="confirmarsenha" type="password" placeholder=" Confirme sua senha *" required="required" data-validation-required-message="Por favor, confirme sua senha.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-
-                            <div class="clearfix"></div>
-                            <div class="col-lg-12 text-center">
-                                <div id="success"></div>
-                                <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Cadastrar</button>
-                            </div>
-            </section>
+                        <div class="clearfix"></div>
+                        <div class="col-lg-12 text-center">
+                            <div id="success"></div>
+                            <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Cadastrar</button>
+                        </div>
+            
         </form>
-        <script>
-        $("#cpf").mask("000.000.000-00");
-        $("#telefone").mask("(00) 00000-0000");
-
-    </script>
     </section>
 
     <!-- Bootstrap core JavaScript -->
