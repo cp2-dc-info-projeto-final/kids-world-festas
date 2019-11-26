@@ -59,7 +59,7 @@
         }
 
         session_start();
-        $_SESSION["msg"] = "Cadastro realizado com sucesso!";
+        $_SESSION["msg"] = "Agendamento realizado com sucesso!";
         header("Location: ../index.php");
        
 
