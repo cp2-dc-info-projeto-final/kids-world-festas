@@ -28,6 +28,12 @@ require_once "../site/inserir/listagem.php";
     <link href="../startbootstrap/css/agency.css" rel="stylesheet">
 </head>
 
+<style>
+    .tabela_agendamento {
+        padding: 2px;
+    }
+</style>
+
 <body id="page-top">
 
     <!-- Navigation -->
@@ -242,15 +248,18 @@ require_once "../site/inserir/listagem.php";
                         <h2 class="section-heading text-uppercase">Remover Produtos</h2>
                     </div>
                     
-                    <div class="center-block">
+                   
+                </div>
+
+                 <div class="text-center">
                         
                             <?php echo listaProdutos();?>
                             
                                 <button class="btn btn-danger btn-md text-uppercase" type="submit">Remover</button>
               
                     <div>
-                </div>
             </div>
+
         
                         
                         
@@ -325,7 +334,7 @@ require_once "../site/inserir/listagem.php";
     </section>
 
 
-     <!-- Agendamentos --
+     <!-- Agendamentos -->
      <section class="page-section" id="agendamentos">
         <center>
             <div class="text-center">
@@ -337,25 +346,25 @@ require_once "../site/inserir/listagem.php";
             <table style="border-collapse: collapse;" border="1">
                 <tr id="linha1">
 
-                    <td>Nome</td>
-                    <td>Email</td>
-                    <td>Telefone</td>
-                    <td>Logradouro</td>
+                    <td class="tabela_agendamento">Nome</td>
+                    <td class="tabela_agendamento">Email</td>
+                    <td class="tabela_agendamento">Telefone</td>
+                    <td class="tabela_agendamento">Logradouro</td>
 
-                    <td>Número</td>
-                    <td>CEP</td>
-                    <td>Cidade</td>
+                    <td class="tabela_agendamento">Número</td>
+                    <td class="tabela_agendamento">CEP</td>
+                    <td class="tabela_agendamento">Cidade</td>
                     
-                    <td>Data</td>
-                    <td>Horário</td>
-                    <td>Produto</td>
-                    <td>Preço</td>
+                    <td class="tabela_agendamento">Data</td>
+                    <td class="tabela_agendamento">Horário</td>
+                    <td class="tabela_agendamento">Produto</td>
+                    <td class="tabela_agendamento">Preço</td>
                     
 
                     
                 </tr>
                 <?php
-                /* require_once "mostrarAgendamento.php";
+                 require_once "mostrarAgendamento.php";
 
                  $agendamentos = buscaAgendamentos();
 
@@ -363,43 +372,43 @@ require_once "../site/inserir/listagem.php";
                                 
                 ?>
 
-           <!-- <tr>
-                <td>
+                 <tr>
+                <td class="tabela_agendamento">
                  <?php echo $agendamento['nome']; ?>
                 </td>
-                <td>
+                <td class="tabela_agendamento">
                 <?php echo $agendamento['email']; ?>
                 </td>
-                <td>
+                <td class="tabela_agendamento">
                 <?php echo $agendamento['telefone']; ?>
                 </td>
-                <td>
+                <td class="tabela_agendamento">
                 <?php echo $agendamento['logradouro']; ?>
                 </td>
-                <td>
+                <td class="tabela_agendamento">
                 <?php echo $agendamento['numero']; ?>
                 </td>
-                <td>
+                <td class="tabela_agendamento">
                 <?php echo $agendamento['cep']; ?>
                 </td>
-                <td>
+                <td class="tabela_agendamento">
                 <?php echo $agendamento['cidade']; ?>
                 </td>                
-                <td>
-                <?php echo $agendamento['data']; ?>
+                <td class="tabela_agendamento">
+                <?php echo $agendamento['dia']; ?>
                 </td>
-                <td>
+                <td class="tabela_agendamento">
                 <?php echo $agendamento['horario']; ?>
-                </td><td>
+                </td><td class="tabela_agendamento">
                 <?php echo $agendamento['nomeprod']; ?>
-                </td><td>
-                <?php echo "R$ " . number_format($agendamento['preco'],2,",",".") ?>
+                </td><td class="tabela_agendamento">
+                <?php echo "R$ " . number_format($agendamento['preco_pago'],2,",",".") ?>
                 </td>
             </tr>
       
          <?php    
       }
-  */?>
+    ?>
 
                 </tr>
             </table>
@@ -411,7 +420,7 @@ require_once "../site/inserir/listagem.php";
 
     </section>
 
- -->
+
 
     <!-- Footer -->
     <footer class="bg-light footer">

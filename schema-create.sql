@@ -1,5 +1,6 @@
 USE kids_world_festas;
 
+DROP TABLE IF EXISTS usuario;
 CREATE TABLE usuario(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(50) NOT NULL,
@@ -8,11 +9,13 @@ CREATE TABLE usuario(
 
 );
 
+DROP TABLE IF EXISTS administrador;
 CREATE TABLE administrador(
     id INT NOT NULL PRIMARY KEY,
     FOREIGN KEY(id) REFERENCES usuario(id)
 );
 
+DROP TABLE IF EXISTS cliente;
 CREATE TABLE cliente(
     id INT NOT NULL PRIMARY KEY,
     cpf VARCHAR(11),
@@ -20,6 +23,7 @@ CREATE TABLE cliente(
     FOREIGN KEY(id) REFERENCES usuario(id)
 );
 
+DROP TABLE IF EXISTS endereco;
 CREATE TABLE endereco(
     id INT PRIMARY KEY AUTO_INCREMENT,
     logradouro VARCHAR(100),
@@ -29,6 +33,7 @@ CREATE TABLE endereco(
     cidade VARCHAR(50)
 );
 
+DROP TABLE IF EXISTS locacao;
 CREATE TABLE locacao(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     id_cliente INT NOT NULL,
@@ -39,6 +44,7 @@ CREATE TABLE locacao(
     FOREIGN KEY(id_endereco) REFERENCES endereco(id)
 );
 
+DROP TABLE IF EXISTS produto;
 CREATE TABLE produto(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(30) NOT NULL,
@@ -48,6 +54,7 @@ CREATE TABLE produto(
     visibilidade BOOLEAN NOT NULL
 );
 
+DROP TABLE IF EXISTS locacao_produto;
 CREATE TABLE locacao_produto(
 	id_locacao INT,
     id_produto INT,
@@ -57,96 +64,37 @@ CREATE TABLE locacao_produto(
     FOREIGN KEY(id_produto) REFERENCES produto(id)
 );
 
-SELECT
-locacao.dia, usuario.email, usuario.nome, cliente.telefone,
-endereco.logradouro, endereco.numero, endereco.cep, endereco.complemento,
-endereco.cidade, locacao.horario, produto.nome, locacao_produto.preco_pago
+--                                        // Inserir produtos
 
-FROM
-usuario
+INSERT INTO `produto`( `nome`, `descricao`, `preco`, `imagem`, `visibilidade`) VALUES 
+                    ('Máquina de Algodão Doce', 'Estação de algodão doce para até 100 pessoas', 150, 'img/portfolio/maq_algdoceThumbnail.png', 1),
+                    ('Pipoqueira', 'Estação de pipoqueira de cinema para até 100 pessoas', 200, 'img/portfolio/pipoqueiraThumbnail.png', 1),
+                    ('Máquina de Crepe', 'Rodízio de crepe para até 100 pessoas', 550, 'img/portfolio/crepeThumbnail.png', 1),
+                    ('Máquina de Churros', 'Estação de churros gourmet para 100 pessoas', 150, 'img/portfolio/churrosThumbnail.png', 1),
+                    ('Trenzinho de Lanches', 'Lanchinhos: Batata frita, pão de queijo, mini hot dog, mini pizza, mini hamburguer e nuggets.', 500, 'img/portfolio/tremThumbnail.png', 1),
+                    ('Pula-Pula', 'Categoria: Brinquedo Tamanho: 3,05m', 150, 'img/portfolio/pulaThumbnail.png', 1);
 
-INNER JOIN
-cliente ON usuario.id = cliente.id 
+--                                        // Inserir Usuario
+INSERT INTO `usuario`(`nome`, `email`, `senha`) VALUES 
+                    ('Leticia', 'leticiagatinha@gmail.com', '$2y$10$cyeMlImU8XE79FK3EeQjAOP6b.kiYl.7wTkQ/7DLd92jzD6putRoi'),
+                    ('Emanuel', 'ueitomep@gmail.com', '$2y$10$cyeMlImU8XE79FK3EeQjAOP6b.kiYl.7wTkQ/7DLd92jzD6putRoi');
 
-INNER JOIN
-locacao ON locacao.id_cliente = cliente.id
+INSERT INTO `cliente`(`id`, `cpf`, `telefone`) VALUES 
+                    (1 ,'33352223133', '21954346541'),
+                    (2 ,'12312312312', '21012341234');
 
-INNER JOIN
-endereco ON endereco.id = locacao.id_endereco
+--                                        // Finalizar Compra
+INSERT INTO `endereco`(`logradouro`, `numero`, `cep`, `complemento`, `cidade`) VALUES 
+('Rua Aninha','1677','123-789','Atrás da árvore','Mauá'),
+('Av Jukinha','9999','1237890','Apartamento 2','Belford Roxo');
 
-INNER JOIN
-locacao_produto ON locacao_produto.id_locacao = locacao.id
+INSERT INTO `locacao`(`id_cliente`, `id_endereco`, `dia`, `horario`) VALUES 
+(1, 1, '2019-11-15', '12:12'),
+(2, 2, '2019-11-16', '17:17');
 
-INNER JOIN
-produto ON produto.id = locacao_produto.id_produto
-
-ORDER BY
-locacao.dia
-=====================================================================================================
-SELECT nome
-FROM produto 
-WHERE produto.id NOT IN
-    (
-    SELECT id_produto FROM locacao_produto JOIN locacao ON locacao_produto.id_locacao = locacao.id WHERE locacao.dia = '2019-11-06'
-    )
-==========================================================================================================
-                                        // Inserir produtos
-
-INSERT INTO `produto`( `nome`, `descricao`, `preco`, `imagem`, `visibilidade`) VALUES ('Máquina de Algodão Doce', 'Estação de algodão doce para até 100 pessoas', 150, 'img/portfolio/maq_algdoceThumbnail.png', 1);
-INSERT INTO `produto`( `nome`, `descricao`, `preco`, `imagem`, `visibilidade`) VALUES ('Pipoqueira', 'Estação de pipoqueira de cinema para até 100 pessoas', 200, 'img/portfolio/pipoqueiraThumbnail.png', 1);
-INSERT INTO `produto`( `nome`, `descricao`, `preco`, `imagem`, `visibilidade`) VALUES ('Máquina de Crepe', 'Rodízio de crepe para até 100 pessoas', 550, 'img/portfolio/crepeThumbnail.png', 1);
-INSERT INTO `produto`( `nome`, `descricao`, `preco`, `imagem`, `visibilidade`) VALUES ('Máquina de Churros', 'Estação de churros gourmet para 100 pessoas', 150, 'img/portfolio/churrosThumbnail.png', 1);
-INSERT INTO `produto`( `nome`, `descricao`, `preco`, `imagem`, `visibilidade`) VALUES ('Trenzinho de Lanches', 'Lanchinhos: Batata frita, pão de queijo, mini hot dog, mini pizza, mini hamburguer e nuggets.', 500, 'img/portfolio/tremThumbnail.png', 1);
-INSERT INTO `produto`( `nome`, `descricao`, `preco`, `imagem`, `visibilidade`) VALUES ('Pula-Pula', 'Categoria: Brinquedo Tamanho: 3,05m', 150, 'img/portfolio/pulaThumbnail.png', 1);
-
-                                        // Inserir Usuario
-INSERT INTO `usuario`(`nome`, `email`, `senha`) VALUES ('Leticia', 'leticiagatinha@gmail.com', '$2y$10$cyeMlImU8XE79FK3EeQjAOP6b.kiYl.7wTkQ/7DLd92jzD6putRoi');
-INSERT INTO `cliente`(`id`, `cpf`, `telefone`) VALUES (1 ,'33352223133', '21954346541');
-INSERT INTO `usuario`(`nome`, `email`, `senha`) VALUES ('Emanuel', 'ueitomep@gmail.com', '$2y$10$cyeMlImU8XE79FK3EeQjAOP6b.kiYl.7wTkQ/7DLd92jzD6putRoi');
-INSERT INTO `cliente`(`id`, `cpf`, `telefone`) VALUES (2 ,'12312312312', '21012341234');
-
-                                        // Finalizar Compra
-INSERT INTO `endereco`(`logradouro`, `numero`, `cep`, `complemento`, `cidade`) VALUES ('Rua Aninha','1677','123-789','Atrás da árvore','Mauá', 'RJ');
-
-INSERT INTO `locacao`(`id_cliente`, `id_endereco`, `dia`, `horario`) VALUES (1, 1, '2019-11-15', '12:12');
-
-INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`) VALUES (1, 1, 500, 2);
-INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`) VALUES (1, 3, 150, 1);
-INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`, `quantidade`) VALUES (1, 4, 200, 3);
-
-
-
-
-
-
-AGENDAMENTO (tamo finalizando agr)
-Redirecionamento com segurança dos atores
-Exibir os agendamentos para o administrador
-
-Pagamento*
-Máscaras perfeitas
-
-
-
-
-
-
-
-
-
-
-
-
-INSERT INTO `endereco`(`logradouro`, `numero`, `cep`, `complemento`, `cidade` VALUES ('Av Jukinha','9999','1237890','Apartamento 2','Belford Roxo');
-INSERT INTO `locacao`(`id_cliente`, `id_endereco`, `dia`, `horario`) VALUES (2, 2, '2019-11-16', '17:17');
-INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`) VALUES (2, 2, 550);
-INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`) VALUES (2, 5, 150);
-INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`) VALUES (2, 6, 150);
-
-
-
-
-
-
-
-   
+INSERT INTO `locacao_produto`(`id_locacao`, `id_produto`, `preco_pago`) VALUES
+(1, 1, 500),
+(1, 3, 150),
+(1, 4, 200),
+(2, 2, 550),
+(2, 5, 150);

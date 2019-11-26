@@ -1,6 +1,6 @@
 <?php
 
-    require "loginModelo.php";
+    require_once "loginModelo.php";
 
     $email = $_POST["email"];
     $senha = $_POST["senha"];
