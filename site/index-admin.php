@@ -82,113 +82,15 @@ require_once "../site/inserir/listagem.php";
         </div>
     </header>
 
-    <!-- Services -->
-    <!-- Portfolio Grid -->
-    <section class="bg-light page-section" id="produtos">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">Produtos</h2>
-                    <h3 class="section-subheading text-muted">Conheça nossos produtos.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="./img/portfolio/maq_algdoce-thumbnail.png" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Algodão Doce</h4>
-                        <p class="text-muted">Máquinas</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="./img/portfolio/pipoqueira-thumbnail.png" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Pipoqueira</h4>
-                        <p class="text-muted">Máquinas</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="./img/portfolio/churros-thumbnail.png" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Máquina de Churros</h4>
-                        <p class="text-muted">Máquinas</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="./img/portfolio/crepe-thumbnail.png" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Crepe</h4>
-                        <p class="text-muted">Máquinas</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="./img/portfolio/trem-thumbnail.png" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Trenzinho de lanches</h4>
-                        <p class="text-muted">lanchinhos </p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="./img/portfolio/pula-pula-thumbnail.png" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Pula-Pula</h4>
-                        <p class="text-muted">Brinquedos</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+   
 
        <form action="inserir/inserirCtrl.php" method="POST" enctype="multipart/form-data"> 
-        <section class=" bg-light   page-section" id="produtos-inserir">
+        <section class="bg-light    page-section" id="produtos-inserir">
 
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h2 class="section-heading text-uppercase">Produtos</h2>
+                        <h2 class="section-heading text-uppercase">Inserir Produtos</h2>
                         <h3 class="section-subheading text-muted">Insira novos produtos no seu site.</h3>
                     </div>
                     <div class="row">
@@ -238,7 +140,7 @@ require_once "../site/inserir/listagem.php";
     </section>
     
      <form action="inserir/removerCtrl.php" method="POST" id="contactForm" name="sentMessage" novalidate="novalidate">
-      <section class=" bg-light   page-section" id="main">
+      <section class=" page-section" id="main">
       
             <div class="container">
 
@@ -259,24 +161,14 @@ require_once "../site/inserir/listagem.php";
               
                     <div>
             </div>
-
-        
-                        
-                        
-                        
-                        
+                    
       </form>
-      
-    
-    
-
-
 
 
         </section>
 
     <!-- Contact -->
-    <section class="page-section" id="Adm-cadastrar">
+    <section class="bg-light    page-section" id="Adm-cadastrar">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -345,7 +237,8 @@ require_once "../site/inserir/listagem.php";
             <div>
             <table style="border-collapse: collapse;" border="1">
                 <tr id="linha1">
-
+                    
+                    <td class="tabela_agendamento">Código</td>
                     <td class="tabela_agendamento">Nome</td>
                     <td class="tabela_agendamento">Email</td>
                     <td class="tabela_agendamento">Telefone</td>
@@ -373,35 +266,51 @@ require_once "../site/inserir/listagem.php";
                 ?>
 
                  <tr>
+                 <td class="tabela_agendamento">
+                 <?php echo $agendamento['id']; ?>
+                </td>
+
                 <td class="tabela_agendamento">
                  <?php echo $agendamento['nome']; ?>
                 </td>
+
                 <td class="tabela_agendamento">
                 <?php echo $agendamento['email']; ?>
                 </td>
+
                 <td class="tabela_agendamento">
                 <?php echo $agendamento['telefone']; ?>
                 </td>
+
                 <td class="tabela_agendamento">
                 <?php echo $agendamento['logradouro']; ?>
                 </td>
+
                 <td class="tabela_agendamento">
                 <?php echo $agendamento['numero']; ?>
                 </td>
+
                 <td class="tabela_agendamento">
                 <?php echo $agendamento['cep']; ?>
                 </td>
+
                 <td class="tabela_agendamento">
                 <?php echo $agendamento['cidade']; ?>
-                </td>                
+                </td>   
+
                 <td class="tabela_agendamento">
                 <?php echo $agendamento['dia']; ?>
                 </td>
+
                 <td class="tabela_agendamento">
                 <?php echo $agendamento['horario']; ?>
-                </td><td class="tabela_agendamento">
+                </td>
+
+                <td class="tabela_agendamento">
                 <?php echo $agendamento['nomeprod']; ?>
-                </td><td class="tabela_agendamento">
+                </td>
+                
+                <td class="tabela_agendamento">
                 <?php echo "R$ " . number_format($agendamento['preco_pago'],2,",",".") ?>
                 </td>
             </tr>

@@ -8,7 +8,7 @@
         $query = ("SELECT
         locacao.dia, usuario.email, usuario.nome, cliente.telefone,
         endereco.logradouro, endereco.numero, endereco.cep, endereco.complemento,
-        endereco.cidade, locacao.horario, produto.nome AS nomeprod, locacao_produto.preco_pago
+        endereco.cidade, locacao.horario, locacao.id, produto.nome AS nomeprod, locacao_produto.preco_pago
 
         FROM
         usuario
