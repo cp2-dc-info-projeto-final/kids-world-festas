@@ -9,7 +9,7 @@
         $sql_select_produtos = "SELECT id, nome, descricao, imagem, preco
         FROM produto 
         WHERE produto.id NOT IN (
-            SELECT id_produto FROM locacao_produto JOIN locacao ON locacao_produto.id_locacao = locacao.id WHERE locacao.dia = '$dia')";
+            SELECT id_produto FROM locacao_produto JOIN locacao ON locacao_produto.id_locacao = locacao.id WHERE locacao.dia = '$dia') and produto.visibilidade = 1 ";
         
         $result = mysqli_query($connection, $sql_select_produtos);
         if (!$result){

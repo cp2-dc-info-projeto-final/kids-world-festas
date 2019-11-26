@@ -62,7 +62,7 @@ session_start();
                                 <a class="nav-link js-scroll-trigger" href="./login/loginView.php">login</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link js-scroll-trigger" href="./cadastro/cadastroVieww.php">Cadastre-se</a>
+                                <a class="nav-link js-scroll-trigger" href="./cadastro/cadastroView.php">Cadastre-se</a>
                             </li>
                         <?php
                             }
@@ -81,7 +81,7 @@ session_start();
             <div class="intro-text">
                 <div class="intro-lead-in">Seja bem-vindo ao nosso site!</div>
                 <div class="intro-heading text-uppercase">Kids World Festas</div>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#busc_data">Agendar</a>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#busc-data">Agendar</a>
             </div>
         </div>
     </header>
