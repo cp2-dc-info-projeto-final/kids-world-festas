@@ -2,8 +2,9 @@
 session_start();
 
 require 'removerModelo.php';
-$nome = $_POST["nome"];
-remove_produto($nome);
+//print_r($_POST);die();
+$produtos = $_POST["produtos"];
+remove_produto($produtos);
    header('Location: ../index-admin.php');
 
 

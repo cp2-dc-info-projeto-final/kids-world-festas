@@ -3,7 +3,7 @@
 require '../ConnectionFactory.php';
    
         // remover produto
-        function remove_produto($nome){
+        function remove_produto($produtos){
          // conexão
          $link=getConnection();
 
@@ -15,9 +15,10 @@ require '../ConnectionFactory.php';
             }
             $sql="UPDATE produto
             SET visibilidade = 0
-            WHERE nome=$nome";
+            WHERE id=$produtos";
             mysqli_query($link, $sql);
             mysqli_close($link);
+            
         }
 
 
