@@ -1,6 +1,6 @@
 <?php
 
-    require "../../connectionFactory.php";
+    require_once "ConnectionFactory.php";
 
     function buscaAgendamentos() {
         $link = getConnection();
