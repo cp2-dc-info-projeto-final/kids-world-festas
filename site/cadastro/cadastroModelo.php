@@ -56,6 +56,8 @@
         }
 
         mysqli_close($link);
+
+        return true;
     }
     
     function cadastrarAdministrador($nome, $email, $senha){

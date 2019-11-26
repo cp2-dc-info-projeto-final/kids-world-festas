@@ -47,13 +47,12 @@
 
                                         <div class="clearfix"></div>
                                         <div class="col-lg-12 text-center">
-                                            <div id="success"></div>
-                                            <br>
-                                            <input id="Buscprodutos" class="btn btn-primary btn-xl text-uppercase"
-                                                type="submit" value="Login">
+                                        <div id="success"></div>
+                                        <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Login</button>
                                         </div>
-                                    </div>
-                                </div>
+                                        </div>
+
+
                                 <?php
                                     session_start();
                                     if(array_key_exists('erro', $_SESSION) == true){
@@ -61,9 +60,15 @@
                                         echo "<br><b>$erro</br>";
                                         session_unset();
                                     }
+
+                                    if(array_key_exists('msg', $_SESSION) == true){
+                                        $erro = $_SESSION["msg"];
+                                        echo "<br><b>$msg</br>";
+                                        session_unset();
+                                    }
                                 ?>
-                                <p>
-                                    <a href="./cadastro/cadastroView.html">Cadastre-se</a>
+                                <p>Não é cadastrado? <br>
+                                    <a href="../cadastro/cadastroVieww.php">Cadastre-se</a>
                                 </p>
                             </form>
     </center>

@@ -81,6 +81,15 @@
                             <div id="success"></div>
                             <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Cadastrar</button>
                         </div>
+
+                        
+                        <?php
+                            session_start();
+                            if(array_key_exists('erro', $_SESSION) == true){
+                                $erro = $_SESSION["erro"];
+                                echo "$erro";
+                            }
+                        ?>
             
         </form>
     </section>

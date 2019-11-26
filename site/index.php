@@ -38,11 +38,23 @@ session_start();
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
-                Menu
                 <i class="fas fa-bars"></i>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ml-auto">                   
+                <ul class="navbar-nav text-uppercase ml-auto">
+                
+
+                <?php
+                            if (isset($_GET["dia"])) {
+                        ?>
+                <li class="nav-item">
+                        <span class="nav-link total"><label> Total: R$</label><label id="resultado" name="resultado" >0</label></span>
+                </li>
+                <?php
+                }
+                ?>
+              
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#about">Sobre</a>
                     </li>
@@ -128,79 +140,74 @@ session_start();
                     <br>
                     <br>
                     <br>
-
+                 
                     <div class="col-sm-12">
                     <form action="fim-compra/guardarProdutosSelecionados.php" method="POST">
-                        <h1 class="section-subheading text-muted text-center "">
+
+                        <?php
+                            if (isset($_GET["dia"])) {
+                        ?> 
+                        <h1 class="section-subheading text-muted text-center ">
                             Os produtos disponíveis nessa data são:
                         </h1>
 
+                        <?php 
+                            }
+                            ?>
+                            
                         <br>
                         <br>
+                            
+                        <div class="card-deck">
+                            <?php
+            
+                            require_once "buscarCtrl.php";
+            
+                            $dia = null;
+            
+                            if (isset($_GET['dia']))
+                                $dia = $_GET['dia'];
 
-                        <?php
-        
-                        require_once "buscarCtrl.php";
-        
-                        $dia = null;
-        
-                        if (isset($_GET['dia']))
-                            $dia = $_GET['dia'];
+                                // if ($dia < date('Y-m-d') and $dia != [])
+                                // echo "esta busca não é permitida";
+                                // die;
+                            echo "<input type=\"hidden\" name=\"dia\" value=\"".$dia."\"/>";
+                            $produtos = buscarProdutosCtrl($dia);
+            
+                            $i = 0;
 
-                            // if ($dia < date('Y-m-d') and $dia != [])
-                            // echo "esta busca não é permitida";
-                            // die;
-                        echo "<input type=\"hidden\" name=\"dia\" value=\"".$dia."\"/>";
-                        $produtos = buscarProdutosCtrl($dia);
-        
-                        $i = 0;
-
-                        foreach ($produtos as $produto) {
-                        ?>
-
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content">
-                                        <i class="fas fa-plus fa-3x"></i>
-                                    </div>
-                                </div>
-                                <img class="img-fluid" src="<?php echo $produto['imagem'];?>" />
-                            </a>
-                            <div class="portfolio-caption">
-                                <h4>
-                                    
-                                    <input type="checkbox" onclick="soma(<?php echo $i;?>)"
-                                        name="<?php echo "prod".$i;?>">
-                                    <?php echo $produto['nome'];?>
-
-                                    <input type="hidden" name="<?php echo "prodid".$i;?>"
-                                        value="<?php echo $produto['id'];?>">
-
-                                    <input type="hidden" name="<?php echo "preco".$i;?>"
-                                        value="<?php echo $produto['preco'];?>">
-
-                                </h4>
-                                <p class="text-muted"> R$<?php echo $produto['preco'];?>,00</p>
-                                <p class="text-muted"><?php echo $produto['descricao'];?>,00</p>
+                            foreach ($produtos as $produto) {
+                            ?>
+                            <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="<?php echo $produto['imagem'];?>" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $produto['nome'];?></h5>
+                                <p class="card-text"><?php echo $produto['descricao'];?></p>
+                                <p class="card-text">
+                                            <input type="checkbox" onclick="soma(<?php echo $i;?>)"
+                                            name="<?php echo "prod".$i;?>">
+                                            R$ <?php echo $produto['preco'];?>
+                                </p>
+                                <input type="hidden" name="<?php echo "prodid".$i;?>" value="<?php echo $produto['id'];?>">
+                                <input type="hidden" name="<?php echo "preco".$i;?>" value="<?php echo $produto['preco'];?>">
+                                <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
                             </div>
+                            </div>
+
+                            <?php
+
+                                $i++;
+                            }
+                            ?>
                         </div>
-
-                        <?php
-
-                            $i++;
-                        }
-                        ?>
                     </div>
         </div>
-        
+                         <?php
+                            if (isset($_GET["dia"])) {
+                        ?>
+
             <div>
-                <center>
-                    <div class="DivTotal col-sm-4 form-group">
-                        Total: <input class="form-control" style="width:100px;" type="text" id="resultado" name="resultado" readonly=“true” value="0" ;>
-                    </div>
-                        
-            
+                <center>            
                 <div class="clearfix"></div>
                 <div class="col-lg-12 text-center">
                     <div id="success"></div>
@@ -210,6 +217,10 @@ session_start();
                 </div>
                 </center>
             </div>
+
+                            <?php 
+                            }
+                            ?>
         </form>
     </div>
     </section>

@@ -29,6 +29,8 @@
     $erro = "";
 
     if (cadastrarCliente($nome, $email, $senha, $telefone, $cpf)) {
+        unset($_SESSION["erro"]);
+        $_SESSION["msg"] = "Cadastro realizado com sucesso!";
         header("Location: ../login/loginView.php");
     } 
     else {
