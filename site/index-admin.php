@@ -1,4 +1,8 @@
-                             <!DOCTYPE html>
+<?php
+require_once "../site/inserir/listagem.php";
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -226,34 +230,36 @@
 
 
     </section>
-
-     <form action="removerCtrl.php" method="POST" id="contactForm" name="sentMessage" novalidate="novalidate">
-      <section class=" bg-light   page-section" id="produtos-remover">
-
+    
+     <form action="inserir/removerCtrl.php" method="POST" id="contactForm" name="sentMessage" novalidate="novalidate">
+      <section class=" bg-light   page-section" id="main">
+      
             <div class="container">
+
                 <div class="row">
+
                     <div class="col-lg-12 text-center">
                         <h2 class="section-heading text-uppercase">Remover Produtos</h2>
-                        <h3 class="section-subheading text-muted">Remova produtos do seu site.</h3>
                     </div>
-                    <div class="row">
-                        <br class="col-lg-12">
-                        <br id="contactForm" name="sentMessage" novalidate="novalidate">
+                    
+                    <div class="center-block">
                         
-                        <h6 class="section-heading text-uppercase">Digite o nome do produto que deve ser apagado</h6>
-                        <div class= " col-md-12 form-group">
-                            <input class="form-control" id="nomeremprod" name="nomeremprod" type="text" placeholder="Digite o nome do produto *" required="required" data-validation-required-message="Digite o nome.">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                         
-                        <div class="clearfix"></div>
-                        <div class="col-lg-12 text-center">
-                            <div id="success"></div>
-                            <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Excluir</button>
-
+                            <?php echo listaProdutos();?>
+                            
+                                <button class="btn btn-danger btn-md text-uppercase" type="submit">Remover</button>
+              
+                    <div>
+                </div>
+            </div>
+        
+                        
+                        
+                        
+                        
       </form>
-    </div>
-    </div>
+      
+    
+    
 
 
 
@@ -273,7 +279,7 @@
                     <center>
                         <div class="col-md-6">
 
-                            <form action="cadastroadminCtrl.php" name="Adm-cadastrar">
+                            <form action="../site/cadastroadmin/cadastroadminCtrl.php" name="Adm-cadastrar" method="post">
 
 
                             <input class="form-control" id="nomeadmin" name="nomeadmin" type="text" placeholder="Digite o nome *" required="required" data-validation-required-message="Please enter your email address.">
@@ -319,7 +325,7 @@
     </section>
 
 
-     <!-- agendamentos -->
+     <!-- Agendamentos --
      <section class="page-section" id="agendamentos">
         <center>
             <div class="text-center">
@@ -349,7 +355,7 @@
                     
                 </tr>
                 <?php
-                 require_once "mostrarAgendamento.php";
+                /* require_once "mostrarAgendamento.php";
 
                  $agendamentos = buscaAgendamentos();
 
@@ -357,7 +363,7 @@
                                 
                 ?>
 
-            <tr>
+           <!-- <tr>
                 <td>
                  <?php echo $agendamento['nome']; ?>
                 </td>
@@ -393,7 +399,7 @@
       
          <?php    
       }
-  ?>
+  */?>
 
                 </tr>
             </table>
@@ -405,7 +411,7 @@
 
     </section>
 
-
+ -->
 
     <!-- Footer -->
     <footer class="bg-light footer">

@@ -32,7 +32,7 @@
                         <div class="row">
                           
                             <div class="form-group">
-                             <input class="form-control" id="nome" type="text" placeholder="Digite seu nome *" required="required" data-validation-required-message="Digite seu nome.">
+                             <input class="form-control" id="nomeadmin" type="text" placeholder="Digite seu nome *" required="required" data-validation-required-message="Digite seu nome.">
                               <p class="help-block text-danger"></p>
                              </div>
                             <div class="form-group">

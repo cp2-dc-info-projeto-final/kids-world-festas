@@ -2,7 +2,7 @@
 
     require "cadastroadminModelo.php";
     //session_start();
-
+    
     $nome = $_POST["nomeadmin"];
     $email = $_POST["email"];
     $senha = $_POST["senha"];

@@ -1,4 +1,5 @@
 <?php
+require "../ConnectionFactory.php";
     function cadastrarAdministrador($nome, $email, $senha){
         
         $link = getConnection();
