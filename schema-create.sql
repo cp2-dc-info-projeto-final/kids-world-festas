@@ -67,12 +67,12 @@ CREATE TABLE locacao_produto(
 --                                        // Inserir produtos
 
 INSERT INTO `produto`( `nome`, `descricao`, `preco`, `imagem`, `visibilidade`) VALUES 
-                    ('Máquina de Algodão Doce', 'Estação de algodão doce para até 100 pessoas', 150, 'img/portfolio/maq_algdoceThumbnail.png', 1),
-                    ('Pipoqueira', 'Estação de pipoqueira de cinema para até 100 pessoas', 200, 'img/portfolio/pipoqueiraThumbnail.png', 1),
-                    ('Máquina de Crepe', 'Rodízio de crepe para até 100 pessoas', 550, 'img/portfolio/crepeThumbnail.png', 1),
-                    ('Máquina de Churros', 'Estação de churros gourmet para 100 pessoas', 150, 'img/portfolio/churrosThumbnail.png', 1),
-                    ('Trenzinho de Lanches', 'Lanchinhos: Batata frita, pão de queijo, mini hot dog, mini pizza, mini hamburguer e nuggets.', 500, 'img/portfolio/tremThumbnail.png', 1),
-                    ('Pula-Pula', 'Categoria: Brinquedo Tamanho: 3,05m', 150, 'img/portfolio/pulaThumbnail.png', 1);
+                    ('Máquina de Algodão Doce', 'Estação de algodão doce para até 100 pessoas', 150, 'img/produto/1/maq_algdoceThumbnail.png', 1),
+                    ('Pipoqueira', 'Estação de pipoqueira de cinema para até 100 pessoas', 200, 'img/produto/2/pipoqueiraThumbnail.png', 1),
+                    ('Máquina de Crepe', 'Rodízio de crepe para até 100 pessoas', 550, 'img/produto/3/crepeThumbnail.png', 1),
+                    ('Máquina de Churros', 'Estação de churros gourmet para 100 pessoas', 150, 'img/produto/4/churrosThumbnail.png', 1),
+                    ('Trenzinho de Lanches', 'Lanchinhos: Batata frita, pão de queijo, mini hot dog, mini pizza, mini hamburguer e nuggets.', 500, 'img/produto/5/tremThumbnail.png', 1),
+                    ('Pula-Pula', 'Categoria: Brinquedo Tamanho: 3,05m', 150, 'img/produto/6/pulaThumbnail.png', 1);
 
 --                                        // Inserir Usuario
 INSERT INTO `usuario`(`nome`, `email`, `senha`) VALUES 

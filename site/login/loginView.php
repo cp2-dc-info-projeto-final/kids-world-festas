@@ -62,7 +62,7 @@
                                     }
 
                                     if(array_key_exists('msg', $_SESSION) == true){
-                                        $erro = $_SESSION["msg"];
+                                        $msg = $_SESSION["msg"];
                                         echo "<br><b>$msg</br>";
                                         session_unset();
                                     }

@@ -101,6 +101,13 @@ session_start();
     <!-- Busc-Data -->
     <section class="bg-light page-section" id="busc-data">
         <div class="container">
+            <?php
+                if(array_key_exists('msg', $_SESSION) == true){
+                    $msg = $_SESSION["msg"];
+                    echo "<br><h3>$msg</h3></br>";
+                    unset($_SESSION["msg"]);
+                }
+            ?>
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading text-uppercase">
                     Busque sua data
@@ -158,7 +165,7 @@ session_start();
                         <br>
                         <br>
                             
-                        <div class="card-deck">
+                        <div class="card-columns">
                             <?php
             
                             require_once "buscarCtrl.php";

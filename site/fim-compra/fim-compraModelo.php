@@ -58,7 +58,8 @@
             
         }
 
-        echo "<script>alert('FOI')</script>";
+        session_start();
+        $_SESSION["msg"] = "Cadastro realizado com sucesso!";
         header("Location: ../index.php");
        
 
