@@ -29,7 +29,6 @@
 <body>
     <center>
         <!-- Estilizar Formulário -->
-        <section class="bg-light page-section" id="login">
         <form action="cadastroCtrl.php" method="POST">
                 <div class="container">
                         <div class="row">
@@ -94,12 +93,6 @@
                 }
             ?>
         </form>
-        <script>
-        $("#cpf").mask("000.000.000-00");
-        $("#telefone").mask("(00) 00000-0000");
-        </script>
-      
-    </section>
     </center>
 </body>
 
