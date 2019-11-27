@@ -34,7 +34,7 @@
 - O administrador poderá adicionar novos produtos ao site inserindo seu nome, preço, descrição e uma imagem.
 ![Inserir Produtos](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/telas/inserirProduto.png "Inserir Produtos")
 
-- O Administrador poderá também remover produtos presentes no site ao digitar o nome do produto.
+- O Administrador poderá também remover produtos presentes no site.
 ![Remover Produtos](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/telas/removerProduto.png "Remover Produtos")
 
 - Por fim, o Administrador será capaz de cadastrar outros administradores inserindo nome, telefone, email, e senha.
