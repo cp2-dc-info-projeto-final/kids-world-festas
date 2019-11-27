@@ -39,6 +39,6 @@ Auxiliar na organização da empresa e tornar os serviços de aluguel, reserva e
 
 ### 5. Manual de utilização
 - [Manual.md](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/manual.md)
-- [Slide](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/Slide.pdf)
+- [Slide](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/slideKDW.pdf)
 - [LICENSE](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/LICENSE)
 
