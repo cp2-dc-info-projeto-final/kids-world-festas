@@ -28,9 +28,6 @@
 - Caso o usuário seja uma Administrador, ao efetuar o login será redirecionado para uma página diferente com funções exclusivas.
 ![Home Administrador](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/telas/homeADM.png "Home Administrador")
 
-- Nessa página o Administrador poderá visualizar os produtos presentes no site.
-![Produtos](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/telas/Produtos.png "Produtos")
-
 - Nessa página serão exibidos os agendamentos realizados no site.
 ![Agendamentos](https://github.com/cp2-dc-info-projeto-final/kids-world-festas/blob/master/documentacao/telas/agendamentos.png "Agendamentos")
 
